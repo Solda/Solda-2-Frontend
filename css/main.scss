@@ -5,7 +5,25 @@ body {
 	font-family: "Noto Sans CJK TC", sans-serif;
 }
 
-// 版型
+// 使用狀態的 icon
+
+i.active-icon {
+	.homepage & {
+		color: #FF5252;	
+	}
+	color: #FF5252;
+}
+
+// 上方工具列
+
+.homepage .mdl-layout__header,
+.homepage .mdl-layout__drawer-button,
+.homepage .notification-button {
+  color: rgba(0,0,0,0.54);
+}
+
+
+// 產品列表
 
 $page-width: 100%;
 
@@ -43,9 +61,6 @@ $page-width: 100%;
 		}
 		i.favorite-button {
 			cursor: pointer;
-			&.favorite-added {
-				color: #FF5252;
-			}
 		}
 	}
 }
