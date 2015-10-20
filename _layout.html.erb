@@ -4,15 +4,17 @@
     <%= render :partial => "header" %>
   </head>
   <body>
-    <div class="homepage mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="homepage mdl-layout mdl-js-layout">
+      <div class="notification-area">
+        <a href="notification.html"><i class="notification-button material-icons">notifications</i></a>
+        <!-- 如果有通知顯示下方 icon -->
+        <a style="display:none;" href="notification.html"><i class="notification-button material-icons active-icon">notifications_active</i></a>
+      </div>
       <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout-icon"></div>
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title mdl-layout--large-screen-only">SOLDA 手打拍賣</span>
           <div class="mdl-layout-spacer"></div>
-          <a href="notification.html"><i class="notification-button material-icons">notifications</i></a>
-          <!-- 如果有通知顯示下方 icon -->
-          <a style="display:none;" href="notification.html"><i class="notification-button material-icons active-icon">notifications_active</i></a>
         </div>
       </header>
       <div class="mdl-layout__drawer">
@@ -22,6 +24,7 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
+        <div class="vertical-spacer mdl-layout--small-screen-only"></div>
         <%= yield %>
       </main>
     </div>
