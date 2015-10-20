@@ -116,13 +116,19 @@ i.active-icon {
  height: 32px;
 }
 
-// 產品列表
+// 寬度
 
-$page-width: 100%;
+$page-width: 1024px;
 
-.product-list {
+.mdl-grid {
 	max-width: $page-width;
 	margin: 0 auto;
+}
+
+// 產品列表
+
+
+.product-list {
 
 	// 讓 action 的按鈕左右排好
 
@@ -172,3 +178,28 @@ $page-width: 100%;
 		line-height: 18px;
 	}
 }
+
+// spacer grid
+// 在桌面版用來稱空間的 grid
+
+.spacer-grid.mdl-cell {
+	background: transparent;
+	height: 0px;
+}
+
+// 輪播
+
+#slideshow.mdl-card  {
+	height: auto;
+	min-height: 100px;
+	position: relative;
+	& > div {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+
