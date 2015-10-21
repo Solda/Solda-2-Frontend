@@ -17,8 +17,9 @@
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
+
       <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">SOLDA 手打拍賣</span>
+        <span class="mdl-layout__title">SOLDA 手打拍賣</span>
         <nav class="mdl-navigation">
           <%= render :partial => "nav" %>
         </nav>
@@ -27,7 +28,7 @@
         <div class="vertical-spacer mdl-layout--small-screen-only"></div>
         <%= render :partial => "logo" %>
         <%= render :partial => "search" %>
-        分類--------------
+        分類-------------- 
         <%= render :partial => "slides" %>
         <%= yield %>
       </main>
