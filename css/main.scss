@@ -119,6 +119,16 @@ $page-width: 1024px;
 	margin: 0 auto;
 }
 
+
+// 讓 action 的按鈕左右排好
+
+.mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+
+}
+
 // 產品列表
 
 
@@ -141,14 +151,11 @@ $page-width: 1024px;
 	}
 
 
-	// 讓 action 的按鈕左右排好
+
 	.mdl-card__actions {
 		height: 39px;
 	  padding: 16px;
 		background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.29) 76%);
-	  display: flex;
-	  box-sizing:border-box;
-	  align-items: center;
 	  color: white;
 		a.product-title {
 			line-height: 24px;
@@ -252,3 +259,130 @@ a.solda-logo {
 		}
 	}
 }
+
+// category
+
+.mdl-card.category-card {
+	.category-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.category-icon {
+		&.dot {
+			background: none;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			color: rgba(0,0,0,0.18);
+		}
+		&.hide {
+			display: none;
+		}
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		font-size: 12px;
+		text-align: center;
+		width: 11%;
+		height: 110px;
+		background-size: 60px;
+		margin-bottom: 20px;
+		text-decoration: none;
+		color: rgba(0,0,0,0.54);
+	}
+}
+
+// category icon
+
+.category-icon.favorite-products { background: url('../img/category/favorite-products.svg') center center no-repeat ; }
+.category-icon.favorite-stores { background: url('../img/category/favorite-stores.svg') center center no-repeat ; }
+
+
+.category-icon._1 { background: url('../img/category/1.svg') center center no-repeat ; }
+.category-icon._2 { background: url('../img/category/2.svg') center center no-repeat ; }
+.category-icon._3 { background: url('../img/category/3.svg') center center no-repeat ; }
+.category-icon._4 { background: url('../img/category/4.svg') center center no-repeat ; }
+.category-icon._5 { background: url('../img/category/5.svg') center center no-repeat ; }
+.category-icon._6 { background: url('../img/category/6.svg') center center no-repeat ; }
+.category-icon._7 { background: url('../img/category/7.svg') center center no-repeat ; }
+.category-icon._8 { background: url('../img/category/8.svg') center center no-repeat ; }
+.category-icon._9 { background: url('../img/category/9.svg') center center no-repeat ; }
+.category-icon._10 { background: url('../img/category/10.svg') center center no-repeat ; }
+.category-icon._11 { background: url('../img/category/11.svg') center center no-repeat ; }
+.category-icon._12 { background: url('../img/category/12.svg') center center no-repeat ; }
+.category-icon._13 { background: url('../img/category/13.svg') center center no-repeat ; }
+.category-icon._14 { background: url('../img/category/14.svg') center center no-repeat ; }
+.category-icon._15 { background: url('../img/category/15.svg') center center no-repeat ; }
+.category-icon._16 { background: url('../img/category/16.svg') center center no-repeat ; }
+.category-icon._17 { background: url('../img/category/17.svg') center center no-repeat ; }
+.category-icon._18 { background: url('../img/category/18.svg') center center no-repeat ; }
+.category-icon._19 { background: url('../img/category/19.svg') center center no-repeat ; }
+.category-icon._20 { background: url('../img/category/20.svg') center center no-repeat ; }
+.category-icon._21 { background: url('../img/category/21.svg') center center no-repeat ; }
+.category-icon._22 { background: url('../img/category/22.svg') center center no-repeat ; }
+.category-icon._23 { background: url('../img/category/23.svg') center center no-repeat ; }
+.category-icon._24 { background: url('../img/category/24.svg') center center no-repeat ; }
+.category-icon._25 { background: url('../img/category/25.svg') center center no-repeat ; }
+.category-icon._26 { background: url('../img/category/26.svg') center center no-repeat ; }
+.category-icon._27 { background: url('../img/category/27.svg') center center no-repeat ; }
+.category-icon._28 { background: url('../img/category/28.svg') center center no-repeat ; }
+.category-icon._29 { background: url('../img/category/29.svg') center center no-repeat ; }
+
+// 在不同 size 顯示的數量與寬度
+
+@media (max-width: 479px) {
+	.mdl-card.category-card .category-icon {
+		width: 32%;
+	}
+	// 6 個
+}
+
+@media (min-width: 480px) and (max-width: 839px) {
+	.mdl-card.category-card .category-icon {
+		width: 24%;
+	}
+	// 8 個
+}
+
+@media (min-width: 840px) {
+	.mdl-card.category-card .category-icon {
+		width: 11%;
+	}
+	
+	//9 個
+}
+
+
+// 顯示全部目錄
+
+.category-container.show-all {
+	.category-icon {
+		&.hide, &.mdl-cell--hide-phone, &.mdl-cell--hide-tablet {
+			display: flex;
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
