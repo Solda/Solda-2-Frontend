@@ -1,0 +1,40 @@
+<div class="section-title mdl-grid">
+	<div class="mdl-cell mdl-cell--12-col">
+		<h2 class="mdl-typography--title"><%= zh_lorem_words(2+rand(4)) %></h2>
+    <div class="mdl-layout-spacer"></div>
+		<p><a href="#" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised">顯示更多</a></p>    
+	</div>
+</div>
+
+<div class="mdl-grid product-list">
+
+	<% 2.times do %>
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/buwu2.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/fin3.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	<% end %>
+
+</div>
+
