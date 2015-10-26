@@ -1,1 +1,56 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil aut veritatis iusto, ducimus vero atque fugit debitis quas labore! Laudantium adipisci odio quibusdam vel quod iure harum delectus, perferendis reiciendis!
+<div class="icon-divider">
+	<i style="color:#795548;" class="material-icons">store</i>
+	<p class="mdl-typography--caption-color-contrast">商家動態</p>
+</div>
+<div class="mdl-grid store-news-list">
+	<% 3.times do %>
+	<!-- 無 favortite -->
+	<div class="store-news-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+		<div class="mdl-card__supporting-text">
+			<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
+		</div>
+		<div class="mdl-card--media mdl-card--expand" style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
+			<a href="product.html" class="link-to-product"></a>
+			<div class="mdl-card__actions">
+				<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
+				<div class="mdl-layout-spacer"></div>
+				<i class="favorite-button material-icons">favorite_outline</i>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 有 favortite -->
+	<div class="store-news-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+		<div class="mdl-card__supporting-text">
+			<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
+		</div>
+		<div class="mdl-card--media mdl-card--expand" style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
+			<a href="product.html" class="link-to-product"></a>
+			<div class="mdl-card__actions">
+				<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
+				<div class="mdl-layout-spacer"></div>
+				<i class="favorite-button material-icons active-icon">favorite</i>
+			</div>
+		</div>
+	</div>
+	
+	<% end %>
+
+	<!-- 預告 -->
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+		<div class="mdl-card__supporting-text mdl-card--border_bottom">
+			<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
+		</div>
+		<div class="mdl-card__title link-to-product mdl-card--border">
+			<h4 class="mdl-card__title-text"><%= zh_lorem_words(10+rand(10)) %></h4>
+			<p><%= zh_lorem_paragraphs(3) %></p>	
+		</div>
+		<div class="mdl-card__actions">
+			<div class="mdl-layout-spacer"></div>
+			<a href="store.html" class="mdl-button mdl-js-button">公告細節</a>
+		</div>
+	</div>
+	
+
+
+</div>
