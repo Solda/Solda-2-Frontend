@@ -175,19 +175,24 @@ $page-width: 1024px;
 	@media (max-width: 479px) {
 	.link-to-product {
 		height: 160px;
-		height: auto;
-		min-height: 160px;
 		overflow: hidden;
 		}
 	}
 
-
+	
+	// 	讓品名和 favorite icon 置底
+	.mdl-card--media.mdl-card--expand {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
 
 	.store-news-card .mdl-card__actions, .product-card .mdl-card__actions {
 		height: 39px;
 	  padding: 16px;
 		background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.29) 76%);
 	  color: white;
+	  
 		a.product-title {
 			line-height: 24px;
 			max-width: 80%;
@@ -309,7 +314,7 @@ a.solda-logo {
 
 // category
 
-.mdl-card.category-card {
+.mdl-cell.category-card {
 	min-height: 90px;
 	.category-container {
 		display: flex;
