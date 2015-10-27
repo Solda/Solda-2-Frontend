@@ -1,10 +1,13 @@
+<!-- 指定有 back icon 的 layout -->
+<% content_for :back do %>
+<% end %>
+
 <%= render :partial => "logo" %>
 <%= render :partial => "search" %>
-<%= render :partial => "category" %>
 
 <div class="section-title mdl-grid">
 	<div class="mdl-cell mdl-cell--12-col">
-		<h2 class="mdl-typography--title">設計手做</h2>
+		<h2 class="mdl-typography--display-1-color-contrast">設計手做</h2>
 	</div>
 </div>
 
@@ -43,7 +46,18 @@
 
 <div class="pager mdl-grid">
 	<div class="mdl-cell mdl-cell--12-col">
-		<p><a href="#" class="mdl-button mdl-js-button"><i class="material-icons">navigate_before</i> 上一頁</a> <a href="#" class="mdl-button mdl-js-button">下一頁 <i class="material-icons">navigate_next</i></a></p>    
+		<a href="#" class="previous-page" >
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey-300">
+        <i class="material-icons">arrow_back</i>
+      </button>
+			上一頁
+    </a>   
+		<a href="#" class="next-page" >
+			下一頁
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey-300">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+    </a>   
 	</div>
 </div>
 

@@ -5,9 +5,48 @@
   </head>
   <body>
     <div class="homepage mdl-layout mdl-js-layout">
-      <div class="notification-area">
-        <a href="notification.html"><i class="notification-button material-icons">navigation_back</i></a>
-      </div>
+	    <% if content_for? :back %>
+	    
+	    	<!-- 如果有 back 按鈕，就只顯示 back 按鈕 -->
+
+	      <div class="corner-area left">
+	        <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
+	      </div>
+
+	      <header class="mdl-layout__header mdl-layout__header--transparent">
+	        <div class="mdl-layout-icon"></div>
+	        <div class="mdl-layout__header-row">
+	          <div class="mdl-layout-spacer"></div>
+	        </div>
+	      </header>
+
+	      
+      <% else %>
+
+	    	<!-- 如果是首頁就顯示上方工具列，以及右上方通知 icon -->
+
+	      <div class="corner-area right">
+	        <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">notifications</i></a>
+	        <!-- 如果有通知顯示下方 icon -->
+	        <a style="display: none;" href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons active-icon">notifications_active</i></a>
+	      </div>
+
+	      <header class="mdl-layout__header mdl-layout__header--transparent">
+	        <div class="mdl-layout-icon"></div>
+	        <div class="mdl-layout__header-row">
+	          <span class="mdl-layout-title mdl-layout--large-screen-only">SOLDA 手打拍賣</span>
+	          <div class="mdl-layout-spacer"></div>
+	        </div>
+	      </header>
+	      <div class="mdl-layout__drawer">
+	        <span class="mdl-layout__title">SOLDA 手打拍賣</span>
+	        <nav class="mdl-navigation">
+	        </nav>
+	      </div>
+	
+	      
+			<% end %>
+			
       <main class="mdl-layout__content">
         <div class="vertical-spacer mdl-layout--small-screen-only"></div>
         <%= yield %>

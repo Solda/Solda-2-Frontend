@@ -31,34 +31,51 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 	background-color: transparent;
 }
 
-.notification-area {
-	a {
-		width: 24px;
-		height: 24px;
-		display: inline-block;
-		line-height: 24px;
-	}
-	display: block;
-	font-weight: normal;
-	height: 48px;
-	right: 0px;
-	line-height: 55px;
-	margin: 10px 12px;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	position: absolute;
-	text-align: center;
-	top: 0px;
-	width: 48px;
+.corner-area {
+	color: rgba(0,0,0,0.54);
 	z-index: 4;
+	position: absolute;
 }
 
-@media screen and (max-width:1024px) {
-    .notification-area {
-        margin: 4px;
-        color: rgba(0, 0, 0, .5)
-    }
+// 不同尺寸的間隔
+
+@media (max-width: 479px) {
+	.corner-area {
+		top: 10px;
+		&.right {
+			right: 12px;
+		}
+		&.left {
+			left: 12px;
+		}
+	}
 }
+
+@media (min-width: 480px) and (max-width: 1023px) {
+	.corner-area {
+		top: 10px;
+		&.right {
+			right: 12px;
+		}
+		&.left {
+			left: 12px;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.corner-area {
+		top: 16px;
+		&.right {
+			right: 19px;
+		}
+		&.left {
+			left: 19px;
+		}
+	}
+}
+
+
 
 // logo
 
@@ -293,7 +310,7 @@ a.solda-logo {
 // category
 
 .mdl-card.category-card {
-	min-height: 140px;
+	min-height: 90px;
 	.category-container {
 		display: flex;
 		flex-direction: row;
@@ -306,9 +323,12 @@ a.solda-logo {
 			background: none;
 			justify-content: center;
 			align-items: center;
-			font-size: 40px;
-			color: rgba(0,0,0,0.18);
 		}
+
+		&.expand_less {
+			display: none;
+		}
+
 		&.hide {
 			display: none;
 		}
@@ -318,11 +338,14 @@ a.solda-logo {
 		font-size: 12px;
 		text-align: center;
 		width: 11%;
-		height: 100px;
+		height: 110px;
 		background-size: 60px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		text-decoration: none;
-		color: rgba(0,0,0,0.54);
+		color: rgba(0,0,0,0.38);
+		&:hover {
+			color: rgba(0,0,0,0.84);
+		}
 	}
 }
 
@@ -391,7 +414,10 @@ a.solda-logo {
 
 .category-container.show-all {
 	.category-icon {
-		&.hide, &.mdl-cell--hide-phone, &.mdl-cell--hide-tablet {
+		&.expand_more {
+			display: none;
+		}
+		&.expand_less, &.hide, &.mdl-cell--hide-phone, &.mdl-cell--hide-tablet {
 			display: flex;
 		}
 		
@@ -411,8 +437,21 @@ a.solda-logo {
 
 // 分頁
 
-.pager {
-	text-align: center;
+.pager .mdl-cell {
+	display: flex;
+	justify-content: space-between;
+	a {
+		text-decoration: none;
+		color: rgba(0,0,0,0.34);
+	}
+	.next-page button {
+		margin-left: 16px;
+		color: rgba(0,0,0,0.54);
+	}
+	.previous-page button {
+		margin-right: 16px;
+		color: rgba(0,0,0,0.54);
+	}
 }
 
 
