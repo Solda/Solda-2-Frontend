@@ -5,6 +5,20 @@ body {
 	font-family: "Noto Sans CJK TC", sans-serif;
 }
 
+// little hr
+
+hr.little {
+  display: block;
+  height: 1px;
+  border: 0;
+  opacity: 0.4;
+  border-top: 3px solid grey;
+  margin: 3em auto;
+  width: 40px;
+  padding: 0;
+}
+
+
 // 自己家的 border
 
 .mdl-card--border_bottom {
@@ -80,11 +94,31 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 // logo
 
 .logo {
+	hr.little {
+		margin-bottom: 1em;
+	}
 	text-align: center;
-	margin: 40px;
+	margin: 65px auto 0px auto;
 	img {
 		width: 130px;
 		height: 130px;
+	}
+	button {
+		position: relative;
+		top: -1px;
+	}
+	p {
+		padding: 0 2em;
+		margin-top: 2em;
+	}
+	p a {
+
+		font-size: 14px;
+		color: rgba(0,0,0,0.4);
+		text-decoration: none;
+		&:hover {
+		color: rgba(0,0,0,0.81);
+		}
 	}
 }
 
@@ -92,7 +126,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 	.logo {
 		text-align: center;
-		margin: 45px auto 25px auto;
+		margin: 55px auto 25px auto;
 		img {
 			width: 98px;
 			height: 98px;
@@ -128,6 +162,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 .vertical-spacer {
  display: block;
+ display: none;
  width: 100%;
  height: 32px;
 }
@@ -252,76 +287,88 @@ $page-width: 1024px;
 
 // 輪播
 
-a.solda-logo {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	padding: 32px;
-	box-sizing: border-box;
-	background: url('../img/solda-logo.svg') no-repeat center 40%;
-	background-size: contain;
-}
-
-#slideshow.mdl-card  {
+.slide-card  {
+	.slide-wrap {
+		flex-grow: 1;
+		background: yellow;
+		box-sizing: border-box;
+		padding: 32px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		h1 {
+			color: white;
+			font-size: 34px;
+		}		
+		p {
+			font-size: 16px;
+			color: rgba(255,255,255,0.7);
+		}
+	}
 	position: relative;
-	& > div {
+	a.full-link {
 		position: absolute;
 		top: 0;
-		bottom: 0;
 		left: 0;
 		right: 0;
+		bottom: 0;
+		z-index: 1;
+		&:hover {
+			background: rgba(0,0,0, 0.2);
+		}
+	}
+}
+
+#slideshow {
+	overflow: hidden;
+	height: 400px;
+	position: relative;
+	.slide-wrap {
+		background: yellow;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 	}
 }
 
 
 @media (max-width: 479px) {
-	#slideshow.mdl-card  {
-		min-height: 200px;
+	#slideshow {
 		height: 200px;
-		max-height: 200px;
+		p {
+			display: none;
+		}
 	}
 }
 
 @media (min-width: 480px) and (max-width: 839px) {
-	#slideshow.mdl-card  {
-		height: 240px;
+	#slideshow {
+		height: 300px;
 	}
 }
 @media (min-width: 840px) {
-	#slideshow.mdl-card  {
-		height: 380px;
-	}
-}
-
-// 輪播內容
-
-#slideshow {
-	& > div {
-		position: relative;
-		background: blue;
-		a {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
+	#slideshow {
+		height: 400px;
 	}
 }
 
 // category
 
+.category-list {
+	margin-bottom: 	30px;
+}
+
 .mdl-cell.category-card {
-	min-height: 90px;
+	min-height: 70px;
 	.category-container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: center;
-		align-items: stretch;
+		position: relative;
+		top: -10px;
+		justify-content: space-between;
 	}
 	.category-icon {
 		&.dot {
@@ -343,9 +390,9 @@ a.solda-logo {
 		font-size: 12px;
 		text-align: center;
 		width: 11%;
-		height: 110px;
+		height: 100px;
 		background-size: 60px;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 		text-decoration: none;
 		color: rgba(0,0,0,0.38);
 		&:hover {
@@ -358,6 +405,7 @@ a.solda-logo {
 
 .category-icon.favorite-products { background: url('../img/category/favorite-products.svg') center center no-repeat ; }
 .category-icon.favorite-stores { background: url('../img/category/favorite-stores.svg') center center no-repeat ; }
+.category-icon.search { background: url('../img/category/search.svg') center center no-repeat ; }
 
 
 .category-icon._1 { background: url('../img/category/1.svg') center center no-repeat ; }
@@ -393,21 +441,21 @@ a.solda-logo {
 // 在不同 size 顯示的數量與寬度
 
 @media (max-width: 479px) {
-	.mdl-card.category-card .category-icon {
+	.mdl-cell.category-card .category-icon {
 		width: 32%;
 	}
 	// 6 個
 }
 
 @media (min-width: 480px) and (max-width: 839px) {
-	.mdl-card.category-card .category-icon {
+	.mdl-cell.category-card .category-icon {
 		width: 24%;
 	}
 	// 8 個
 }
 
 @media (min-width: 840px) {
-	.mdl-card.category-card .category-icon {
+	.mdl-cell.category-card .category-icon {
 		width: 11%;
 	}
 	
@@ -422,7 +470,7 @@ a.solda-logo {
 		&.expand_more {
 			display: none;
 		}
-		&.expand_less, &.hide, &.mdl-cell--hide-phone, &.mdl-cell--hide-tablet {
+		&.expand_less, &.hide {
 			display: flex;
 		}
 		
@@ -435,7 +483,7 @@ a.solda-logo {
 .section-title {
 	.mdl-cell {
 		display: flex;
-		align-items: flex-end;
+		align-items: center;
 	}
 }
 
@@ -461,7 +509,13 @@ a.solda-logo {
 
 
 
+// footer
 
+footer {
+	.mdl-mega-footer__drop-down-section .mdl-mega-footer__link-list li {
+		line-height: 1.8em;	
+	}
+}
 
 
 

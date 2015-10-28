@@ -1,26 +1,39 @@
+<!--
 <div class="icon-divider mdl-layout--small-screen-only">
   <i style="color:#3E4EB8;" class="material-icons">stars</i>
   <p class="mdl-typography--caption-color-contrast">手打精選</p>
 </div>
+-->
 
 <div class="mdl-grid">
-	<div id="slideshow" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-   <div>
-     <a href="#" style="background: url('img/slide/slide1.jpg') center center no-repeat; background-size: cover;"></a>
-   </div>
-   <div>
-     <a href="#" style="background: url('img/slide/slide2.jpg') center center no-repeat; background-size: cover;"></a>
-   </div>
-   <div>
-     <a href="#" style="background: url('img/slide/slide3.jpg') center center no-repeat; background-size: cover;"></a>
-   </div>
-   <div>
-     <a href="#" style="background: url('img/slide/slide4.jpg') center center no-repeat; background-size: cover;"></a>
-   </div>
-   <div>
-     <a href="#" style="background: url('img/slide/slide5.jpg') center center no-repeat; background-size: cover;"></a>
-   </div>
+
+	<div id="slideshow" class="slide-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+		<div class="slide-wrap" style="background: url('img/products/p9.jpg') center / cover;">
+			<a class="full-link" href="#"></a>	
+		  <div class="card-content">
+		    <h1><%= zh_lorem_words(4+rand(10)) %></h1>
+				<p><%= zh_lorem_paragraph %></p>
+		  </div>
+		</div>
+		
+		<div class="slide-wrap" style="background: url('img/products/p40.jpg') center / cover;">
+			<a class="full-link" href="#"></a>	
+		  <div class="card-content">
+		    <h1><%= zh_lorem_words(4+rand(10)) %></h1>
+				<p><%= zh_lorem_paragraph %></p>
+		  </div>
+		</div>
+		
+		<div class="slide-wrap" style="background: url('img/products/p16.jpg') center / cover;">
+			<a class="full-link" href="#"></a>	
+		  <div class="card-content">
+		    <h1><%= zh_lorem_words(4+rand(10)) %></h1>
+				<p><%= zh_lorem_paragraph %></p>
+		  </div>
+		</div>
+
 
 	</div>
+				
 
 </div>

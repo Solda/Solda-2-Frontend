@@ -1,8 +1,37 @@
+<div class="section-title mdl-grid">
+	<div class="mdl-cell mdl-cell--12-col">
+		<h2 class="mdl-typography--headline-color-contrast">商家動態</h2>
+    <div class="mdl-layout-spacer"></div>
+		<a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" >
+     更多 <i class="material-icons">chevron_right</i>
+    </a>   
+	</div>
+</div>
+
+<!--
 <div class="icon-divider">
 	<i style="color:#795548;" class="material-icons">store</i>
 	<p class="mdl-typography--caption-color-contrast">商家動態</p>
 </div>
+-->
 <div class="mdl-grid store-news-list">
+	
+	<!-- 第一次出現的預告 -->
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone" style="background: #d6f4ff;">
+		<div class="mdl-card__title">
+			<h4 class="mdl-card__title-text">追蹤喜愛的商家</h4>
+		</div>
+		<div class="mdl-card__supporting-text mdl-card--expand">
+			在商店頁面點下追蹤，他們的新商品就會出現在這裡喔。多加利用來發現有趣商品吧！
+		</div>
+			<div class="mdl-card__actions mdl-card--border">
+				<a href="#" class="mdl-button mdl-js-button mdl-button--colored">我瞭解了</a>
+			</div>
+	</div>
+	
+
+
+	
 	<% 3.times do %>
 	<!-- 無 favortite -->
 	<div class="store-news-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
@@ -46,7 +75,7 @@
 			<p><%= zh_lorem_paragraphs(3) %></p>	
 		</div>
 		<div class="mdl-card__actions">
-			<a href="store.html" class="mdl-button mdl-js-button">前往商店<i class="material-icons">chevron_right</i></a>
+			<a href="store.html" class="mdl-button mdl-js-button mdl-button--colored">前往商店<i class="material-icons">chevron_right</i></a>
 		</div>
 	</div>
 	
