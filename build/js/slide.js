@@ -3,9 +3,9 @@ $( document ).ready(function() {
 		
 		setInterval(function() { 
 		  $('#slideshow > div:first')
-		    .fadeOut(700)
+		    .fadeOut(1000)
 		    .next()
-		    .fadeIn(700)
+		    .fadeIn(1000)
 		    .end()
 		    .appendTo('#slideshow');
 		},  5000);
