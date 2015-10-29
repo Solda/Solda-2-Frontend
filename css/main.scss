@@ -125,7 +125,6 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 @media screen and (max-width:1024px) {
 
 	.logo {
-		text-align: center;
 		margin: 55px auto 25px auto;
 		img {
 			width: 98px;
@@ -135,7 +134,65 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 }
 
-// search area
+// search full 大區塊
+
+#compact-search {
+	display: none;
+	.logo {
+		margin: 55px auto 45px;
+	}
+}
+
+#search-full {
+	display: none;
+	.mdl-textfield__input {
+		font-size: 20px;
+		padding: 6px 0;
+	}
+	.mdl-textfield__label {
+		padding: 6px 0;
+		font-size: 20px;
+	}
+	.search-field {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.mdl-textfield {
+		flex-grow: 1;
+		margin-left: 0.5em;
+	}
+}
+
+// 顯示或隱藏搜尋欄位
+
+
+main.mdl-layout__content {
+	&.show-search-full {
+			#search-full, #compact-search {
+				display: block;
+			}
+		.logo {
+			p, hr {
+				display: none;
+			}
+		}
+
+		.logo {
+			margin: 55px auto 15px auto;
+			img {
+				width: 78px;
+				height: 78px;
+				cursor: pointer;
+			}
+		}
+		.hide-when-search {
+			display: none;
+		}
+	}
+}
+
+// 一般的 search area
 
 .search-area {
 	background: white;
@@ -158,6 +215,9 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 		font-size: 16px;
 	}
 }
+
+// 特製全螢幕 search
+
 // 小螢幕時撐開 app bar 和下方內容區塊
 
 .vertical-spacer {

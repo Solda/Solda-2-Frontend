@@ -21,6 +21,7 @@
 <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
 <meta name="msapplication-TileColor" content="#3372DF">
 
+
 <!-- Material Design -->
 <link rel="stylesheet" href="css/material.min.css">
 <script src="js/material.min.js"></script>
@@ -34,6 +35,8 @@
 <!-- Leo's Design -->
 <link rel="stylesheet" href="css/main.css">
 
+
+<!-- Live Reload -->
 
   </head>
   <body>
@@ -60,18 +63,24 @@
         <div class="vertical-spacer mdl-layout--small-screen-only"></div>
         <!-- 指定有 back icon 的 layout -->
 
-<div class="logo">
+<div class="logo hide-when-search">
   <a href="/"><img src="img/solda-pick.svg" alt=""></a>
   <p class="mdl-typography--font-regular"><a target="_blank" href="#">追蹤商家，輕量通販，手機或網站三十秒免費開賣。<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">exit_to_app</i></button> 登入或下載</a></p>
   <hr class="little" />
-</div><div class="mdl-grid">
-
+</div><div class="mdl-grid" id="compact-search">
+  <div class="logo">
+    <img src="img/solda-pick.svg" alt="">
+    <p><i class="material-icons">close</i></p>
+  </div>
+	<!-- 一般的 search area -->
   <div class="mdl-shadow--2dp mdl-cell mdl-cell--12-col">
     <div class="search-area">
       <i class="material-icons">search</i>
       <input type="text" id="search" placeholder="搜尋商品或是商家" />
     </div>
   </div>
+
+  <hr class="little"/>
 
 </div>
 <div class="section-title mdl-grid">
@@ -85,206 +94,24 @@
 	
 
 	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p9.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">門壇要得說到</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p54.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">目黎不了那一跌老頂到</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p16.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">大這經們</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p17.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">輸何級地-市些到他</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p73.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">得老及整憊也暗就比不甘你</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p33.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">了下生了議堪蹶還孩不番以</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p69.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">了拿將無地點責</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p27.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">也真～她家這為不人</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p47.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">溪的８咖的那</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p32.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">動贊大麼２裡憶</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p34.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">也0再不又和多地本來意</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p9.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">喊會我五壞</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p20.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">的去已的比著得和又在纔</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button material-icons">favorite_outline</i>
-		</div>
-	</div>
-
-	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p73.jpg') center / cover;">
-		<div class="mdl-card--expand">
-			<a href="product.html" class="link-to-product"></a>
-		</div>
-		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">咖老在涼來他命麵</a>
-			<div class="mdl-layout-spacer"></div>
-			<i class="favorite-button active-icon material-icons">favorite</i>
-		</div>
-	</div>
-
-	
-
-	<!-- 沒有 favorite -->
 	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p67.jpg') center / cover;">
 		<div class="mdl-card--expand">
 			<a href="product.html" class="link-to-product"></a>
 		</div>
 		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">麼發早可</a>
+			<a href="product.html" class="product-title">台廢你了石少在餃趕</a>
 			<div class="mdl-layout-spacer"></div>
 			<i class="favorite-button material-icons">favorite_outline</i>
 		</div>
 	</div>
 
 	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p22.jpg') center / cover;">
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p39.jpg') center / cover;">
 		<div class="mdl-card--expand">
 			<a href="product.html" class="link-to-product"></a>
 		</div>
 		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">也明會下一可</a>
+			<a href="product.html" class="product-title">得個麻短地啡寸了</a>
 			<div class="mdl-layout-spacer"></div>
 			<i class="favorite-button active-icon material-icons">favorite</i>
 		</div>
@@ -293,24 +120,24 @@
 	
 
 	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p18.jpg') center / cover;">
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p2.jpg') center / cover;">
 		<div class="mdl-card--expand">
 			<a href="product.html" class="link-to-product"></a>
 		</div>
 		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">適電２值了一落在的滾用</a>
+			<a href="product.html" class="product-title">看容煩了輸看覺適就就</a>
 			<div class="mdl-layout-spacer"></div>
 			<i class="favorite-button material-icons">favorite_outline</i>
 		</div>
 	</div>
 
 	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p63.jpg') center / cover;">
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p16.jpg') center / cover;">
 		<div class="mdl-card--expand">
 			<a href="product.html" class="link-to-product"></a>
 		</div>
 		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">我麼不喝錢性去行暫</a>
+			<a href="product.html" class="product-title">的的腳媽罵</a>
 			<div class="mdl-layout-spacer"></div>
 			<i class="favorite-button active-icon material-icons">favorite</i>
 		</div>
@@ -319,24 +146,206 @@
 	
 
 	<!-- 沒有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p17.jpg') center / cover;">
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p15.jpg') center / cover;">
 		<div class="mdl-card--expand">
 			<a href="product.html" class="link-to-product"></a>
 		</div>
 		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">快些再去們橫些人何現心</a>
+			<a href="product.html" class="product-title">沒情是爭的</a>
 			<div class="mdl-layout-spacer"></div>
 			<i class="favorite-button material-icons">favorite_outline</i>
 		</div>
 	</div>
 
 	<!-- 有 favorite -->
-	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p20.jpg') center / cover;">
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p6.jpg') center / cover;">
 		<div class="mdl-card--expand">
 			<a href="product.html" class="link-to-product"></a>
 		</div>
 		<div class="mdl-card__actions">
-			<a href="product.html" class="product-title">興吃鬧他再</a>
+			<a href="product.html" class="product-title">一的棄的興己別</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p72.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">有這記方</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p72.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">在們因用不的的不爭不在麼</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p78.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">災用逆天難</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p51.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">成空見些氛裡何</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p59.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">將不來達隨疑了一如</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p55.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">的～將們個一人孩著又鑼地</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p75.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">拚理壇地</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p71.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">地２拚的新身白解老起很過</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p25.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">麵已是腕之不腹意他罵千暫</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p71.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">廢義捨地啦問腕去</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p61.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">等皮憑是</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p76.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">幫問解渡不好</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button active-icon material-icons">favorite</i>
+		</div>
+	</div>
+
+	
+
+	<!-- 沒有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p46.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">～…在一這棄城來</a>
+			<div class="mdl-layout-spacer"></div>
+			<i class="favorite-button material-icons">favorite_outline</i>
+		</div>
+	</div>
+
+	<!-- 有 favorite -->
+	<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p52.jpg') center / cover;">
+		<div class="mdl-card--expand">
+			<a href="product.html" class="link-to-product"></a>
+		</div>
+		<div class="mdl-card__actions">
+			<a href="product.html" class="product-title">不就暫進有</a>
 			<div class="mdl-layout-spacer"></div>
 			<i class="favorite-button active-icon material-icons">favorite</i>
 		</div>
