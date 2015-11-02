@@ -136,14 +136,15 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 // search full 大區塊
 
-#search-result {
-	display: none;
-}
 
 #compact-search {
-	display: none;
 	.logo {
-		margin: 55px auto 45px;
+		margin: 55px auto 35px auto;
+		img {
+			width: 78px;
+			height: 78px;
+			cursor: pointer;
+		}
 	}
 }
 
@@ -168,7 +169,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 	}
 }
 
-// 顯示或隱藏搜尋欄位
+// 顯示或隱藏搜尋欄位 (depreciated)
 
 
 main.mdl-layout__content {
