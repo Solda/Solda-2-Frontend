@@ -21,13 +21,13 @@ $( document ).ready(function() {
 		
 		// 顯示搜尋
 		
-		$( "a.category-icon.search" ).click(function() {
-			$( "main.mdl-layout__content" ).toggleClass( 'show-search-full' );
-			$("#search").focus();
-		});		
-		$( ".logo img" ).click(function() {
-			$( "main.mdl-layout__content" ).toggleClass( 'show-search-full' );
-		});		
+		// $( "a.category-icon.search" ).click(function() {
+		// 	$( "main.mdl-layout__content" ).toggleClass( 'show-search-full' );
+		// 	$("#search").focus();
+		// });		
+		// $( ".logo img" ).click(function() {
+		// 	$( "main.mdl-layout__content" ).toggleClass( 'show-search-full' );
+		// });		
 
 
 });
