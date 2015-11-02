@@ -136,6 +136,10 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 // search full 大區塊
 
+#search-result {
+	display: none;
+}
+
 #compact-search {
 	display: none;
 	.logo {
@@ -169,7 +173,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 main.mdl-layout__content {
 	&.show-search-full {
-			#search-full, #compact-search {
+			#search-full, #compact-search, #search-result {
 				display: block;
 			}
 		.logo {
@@ -216,7 +220,6 @@ main.mdl-layout__content {
 	}
 }
 
-// 特製全螢幕 search
 
 // 小螢幕時撐開 app bar 和下方內容區塊
 
