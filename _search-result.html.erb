@@ -1,45 +1,74 @@
 <div id="search-result">
-	
-	<div class="section-title mdl-grid">
-		<div class="mdl-cell mdl-cell--12-col">
-			<h2 class="mdl-typography--headline-color-contrast">搜尋結果</h2>
+
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+	  
+	  <div class="mdl-grid" id="tab-bar">
+	  	<div class="mdl-cell mdl-cell--12-col">
+	  		<div class="mdl-tabs__tab-bar">
+			    <a href="#tab1" class="mdl-tabs__tab is-active">商品</a>
+			    <a href="#tab2" class="mdl-tabs__tab">商家</a>
+			  </div>
+	  	</div>
+	  </div>
+
+
+	  <div class="mdl-tabs__panel is-active" id="tab1">
+
+			<div class="mdl-grid product-list">
+
+				<% 10.times do %>
+
+				<!-- 沒有 favorite -->
+				<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
+					<div class="mdl-card--expand">
+						<a href="product.html" class="link-to-product"></a>
+					</div>
+					<div class="mdl-card__actions">
+						<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
+						<div class="mdl-layout-spacer"></div>
+						<i class="favorite-button material-icons">favorite_outline</i>
+					</div>
+				</div>
+
+				<!-- 有 favorite -->
+				<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
+					<div class="mdl-card--expand">
+						<a href="product.html" class="link-to-product"></a>
+					</div>
+					<div class="mdl-card__actions">
+						<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
+						<div class="mdl-layout-spacer"></div>
+						<i class="favorite-button active-icon material-icons">favorite</i>
+					</div>
+				</div>
+
+				<% end %>
+
+			</div>
+
+	  </div>
+	  <div class="mdl-tabs__panel" id="tab2">
+			<div class="mdl-grid seller-list">
+
+				<% 30.times do %>
+
+				<!-- normal -->
+				<div class="seller-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+					<div class="mdl-card--expand mdl-card--border_bottom">
+						<a class="avatar" href="store.html">
+							<img src="img/avatar/a<%= 1 + rand(20) %>.jpg" alt="">
+						</a>
+					</div>
+					<div class="seller-name pro mdl-typography--text-center">
+						<%= zh_lorem_words(4+rand(12)) %>
+					</div>
+				</div>
+
+
+				<% end %>
+
+			</div>
 		</div>
-	</div>
-
-	<div class="mdl-grid seller-list">
-		div
-	</div>
-
-	<div class="mdl-grid product-list">
-
-		<% 10.times do %>
-
-		<!-- 沒有 favorite -->
-		<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone" style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
-			<div class="mdl-card--expand">
-				<a href="product.html" class="link-to-product"></a>
-			</div>
-			<div class="mdl-card__actions">
-				<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
-				<div class="mdl-layout-spacer"></div>
-				<i class="favorite-button material-icons">favorite_outline</i>
-			</div>
-		</div>
-
-		<!-- 有 favorite -->
-		<div class="product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone"  style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
-			<div class="mdl-card--expand">
-				<a href="product.html" class="link-to-product"></a>
-			</div>
-			<div class="mdl-card__actions">
-				<a href="product.html" class="product-title"><%= zh_lorem_words(4+rand(10)) %></a>
-				<div class="mdl-layout-spacer"></div>
-				<i class="favorite-button active-icon material-icons">favorite</i>
-			</div>
-		</div>
-
-		<% end %>
-
 	</div>
 
 

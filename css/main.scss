@@ -581,10 +581,39 @@ footer {
 	}
 }
 
+// 搜尋結果
 
 
+.seller-list {
+	#tab-bar .mdl-cell {
+		min-height: 49px;
+		height: 49px;
+		overflow: hidden;
+	}
+	
+	.mdl-card {
+		min-height: 90px;
+	}
 
+	a.avatar {
+		text-align: center;
+		width: 100%;
+		display: block;
+		img {
+			width: 50%;
+			margin: 25% 25% 20% 25%;
+		}
+	}
 
+	.seller-name {
+		box-sizing: border-box;
+		font-size: 12px;
+		line-height: 16px;
+		color: rgba(0,0,0,0.54);
+		padding: 8px 16px;
+	}
+
+}
 
 
 
