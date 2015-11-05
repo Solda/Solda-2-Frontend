@@ -49,6 +49,13 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 	color: rgba(0,0,0,0.54);
 	z-index: 4;
 	position: absolute;
+	a.mdl-navigation__link {
+		padding: 4px 8px;
+		display: inline-block;
+		i {
+			vertical-align: middle;
+		}
+	}
 }
 
 // 不同尺寸的間隔
@@ -616,7 +623,71 @@ footer {
 }
 
 
+// store page
+
+.store-page {
+
+	.store-profile {
+		text-align: center;
+		background: #FFFFFF;
+		padding-top: 66px;
+		padding-bottom: 16px;
+		a.avatar img {
+			width: 80px;
+			height: 80px;
+		}
+		h1 {
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: bold;
+			margin-bottom: 0;
+			padding: 0 72px;
+		}
+		p {
+			font-size: 12px;
+			color: rgba(0,0,0,0.54);
+			margin-bottom: 16px;
+		}
+		a.profile_excerpt {
+			display: block;
+			font-size: 12px;
+			line-height: 16px;
+			font-weight: normal;
+			text-decoration: none;
+			color: rgba(0,0,0,0.26);
+			width: 65%;
+			margin: 0 auto;
+			height: 32px;
+			overflow: hidden;
+		}
+	}
+
+	.mdl-tabs__tab-bar {
+		background: white;
+	}
+
+}
 
 
+// product
+
+.product-page {
+	// 上方添加 gradient
+	.mdl-layout__content::after {
+	 display: block;
+	 content: "";
+	 width: 100%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 height: 64px;
+	 z-index: 1;
+	 background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.1) 76%);
+	}
+
+
+
+}
 
 
