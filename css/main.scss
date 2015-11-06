@@ -623,7 +623,8 @@ $page-width: 1024px;
 
 // 分頁
 
-.pager .mdl-cell {
+.pager.mdl-cell {
+	padding-top: 32px;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;

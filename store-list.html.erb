@@ -1,0 +1,49 @@
+<!-- 指定有 back icon 的 layout -->
+<% content_for :back do %>
+<% end %>
+
+<%= render :partial => "logo" %>
+
+<div class="section-title mdl-grid">
+	<div class="mdl-cell mdl-cell--12-col">
+		<h2 class="mdl-typography--headline-color-contrast">已追蹤商家</h2>
+	</div>
+</div>
+
+
+<div class="mdl-grid seller-list">
+
+	<% 30.times do %>
+
+	<!-- normal -->
+	<div class="seller-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+		<div class="mdl-card--expand mdl-card--border_bottom">
+			<a class="avatar" href="store.html">
+				<img src="img/avatar/a<%= 1 + rand(20) %>.jpg" alt="">
+			</a>
+		</div>
+		<div class="seller-name pro mdl-typography--text-center">
+			<%= zh_lorem_words(4+rand(12)) %>
+		</div>
+	</div>
+
+
+	<% end %>
+
+
+	<div class="pager mdl-cell mdl-cell--12-col">
+		<a href="#" class="previous-page" >
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey-300">
+        <i class="material-icons">arrow_back</i>
+      </button>
+			上一頁
+    </a>   
+		<a href="#" class="next-page" >
+			下一頁
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--grey-300">
+        <i class="material-icons">arrow_forward</i>
+      </button>
+    </a>   
+	</div>
+
+</div>
