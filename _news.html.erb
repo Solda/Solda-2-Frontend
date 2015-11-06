@@ -17,20 +17,20 @@
 	-->
 	<div class="mdl-grid store-news-list">
 		
-		<!-- 第一次出現的預告 -->
+		<!-- 只要有追蹤，這張卡片就不會顯示 -->
 		<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone" style="background: #d6f4ff;">
 			<div class="mdl-card__title">
-				<h4 class="mdl-card__title-text">追蹤喜愛的商家</h4>
+				<h4 class="mdl-card__title-text">目前沒有追蹤的商家</h4>
 			</div>
-			<div class="mdl-card__supporting-text mdl-card--expand">
+			<div class="mdl-card__media mdl-card--expand" style="background: transparent; text-align: center;">
+				<img style="width: 100px;" src="img/category/favorite-stores.svg" alt="">
+
+			</div>
+			<div class="mdl-card__supporting-text">
 				在商店頁面點下追蹤，他們的新商品就會出現在這裡喔。多加利用來發現有趣商品吧！
 			</div>
-				<div class="mdl-card__actions mdl-card--border">
-					<a href="#" class="mdl-button mdl-js-button mdl-button--colored">我瞭解了</a>
-				</div>
 		</div>
 		
-
 
 		
 		<% 3.times do %>
