@@ -762,6 +762,26 @@ footer {
 		background: white;
 	}
 
+	.store-category-list {
+		li {
+			list-style: none;
+			a {
+				&:hover {
+					color: rgb(255, 64, 129);
+				}
+				display: flex;
+				font-size: 14px;
+				line-height: 36px;
+				text-decoration: none;
+				color: rgba(0,0,0,0.87);
+				small {
+					padding-left: 1em;
+					color: rgba(0,0,0,0.32);
+				}
+			}
+		}
+	}
+
 }
 
 

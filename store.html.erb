@@ -4,10 +4,7 @@
 	</a>
 	<h1>寶物淘淘網</h1>
 	<p>@cloud-tou•87 % 好評 </p>
-	<a class="profile_excerpt" href="profile.html">大家好，我們是hahahana 
-由兩個小小設計師組合的品牌大家好，我們是hahahana 
-由兩個小小設計師組合的品牌大家好，我們是hahahana 
-由兩個小小設計師組合的品牌</a>
+	<a class="profile_excerpt" href="profile.html"><%= zh_lorem_paragraphs(2) %></a>
 </div>
 
 <div class="mdl-tabs mdl-js-tabs">
@@ -101,6 +98,21 @@
 
   </div>
   <div class="mdl-tabs__panel" id="tab2">
-    <p>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/>Second tab's content.<br/></p>
+    <div class="mdl-grid store-category-list">
+    	<div class="mdl-cellb mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--4-col-tablet mdl-cell--2-offset-tablet mdl-cell--4-col-phone">
+    		<ul>
+
+					<% 15.times do %>
+
+	    		<li>
+	    			<a href="#">
+	    				<%= zh_lorem_words(1+rand(6)) %><small><%= rand(30) %></small></a>
+	    		</li>
+    		
+					<% end %>
+
+    		</ul>
+    	</div>
+    </div>
   </div>
 </div>
