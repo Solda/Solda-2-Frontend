@@ -19,15 +19,10 @@ $( document ).ready(function() {
 			$( ".category-container" ).toggleClass( 'show-all' );
 		});		
 		
-		// 顯示搜尋
-		
-		// $( "a.category-icon.search" ).click(function() {
-		// 	$( "main.mdl-layout__content" ).toggleClass( 'show-search-full' );
-		// 	$("#search").focus();
-		// });		
-		// $( ".logo img" ).click(function() {
-		// 	$( "main.mdl-layout__content" ).toggleClass( 'show-search-full' );
-		// });		
+		// 商家頁面，點預告可展開
 
+		$( "a.expand-more, a.expand-less" ).click(function() {
+			$( ".billboard-card" ).toggleClass( 'expand' );
+		});	
 
 });
