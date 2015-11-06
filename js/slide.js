@@ -25,4 +25,10 @@ $( document ).ready(function() {
 			$( ".billboard-card" ).toggleClass( 'expand' );
 		});	
 
+		// 點兩下隱藏預告，只是為了看版面方便
+
+		$( ".billboard-card" ).dblclick(function() {
+			$( this ).hide();
+		});	
+
 });
