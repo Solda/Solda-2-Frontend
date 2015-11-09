@@ -5,6 +5,13 @@ body {
 	font-family: "Noto Sans CJK TC", sans-serif;
 }
 
+.mdl-card {
+	min-height: 60px;
+}
+.mdl-card__supporting-text {
+	width: auto;
+}
+
 // little hr
 
 hr.little {
@@ -762,28 +769,44 @@ footer {
 		background: white;
 	}
 
-	.store-category-list {
-		li {
-			list-style: none;
-			a {
-				&:hover {
-					color: rgb(255, 64, 129);
-				}
-				display: flex;
-				font-size: 14px;
-				line-height: 36px;
-				text-decoration: none;
-				color: rgba(0,0,0,0.87);
-				small {
-					padding-left: 1em;
-					color: rgba(0,0,0,0.32);
-				}
+}
+
+
+// list style
+
+.text-list {
+	padding-left: 0;
+	li {
+		list-style: none;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		i {
+			width: 24px;
+			margin-top: 10px;
+			margin-right: 36px;
+			opacity: 0.8;
+		}
+		a {
+			&:hover {
+				color: rgb(255, 64, 129);
+			}
+			font-size: 16px;
+			line-height: 46px;
+			text-decoration: none;
+			color: rgba(0,0,0,0.87);
+			small {
+				padding-left: 1em;
+				color: rgba(0,0,0,0.32);
 			}
 		}
 	}
-
 }
 
+
+.icon-list {
+	@extend .text-list;
+}
 
 // product
 
@@ -805,3 +828,56 @@ footer {
 }
 
 
+// rating
+
+.rating-tab.mdl-tabs__tab-bar {
+	height: 110px;
+	width: 100%;
+	margin-top: 20px;
+	.mdl-tabs__tab {
+		height: 110px;
+	}
+	a {
+		width: 18%;
+		text-decoration: none;
+		display: block;
+		font-size: 12px;
+		color: rgba(0,0,0,0.34);
+		line-height: 18px;
+		img {
+			margin: 10px auto;
+		}
+		strong {
+			font-size: 20px;
+			color: rgba(0,0,0,0.87);
+			line-height: 30px;
+		}
+	}
+
+}
+
+.rating-container {
+	padding: 16px;
+	.rating-unit {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		padding-top: 8px;
+		padding-bottom: 8px;
+		.product {
+			padding: 8px 0;
+			img {
+				border-radius: 2px;
+				height: 88px;
+			}
+		}
+		.buyer {
+			a {
+				text-decoration: none;
+				color: black;
+			}
+			font-size: 13px;
+			small {
+				color: rgba(0,0,0,0.32);
+			}
+		}
+	}
+}

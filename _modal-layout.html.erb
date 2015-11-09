@@ -1,0 +1,25 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <%= render :partial => "header" %>
+  </head>
+  <body>
+    <div class="store-page mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
+      <div class="corner-area left">
+        <a href="#" onclick="window.history.go(-1); return false;" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">close</i></a>
+      </div>
+
+      <header class="mdl-layout__header mdl-layout__header--transparent mdl-card--border_bottom ">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title" style="color: rgba(0,0,0,0.87);">商家介紹</span>  
+        </div>
+      </header>
+
+
+      <main class="mdl-layout__content">
+        <%= yield %>
+      </main>
+    </div>
+  </body>
+</html>

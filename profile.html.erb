@@ -1,0 +1,133 @@
+<div class="mdl-grid store-news-list">
+			<!-- 預告 -->
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop  mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+		<div class="mdl-card__supporting-text mdl-card--border_bottom ">
+			商家介紹
+		</div>
+		<div class="mdl-card__supporting-text">
+			<p class="mdl-typography--body-1 mdl-color-text--black">
+				<%= zh_lorem_paragraphs(2) %>
+			</p>
+		</div>
+	</div>
+
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop  mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+		<div class="mdl-card__supporting-text mdl-card--border_bottom ">
+			聯絡方式
+		</div>
+		<div class="mdl-card__supporting-text">
+
+	  		<ul class="icon-list">
+
+	    		<li>
+	    			<i class="material-icons">phone</i>
+	    			<a href="tel:0912-345-678">0912-345-678</a>
+	    		</li>
+
+	    		<li>
+	    			<i><img src="img/profile/facebook.svg" /></i>
+	    			<a href="#">手打拍賣粉絲專業</a>
+	    		</li>
+
+	    		<li>
+	    			<i><img src="img/profile/twitter.svg" /></i>
+	    			<a href="#">@sillyleo</a>
+	    		</li>
+
+	    		<li>
+	    			<i><img src="img/profile/instagram.svg" /></i>
+	    			<a href="#">@ken.is.photographer</a>
+	    		</li>
+
+	    		<li>
+	    			<i><img src="img/profile/address.svg" /></i>
+	    			<a href="https://www.google.com.tw/maps/place/台北市新生南路三段/@25.0212125,121.531932,17z/data=!3m1!4b1!4m2!3m1!1s0x3442a988f6b28787:0xf93d3d26e9917cbb">台北市大安區新生南路三段 280 號</a>
+	    		</li>
+
+    		</ul>
+		</div>
+	</div>
+
+
+		
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop  mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+		<div class="mdl-card__supporting-text mdl-card--border_bottom ">
+			評價
+		</div>
+		<div class="mdl-card__supporting-text mdl-typography--text-center">
+			最近兩個月的 <strong class="mdl-color-text--black">27</strong> 筆訂單有 <strong class="mdl-color-text--black">100%</strong> 的優良評價。
+		</div>
+
+
+		<div class="mdl-tabs mdl-js-tabs">
+		  <div class="mdl-tabs__tab-bar rating-tab">
+
+		    <a href="#tab1" class="mdl-tabs__tab is-active">
+					優良<br/>
+					<img src="img/profile/good.svg" alt=""><br/>
+					<strong>160</strong>
+		    </a>
+
+		    <a href="#tab2" class="mdl-tabs__tab">
+					可接受<br/>
+					<img src="img/profile/ok.svg" alt=""><br/>
+					<strong>4</strong>
+		    </a>
+
+		    <a href="#tab3" class="mdl-tabs__tab">
+					不滿意<br/>
+					<img src="img/profile/bad.svg" alt=""><br/>
+					<strong>1</strong>
+		    </a>
+
+		  </div>
+		  <div class="mdl-tabs__panel is-active" id="tab1">
+		    
+
+		   <div class="rating-container">
+			   <% 7.times do %>
+					<div class="rating-unit">
+						<div class="buyer">
+							<a href="store.html"><%= zh_lorem_name %></a>：<%= zh_lorem_words(4+rand(10)) %> <small> - <%= lorem_date %></small>
+						</div>
+						<div class="product">
+							<a href="#"><img src="img/products/p<%= 1 + rand(78) %>.jpg" alt=""></a>
+						</div>
+					</div>
+
+					<div class="rating-unit">
+
+						<div class="buyer">
+							<a href="store.html"><%= zh_lorem_name %></a>：<%= zh_lorem_words(4+rand(10)) %> <small> - <%= lorem_date %></small>
+						</div>
+						<div class="product">
+							<a href="#"><img src="img/products/p<%= 1 + rand(78) %>.jpg" alt=""></a>
+							<a href="#"><img src="img/products/p<%= 1 + rand(78) %>.jpg" alt=""></a>
+						</div>
+					</div>
+				<% end %>		   	
+		   </div>
+
+
+		  </div>
+		  <div class="mdl-tabs__panel" id="tab2">
+				<div class="mdl-card__supporting-text mdl-typography--text-center">
+					沒有資料。
+				</div>
+		  </div>
+		  <div class="mdl-tabs__panel" id="tab3">
+
+				<div class="mdl-card__supporting-text mdl-typography--text-center">
+					沒有資料。
+				</div>
+
+		  </div>
+		</div>
+
+	
+	</div>
+
+
+		
+
+</div>
