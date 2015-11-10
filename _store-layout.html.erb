@@ -4,7 +4,7 @@
     <%= render :partial => "header" %>
   </head>
   <body>
-    <div class="store-page mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
+    <div class="<% if content_for? :product %>product-page<% else %>store-page<% end %> mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
     
       <div class="corner-area left">
         <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
@@ -18,11 +18,6 @@
 
           <a class="mdl-navigation__link"href=""><i class="material-icons">share</i></a>
           <a class="mdl-navigation__link" href=""><i class="material-icons">message</i></a>
-          <a class="mdl-navigation__link" href="" id="tt2" ><i class="material-icons">star_outline</i><span class="mdl-tooltip" for="tt2">追蹤商家</span></a>
-          
-          <!-- 以追蹤就顯示這個狀態： -->
-  <!--           <a class="mdl-navigation__link" href="" id="tt2" ><i class="material-icons active-icon">star</i><span class="mdl-tooltip" for="tt2">取消追蹤此商家</span></a>
-  -->
         </div>
         
       <% else %>
