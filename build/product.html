@@ -40,58 +40,37 @@
 
   </head>
   <body>
-    <div class="homepage mdl-layout mdl-js-layout">
-	    
+    <div class="product-page mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
+    
+      <div class="corner-area left">
+        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
+      </div>
 
-	    	<!-- 如果是首頁就顯示上方工具列，以及右上方通知 icon -->
+      
 
-	      <div class="corner-area right">
-	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">notifications</i></a>
-	        <!-- 如果有通知顯示下方 icon -->
-	        <a style="display: none;" href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons active-icon">notifications_active</i></a>
-	      </div>
+      <!-- 如果是商品頁面，右上角顯示這些按鈕 -->
 
-	      <header class="mdl-layout__header mdl-layout__header--transparent mdl-cell--hide-desktop">
-	        <div class="mdl-layout-icon"></div>
-	        <div class="mdl-layout__header-row">
-	          <span class="mdl-layout-title mdl-layout--large-screen-only">SOLDA 手打拍賣</span>
-	          <div class="mdl-layout-spacer"></div>
-	        </div>
-	      </header>
-	      <div class="mdl-layout__drawer">
-	        <span class="mdl-layout__title">SOLDA 手打拍賣</span>
-	        <nav class="mdl-navigation">
-            <nav class="mdl-navigation">
-  <a class="mdl-navigation__link is-active" href="/"><i class="material-icons">stars</i>手打精選</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">assignment</i>訂單</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">question_answer</i>訊息</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">store</i>我的商店</a>
-  <hr>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i>商店設定</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">add_circle_outline</i>上架商品</a>
-  <hr>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i>客服中心</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">account_circle</i>登出 solda-hero</a>
-</nav>
-	        </nav>
-	      </div>
-	
-	      
-			
-			
+        <div class="corner-area right">
+
+          <a class="mdl-navigation__link"href=""><i class="material-icons">share</i></a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons">message</i></a>
+        </div>
+        
+      
+
       <main class="mdl-layout__content">
-        <div class="vertical-spacer mdl-layout--small-screen-only"></div>
-        <h1 id="section">主要頁面</h1>
+        <!-- 指定有 prodcut layout -->
 
-<ul>
-  <li><a href="http://solda.github.io/Solda-2-Frontend/build/index.html">首頁</a></li>
-  <li><a href="http://solda.github.io/Solda-2-Frontend/build/category.html">通用產品列表</a></li>
-  <li><a href="http://solda.github.io/Solda-2-Frontend/build/search.html">搜尋</a></li>
-</ul>
+	
+<div class="product-gallery">
+	<img src="img/products/p12.jpg" alt="">
+	<img src="img/products/p13.jpg" alt="">
+	<img src="img/products/p14.jpg" alt="">
+</div>
 
-		    <hr class="little" />
+        <hr class="little hide-when-search" />
 
-<footer class="mdl-mega-footer">
+<footer class="mdl-mega-footer hide-when-search">
   <div class="mdl-mega-footer__middle-section">
 
     <div class="mdl-mega-footer__drop-down-section">

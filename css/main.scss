@@ -882,3 +882,15 @@ footer {
 	}
 }
 
+
+// sidebar
+
+.mdl-layout__drawer .mdl-navigation a.mdl-navigation__link {
+	&.is-active {
+		color: #FF4081;
+		background-color: lighten(#e0e0e0, 5%);
+	}
+	i {
+		margin-right: 32px;
+	}
+}
