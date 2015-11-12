@@ -785,7 +785,10 @@ footer {
 			width: 24px;
 			margin-top: 10px;
 			margin-right: 36px;
-			opacity: 0.8;
+			opacity: 1;
+		}
+		i.material-icons {
+			color: rgba(0,0,0,0.87);
 		}
 		a {
 			&:hover {
@@ -810,7 +813,108 @@ footer {
 
 // product
 
+#buy-section {
+	border-top: 1px solid rgba(0,0,0,0.1);
+	margin-bottom: 16px;
+	padding: 12px 0 10px 0;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	vertical-align: text-bottom;
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0px;
+	z-index: 1;
+	background: white;
+
+	button.mdl-button--icon {
+		margin-top: 4px;
+		margin-left: 16px;
+	}
+}
+
+#main-product-info {
+	background: white;
+}
+
+#sub-product-info {
+	hr {
+		margin-top: 0;
+	}
+	// 小標題
+	h6 {
+		color: rgba(0, 0, 0, 0.54);
+		font-size: 13px;
+		line-height: 18px;
+		font-weight: bold;	
+	}
+	h2 {
+		font-size: 16px;
+		margin: 0;
+		font-weight: bold;
+	}
+}
+
+
+
 .product-page {
+
+
+	// 調整 social button
+
+	#share-section {
+		button {
+		margin: 0 8px;
+			opacity: 0.87;
+		}
+	}
+	
+	.mdl-button img {
+		margin-top: -4px;
+	}
+
+	// 下方的商店資訊
+
+	.store-info-card {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		margin: 8px 0;
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 2px;
+			margin-right: 16px;
+		}
+		button {
+			margin-top: 4px;
+		}
+		a {
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			text-decoration: none;
+			h1 {
+				margin: 0;
+				color: rgba(0,0,0,0.87);
+				font-size: 14px;
+				line-height: 24px;
+				font-weight: bold;
+			}
+			p {
+				color: rgba(0,0,0,0.54);
+				margin: 0;
+				line-height: 12px;
+				font-size: 12px;
+			}
+		}
+	}
+
+	// icon 辯白
+
+	.corner-area i {
+		color: white;
+	}
 	// 上方添加 gradient
 	.mdl-layout__content::after {
 	 display: block;
@@ -822,7 +926,83 @@ footer {
 	 right: 0;
 	 height: 64px;
 	 z-index: 1;
-	 background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.3) 76%);
+	 background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 20%, rgba(0,0,0,0.2) 76%);
+	}
+
+	#product-gallery {
+		overflow-x: auto;
+    white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
+		vertical-align: top;
+		.img-container {
+			vertical-align: top;
+			width: 90vw;
+			height: 90vw;
+			max-height: 500px;
+			max-width: 800px;
+			display: inline-block;
+		}
+	}
+	h1.mdl-typography--headline {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.product-price {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		p {
+			line-height: 24px;			
+		}
+	}
+
+	@media (min-width: 840px) {
+		#link-gallery {
+  		margin-top: -30px;
+  	}
+  }
+	#link-gallery {
+		overflow-x: auto;
+    white-space: nowrap;
+    z-index: 1;
+		-webkit-overflow-scrolling: touch;
+		padding: 12px 16px 0 16px;
+		a {
+			i {
+				position: absolute;
+				left: 16px;
+				top: 24px;
+			}
+			padding: 16px 16px 16px 52px;
+			font-size: 12px;
+		  -webkit-line-clamp: 3;
+		  -webkit-box-orient: vertical;
+	    white-space: normal;
+			color: rgba(0,0,0,0.54);
+			text-decoration: none;
+			background: #D3E8BE;
+			box-sizing: border-box;
+			height: 72px;
+			min-width: 250px;
+			width: 40vw;
+			max-width: 360px;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 8px;
+			overflow: hidden;
+		  position: relative;
+		  border-radius: 2px;
+			&:after {
+			  content: "";
+			  position: absolute;
+			  bottom: 0;
+			  right: 0;
+			  width: 100%;
+			  height: 16px;
+				background: #D3E8BE;
+			}
+		}
 	}
 
 }
@@ -893,4 +1073,19 @@ footer {
 	i {
 		margin-right: 32px;
 	}
+}
+
+
+// 結帳按鈕
+
+#checkout-fab {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: right;
+	display: flex;
+	padding: 16px;
+	position: absolute;
+	bottom: 68px;
+	right: 0;
 }
