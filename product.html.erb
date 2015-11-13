@@ -22,10 +22,8 @@
 
 	<div id="link-gallery">
 
-
 		<a href="#" id="link-description1" target="_blank"><i class="material-icons">open_in_new</i><%= zh_lorem_paragraph %></a>
 		<span for="link-description1" class="mdl-tooltip" >關於這連結的說明（使用者自己打的）</span>
-
 
 		<a href="#" id="link-description2" target="_blank"><i class="material-icons">open_in_new</i><%= zh_lorem_paragraph %></a>
 		<span for="link-description2" class="mdl-tooltip" >關於這連結的說明（使用者自己打的）</span>
@@ -33,47 +31,15 @@
 
 
 
-	<div class="mdl-grid">
+	<div  class="mdl-grid">
 		<div class="product-detail mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 		
-			<h1 class="mdl-typography--headline"><%= zh_lorem_words(13+rand(5)) %>- <%= zh_lorem_words(5+rand(2)) %></h1>
+			<h1 class="mdl-typography--headline"><%= zh_lorem_words(13+rand(20)) %>- <%= zh_lorem_words(5+rand(2)) %></h1>
 
 			<div class="product-price">
 				<p class="mdl-typography--body-2 mdl-color-text--accent">NT$ 450</p>
 				<div class="mdl-layout-spacer"></div>
 				<p class="mdl-typography--caption-color-contrast">台北市•剩餘 0 天 0:59</p>
-			</div>
-
-
-
-		<div id="checkout-fab">
-			<div class="mdl-layout-spacer"></div>
-			<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-			<i class="material-icons">shopping_cart</i>
-			</button>
-		</div>
-	
-
-
-			<div id="buy-section">
-
-
-				<button class="mdl-button mdl-js-button mdl-button--accent mdl-button--raised mdl-js-ripple-effect">
-				  馬上購買
-				</button>
-
-				<button class="mdl-button mdl-js-button mdl-button--icon" id="fav">
-				  <i class="material-icons">favorite_outline</i><span class="mdl-tooltip" for="fav">喜愛商品</span>
-				</button>
-
-
-				<div class="mdl-layout-spacer"></div>
-
-
-				<button class="mdl-button mdl-js-button mdl-button--icon" id="cart">
-				  <i class="material-icons">add_shopping_cart</i><span class="mdl-tooltip" for="cart">加入購物車</span>
-				</button>
-
 			</div>
 
 			<div class="product-description">
@@ -84,16 +50,30 @@
 				<% end %>
 
 				<p class="mdl-typography--caption-color-contrast">瀏覽 40•庫存 7•銷售 3•更新於 2015/06/26</p>
-		
 			</div>
-
 		</div>
+	</div>
+
+	<div id="buy-section" class="mdl-grid">
+		<div class="buy-bar mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 
 
+			<button id="buy-now" class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect">
+			  馬上購買
+			</button>
+
+			<button class="mdl-button mdl-js-button mdl-button--icon" id="fav">
+			  <i class="material-icons">favorite_outline</i><span class="mdl-tooltip" for="fav">喜愛商品</span>
+			</button>
 
 
-	</div>	
+			<div class="mdl-layout-spacer"></div>
 
+			<button id="add-to-cart" class="mdl-button mdl-js-button mdl-button--icon">
+			  <i class="material-icons">add_shopping_cart</i><span class="mdl-tooltip" for="cart">加入購物車</span>
+			</button>
+		</div>
+	</div>
 
 </div>
 

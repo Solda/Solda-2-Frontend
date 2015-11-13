@@ -814,13 +814,30 @@ footer {
 // product
 
 #buy-section {
-	border-top: 1px solid rgba(0,0,0,0.1);
-	margin-bottom: 16px;
-	padding: 12px 0 10px 0;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	vertical-align: text-bottom;
+	padding-top: 0;
+	padding-bottom: 0;
+	.buy-bar {
+		height: 72px;
+		@media (max-width: 480px) {
+			height: 53px;			
+		}
+		@media (min-width: 479px) {
+			#buy-now {
+				background-color: #f95381;
+		    color: rgb(255,255,255);
+		  	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+			}
+		}
+		margin-top: 0;
+		margin-bottom: 0;
+		border-top: 1px solid rgba(0,0,0,0.2);
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
 	position: -webkit-sticky;
 	position: sticky;
 	bottom: 0px;
@@ -828,7 +845,6 @@ footer {
 	background: white;
 
 	button.mdl-button--icon {
-		margin-top: 4px;
 		margin-left: 16px;
 	}
 }
@@ -1079,13 +1095,20 @@ footer {
 // 結帳按鈕
 
 #checkout-fab {
+	position: fixed;
+	@media (max-width: 480px) {
+		bottom: 27px;
+		right: 16px;
+	}
+	bottom: 44px;
+	right: 32px;
+	z-index: 2;
 	display: block;
-	width: 100%;
-	box-sizing: border-box;
-	text-align: right;
-	display: flex;
-	padding: 16px;
-	position: absolute;
-	bottom: 68px;
-	right: 0;
+	transition: all 0.4s;
+	transform: rotate(180deg) scale(0);
+	opacity: 0;
+	&.pop-in {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
 }

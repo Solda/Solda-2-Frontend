@@ -31,4 +31,11 @@ $( document ).ready(function() {
 			$( this ).hide();
 		});	
 
+		// 產品頁示範呼叫購物車
+
+		$("#add-to-cart").click(function() {
+			$("#checkout-fab").addClass("pop-in");
+			$(this).fadeOut();
+		});
+
 });
