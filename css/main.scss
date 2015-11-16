@@ -5,6 +5,10 @@ body {
 	font-family: "Noto Sans CJK TC", sans-serif;
 }
 
+a {
+	cursor: pointer;
+}
+
 .mdl-card {
 	min-height: 60px;
 }
@@ -109,6 +113,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 // logo
 
 .logo {
+	color: rgba(0,0,0,0.4);
 	hr.little {
 		margin-bottom: 1em;
 	}
@@ -127,7 +132,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 		margin-top: 2em;
 	}
 	p a {
-
+		display: inline-block;
 		font-size: 14px;
 		color: rgba(0,0,0,0.4);
 		text-decoration: none;
