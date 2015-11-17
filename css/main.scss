@@ -16,6 +16,16 @@ a {
 	width: auto;
 }
 
+// nav overflow
+
+nav {
+	a.mdl-navigation__link {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
+
 // little hr
 
 hr.little {
