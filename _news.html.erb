@@ -36,9 +36,6 @@
 		<% 3.times do %>
 		<!-- 無 favortite -->
 		<div class="store-news-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-			<div class="mdl-card__supporting-text">
-				<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
-			</div>
 			<div class="mdl-card--media mdl-card--expand" style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
 				<a href="product.html" class="link-to-product"></a>
 				<div class="mdl-card__actions">
@@ -47,13 +44,14 @@
 					<i class="favorite-button material-icons">favorite_outline</i>
 				</div>
 			</div>
+			<div class="mdl-card__supporting-text">
+				<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
+			</div>
+
 		</div>
 		
 		<!-- 有 favortite -->
 		<div class="store-news-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-			<div class="mdl-card__supporting-text">
-				<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
-			</div>
 			<div class="mdl-card--media mdl-card--expand" style="background: url('img/products/p<%= 1 + rand(78) %>.jpg') center / cover;">
 				<a href="product.html" class="link-to-product"></a>
 				<div class="mdl-card__actions">
@@ -62,6 +60,10 @@
 					<i class="favorite-button material-icons active-icon">favorite</i>
 				</div>
 			</div>
+			<div class="mdl-card__supporting-text">
+				<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %> ∙ 1 天</a>
+			</div>
+
 		</div>
 		
 		<% end %>
