@@ -16,6 +16,17 @@ a {
 	width: auto;
 }
 
+// spinner 
+
+.spinner-area {
+	position: fixed;
+	overflow: visible;
+	height: 1px;
+	width: 100%;
+	top: 16px;
+	z-index: 100;
+	text-align: center;
+}
 
 // little hr
 
