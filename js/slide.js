@@ -36,7 +36,6 @@ $( document ).ready(function() {
 		$("#add-to-cart").click(function() {
 			$("#checkout-fab").addClass("pop-in");
 			$("#buy-now").addClass("normalize");
-			$(this).fadeOut();
 		});
 
 });

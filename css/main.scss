@@ -16,15 +16,6 @@ a {
 	width: auto;
 }
 
-// nav overflow
-
-nav {
-	a.mdl-navigation__link {
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-	}
-}
 
 // little hr
 
@@ -324,12 +315,20 @@ $page-width: 1024px;
 	}
 
 
-	@media (max-width: 479px) {
+	@media (min-width: 321px) and (max-width: 479px) {
 	.link-to-product {
-		height: 160px;
+		height: 150px;
 		overflow: hidden;
 		}
 	}
+
+	@media (max-width: 320px) {
+	.link-to-product {
+		height: 110px;
+		overflow: hidden;
+		}
+	}
+
 
 	
 	// 	讓品名和 favorite icon 置底
@@ -1134,12 +1133,47 @@ footer {
 
 // sidebar
 
+
+// nav overflow
+
+nav {
+	a.mdl-navigation__link {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		line-height: 24px;
+		padding: 12px;
+	}
+}
+
+.mdl-layout__title {
+	margin-top: 16px;
+	img {
+		position: relative;
+		left: -15px;
+		top: -3px;
+	}
+}
+
+.mdl-layout__drawer {
+width: 280px;
+-webkit-transform: translateX(-290px);
+-ms-transform: translateX(-290px);
+transform: translateX(-290px);
+}
+
+.mdl-layout__drawer>.mdl-layout__title, .mdl-layout__drawer>.mdl-layout-title {
+	padding-left: 26px;
+}
+
 .mdl-layout__drawer .mdl-navigation a.mdl-navigation__link {
+	padding-left: 26px;
 	&.is-active {
 		color: #FF4081;
 		background-color: lighten(#e0e0e0, 5%);
 	}
 	i {
+		vertical-align: middle;
 		margin-right: 32px;
 	}
 }
