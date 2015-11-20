@@ -4,7 +4,10 @@
     <%= render :partial => "header" %>
   </head>
   <body>
-    <div class="<% if content_for? :product %>product-page<% else %>store-page<% end %> mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
+      <div class="fixed-area">
+        <a href="index.html"><img src="img/solda-pick.svg" alt=""></a>
+      </div>
+      <div class="<% if content_for? :product %>product-page<% else %>store-page<% end %> mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
     
       <div class="corner-area left">
         <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
