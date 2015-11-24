@@ -7,6 +7,14 @@ body {
 
 a {
 	cursor: pointer;
+	img {
+		border: none;
+	}
+}
+
+img {
+	outline: none;
+	border: none;
 }
 
 .mdl-card {
