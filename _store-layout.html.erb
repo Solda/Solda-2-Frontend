@@ -4,9 +4,11 @@
     <%= render :partial => "header" %>
   </head>
   <body>
-      <div class="fixed-area">
+<!--       <div class="fixed-area">
         <a href="index.html"><img src="img/solda-pick.svg" alt=""></a>
-      </div>
+      </div> -->
+      <div id="top-bar"><img src="img/solda-pick.svg" alt=""></div>
+
       <div class="<% if content_for? :product %>product-page<% else %>store-page<% end %> mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
     
       <div class="corner-area left">
