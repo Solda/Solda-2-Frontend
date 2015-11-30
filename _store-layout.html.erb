@@ -11,13 +11,15 @@
 
       <div class="<% if content_for? :product %>product-page<% else %>store-page<% end %> mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
     
-      <div class="corner-area left">
-        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
-      </div>
 
       <% if content_for? :product %>
 
-      <!-- 如果是商品頁面，右上角顯示這些按鈕 -->
+        <div class="corner-area left">
+          <a href="store.html" class="avatar" id="store-name">
+            <img src="img/avatar/a6.jpg" alt="">
+            <span class="mdl-tooltip" for="store-name">寶物淘淘網</span>
+          </a>
+        </div>
 
         <div class="corner-area right">
 
@@ -27,7 +29,12 @@
         
       <% else %>
 
-      <!-- 如果是商家頁面，右上角顯示這些按鈕 -->
+
+        <div class="corner-area left">
+          <a href="index.html" class="avatar logo">
+            <img src="img/solda-pick.svg" alt="">
+          </a>
+        </div>
 
         <div class="corner-area right">
 
