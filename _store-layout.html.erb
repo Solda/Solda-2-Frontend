@@ -4,10 +4,6 @@
     <%= render :partial => "header" %>
   </head>
   <body>
-<!--       <div class="fixed-area">
-        <a href="index.html"><img src="img/solda-pick.svg" alt=""></a>
-      </div> -->
-      <div id="top-bar"><img src="img/solda-pick.svg" alt=""></div>
 
       <div class="<% if content_for? :product %>product-page<% else %>store-page<% end %> mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll">
     
@@ -38,7 +34,7 @@
 
         <div class="corner-area right">
 
-          <a class="mdl-navigation__link"href=""><i class="material-icons">share</i></a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons">share</i></a>
           <a class="mdl-navigation__link" href=""><i class="material-icons">message</i></a>
           <a class="mdl-navigation__link" href="" id="tt2" ><i class="material-icons">star_outline</i><span class="mdl-tooltip" for="tt2">追蹤商家</span></a>
           
