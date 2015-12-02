@@ -342,7 +342,7 @@ componentHandler = (function() {
    * Finds a created component by a given DOM node.
    *
    * @param {!Node} node
-   * @return {*}
+   * @return {?componentHandler.Component}
    */
   function findCreatedComponentByNodeInternal(node) {
     for (var n = 0; n < createdComponents_.length; n++) {
@@ -351,6 +351,7 @@ componentHandler = (function() {
         return component;
       }
     }
+    return null;
   }
 
   /**
@@ -358,7 +359,7 @@ componentHandler = (function() {
    * Execute if found.
    * Remove component from createdComponents list.
    *
-   * @param {*} component
+   * @param {?componentHandler.Component} component
    */
   function deconstructComponentInternal(component) {
     if (component &&
@@ -1539,7 +1540,7 @@ MaterialMenu.prototype.hide = function () {
         var items = this.element_.querySelectorAll('.' + this.CssClasses_.ITEM);
         // Remove all transition delays; menu items fade out concurrently.
         for (var i = 0; i < items.length; i++) {
-            items[i].style.transitionDelay = null;
+            items[i].style.removeProperty('transition-delay');
         }
         // Measure the inner element.
         var rect = this.element_.getBoundingClientRect();
@@ -2779,7 +2780,7 @@ componentHandler.register({
    * https://github.com/jasonmayes/mdl-component-design-pattern
    *
    * @constructor
-   * @param {HTMLElement} element The element that will be upgraded.
+   * @param {Element} element The element that will be upgraded.
    */
 var MaterialTabs = function MaterialTabs(element) {
     // Stores the HTML element.
@@ -2863,7 +2864,7 @@ MaterialTabs.prototype.init = function () {
    * Constructor for an individual tab.
    *
    * @constructor
-   * @param {HTMLElement} tab The HTML element for the tab.
+   * @param {Element} tab The HTML element for the tab.
    * @param {MaterialTabs} ctx The MaterialTabs object that owns the tab.
    */
 function MaterialTab(tab, ctx) {
@@ -3684,7 +3685,7 @@ componentHandler.register({
    * https://github.com/jasonmayes/mdl-component-design-pattern
    *
    * @constructor
-   * @param {HTMLElement} element The element that will be upgraded.
+   * @param {Element} element The element that will be upgraded.
    */
 var MaterialDataTable = function MaterialDataTable(element) {
     this.element_ = element;
@@ -3719,7 +3720,7 @@ MaterialDataTable.prototype.CssClasses_ = {
    * single row (or multiple rows).
    *
    * @param {Element} checkbox Checkbox that toggles the selection state.
-   * @param {HTMLElement} row Row to toggle when checkbox changes.
+   * @param {Element} row Row to toggle when checkbox changes.
    * @param {(Array<Object>|NodeList)=} opt_rows Rows to toggle when checkbox changes.
    * @private
    */
@@ -3757,7 +3758,7 @@ MaterialDataTable.prototype.selectRow_ = function (checkbox, row, opt_rows) {
    * Creates a checkbox for a single or or multiple rows and hooks up the
    * event handling.
    *
-   * @param {HTMLElement} row Row to toggle when checkbox changes.
+   * @param {Element} row Row to toggle when checkbox changes.
    * @param {(Array<Object>|NodeList)=} opt_rows Rows to toggle when checkbox changes.
    * @private
    */

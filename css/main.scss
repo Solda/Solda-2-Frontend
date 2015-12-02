@@ -27,18 +27,18 @@ img {
 
 // 修正按鈕的兼具
 
-// #topbar {
-// 	.mdl-navigation a.mdl-navigation__link {
-// 		padding: 12px 16px;
-// 	}
-// }
+#topbar {
+	.mdl-layout__header-row a.mdl-navigation__link {
+		padding: 0 8px 0 16px;
+	}
+}
 
 
 #topbar.mdl-layout__header {
 	background: white;
-	color: rgba(0,0,0,0.87);
+	color: rgba(0,0,0,0.54);
 	a {
-		color: rgba(0,0,0,0.87);
+		color: rgba(0,0,0,0.54);
 	}
 
 }

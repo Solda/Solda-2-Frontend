@@ -3972,7 +3972,8 @@ input.mdl-button[type="submit"] {
 .mdl-button--raised[disabled][disabled],
 .mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
   background-color: rgba(0,0,0, 0.12);
-  color: rgba(0,0,0, 0.26); }
+  color: rgba(0,0,0, 0.26);
+  box-shadow: none; }
 
 .mdl-button--colored[disabled][disabled],
 .mdl-button--colored.mdl-button--disabled.mdl-button--disabled {
