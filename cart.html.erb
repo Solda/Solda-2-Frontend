@@ -1,0 +1,43 @@
+<!-- 指定有 modal layout -->
+<% content_for :cart do %>
+<% end %>
+
+<div class="mdl-grid store-news-list">
+
+		<% 3.times do %>
+
+
+		<div class="cart-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+			<div class="mdl-card__supporting-text">
+				<a class="avatar" href="store.html"><img src="img/avatar/a<%= 1 + rand(20) %>.jpg" /><%= zh_lorem_words(4+rand(10)) %></a>
+			</div>
+			<div>
+				<table class="mdl-data-table mdl-js-data-table">
+
+						<% 3.times do %>
+
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric product-img"><div class="img-wrapper" style="background: url('img/products/p<%= 1 + rand(20) %>.jpg') center / cover;"></div></td>
+				      <td class="mdl-data-table__cell--non-numeric item"><%= zh_lorem_words(4+rand(10)) %><a href="#">（移除）</a><br/>
+								<p>數量：<select name="" id=""><option>3</option></select></p>
+				      </td>
+				      <td class="price">NT$ <%= 10 + rand(1500) %>
+							</td>
+				    </tr>
+
+						<% end %>
+	
+
+				</table>
+			</div>
+		  <div class="mdl-card__actions mdl-card--border">
+		    <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">開始結帳</a>
+		  	<div class="mdl-layout-spacer"></div>
+				<strong class="price">小計：NT$ <%= 10 + rand(1500) %></strong>	
+		  </div>
+
+		</div>
+
+		<% end %>
+
+</div>

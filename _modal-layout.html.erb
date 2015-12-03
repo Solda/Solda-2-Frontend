@@ -5,6 +5,9 @@
   </head>
   <body>
     <div class="store-page mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <% if content_for? :profile %> <!-- 如果是 profile -->
+
     
       <div class="corner-area left">
         <a href="#" onclick="window.history.go(-1); return false;" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">close</i></a>
@@ -15,6 +18,30 @@
           <span class="mdl-layout-title" style="color: rgba(0,0,0,0.87);">商家介紹</span>  
         </div>
       </header>
+
+      <% end %> 
+
+      <% if content_for? :cart %> <!-- 如果是購物車 -->
+        
+        <header id="cart-bar" class="mdl-layout__header">
+          <div class="mdl-layout-icon">
+            <button class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+          <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">購物車</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation">
+              <a class="mdl-navigation__link" href="">清空全部</a>
+            </nav>
+          </div>
+        </header>
+
+
+      <% end %>
 
 
       <main class="mdl-layout__content">
