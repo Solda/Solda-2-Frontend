@@ -88,6 +88,7 @@ img {
 		}
 		a {
 			font-size: 11px;
+			color: rgba(0,0,0,0.54);
 			text-decoration: none;
 			white-space: nowrap;
 		}
@@ -890,7 +891,7 @@ footer {
 	.store-profile {
 		text-align: center;
 		background: #FFFFFF;
-		padding-top: 66px;
+		padding-top: 36px;
 		padding-bottom: 16px;
 		a.avatar img {
 			width: 80px;
@@ -1362,4 +1363,10 @@ transform: translateX(-290px);
 
 .mdl-mega-footer {
 	padding-bottom: 64px;
+}
+
+// checkout
+
+.card-padding {
+	padding: 16px;
 }

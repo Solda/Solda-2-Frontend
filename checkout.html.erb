@@ -1,0 +1,93 @@
+<!-- 指定有 modal layout -->
+<% content_for :checkout do %>
+<% end %>
+
+<div class="mdl-grid store-news-list">
+
+
+		<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+			<div class="mdl-card__supporting-text mdl-card--border_bottom">
+				運送方式
+			</div>
+			<div class="card-padding">
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+				  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+				  <span class="mdl-radio__label">First</span>
+				</label>
+
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+				  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+				  <span class="mdl-checkbox__label">Checkbox</span>
+				</label>
+
+
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+				  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+				  <span class="mdl-radio__label">First</span>
+				</label>
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+				  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+				  <span class="mdl-radio__label">Second</span>
+				</label>
+
+
+
+
+<!-- Simple Textfield -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="sample1">
+    <label class="mdl-textfield__label" for="sample1">Text...</label>
+  </div>
+</form>
+<!-- Numeric Textfield -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+    <label class="mdl-textfield__label" for="sample2">Number...</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</form>
+
+
+
+
+<!-- Textfield with Floating Label -->
+
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Text...</label>
+  </div>
+</form>
+<!-- Numeric Textfield with Floating Label -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+    <label class="mdl-textfield__label" for="sample4">Number...</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</form>
+
+<!-- Floating Multiline Textfield -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+</form>
+
+
+
+
+<label for="switch1" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+  <input type="checkbox" id="switch1" class="mdl-switch__input">
+  <span class="mdl-switch__label">Sound off/on</span>
+</label>
+
+
+			</div>
+
+		</div>
+
+</div>
