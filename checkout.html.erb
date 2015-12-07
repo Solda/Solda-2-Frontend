@@ -10,6 +10,111 @@
 				運送方式
 			</div>
 			<div class="card-padding">
+
+				<div class="section">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+					  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+					  <span class="mdl-radio__label">郵局</span>
+					  <small>+ NT$30</small>
+					</label>
+				</div>
+				<div class="section">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+					  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+					  <span class="mdl-radio__label">統一超商取貨</span>
+					  <small>+ NT$60</small>
+					</label>
+				</div>
+
+				<div class="section show-self-fill">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+					  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+					  <span class="mdl-radio__label">國際運費</span>
+					  <small>請依照說明自行填寫運費</small>
+					</label>
+					<div class="self-fill">
+						<p>港澳 250，美國 140，歐洲 480，大洋洲 510<br/><small>若運費金額填寫錯誤，賣家有權取消該筆訂單。</small></p>
+						<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+					    <label class="mdl-textfield__label" for="sample4">輸入運費金額</label>
+					    <span class="mdl-textfield__error">輸入錯誤</span>
+					  </div>
+					</form>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+			<div class="mdl-card__supporting-text mdl-card--border_bottom">
+				付款方式
+			</div>
+			<div style="display: flex;" class="mdl-card__supporting-text mdl-card--border_bottom">
+			<span class="mdl-typography--body-1">總計： </span>
+			<span class="mdl-typography--body-2 mdl-color-text--accent">NT$ 1400</span>
+		  	<div class="mdl-layout-spacer"></div>
+				<span class="mdl-typography--body-1">含運費 NT$ 60</span>
+			</div>
+			<div class="card-padding">
+
+				<div class="section">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+					  <input type="radio" id="option-5" class="mdl-radio__button" name="options" value="2">
+					  <span class="mdl-radio__label">ATM 轉帳</span>
+					  <small>虛擬帳號，三日內繳費</small>
+					</label>
+				</div>
+
+
+				<div class="section show-credit-card">
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+					  <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="1" checked>
+					  <span class="mdl-radio__label">信用卡</span>
+					  <small>VISA / MasterCar / JCB</small>
+					</label>
+				</div>
+
+
+
+					<div class="section credit-card">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+					    <label class="mdl-textfield__label" for="sample4">信用卡號</label>
+					    <span class="mdl-textfield__error">輸入錯誤</span>
+					  </div>
+
+					  <div class="section horizontal">
+					  	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+					    <label class="mdl-textfield__label" for="sample4">月月 /  年年</label>
+					    <span class="mdl-textfield__error">輸入錯誤</span>
+					  </div>
+
+						  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+						    <label class="mdl-textfield__label" for="sample4">檢核碼</label>
+						    <span class="mdl-textfield__error">輸入錯誤</span>
+						  </div>
+					  </div>
+
+					</div>
+
+
+
+
+			</div>
+
+		</div>
+
+</div>
+
+
+
 				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
 				  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
 				  <span class="mdl-radio__label">First</span>
@@ -84,10 +189,3 @@
   <input type="checkbox" id="switch1" class="mdl-switch__input">
   <span class="mdl-switch__label">Sound off/on</span>
 </label>
-
-
-			</div>
-
-		</div>
-
-</div>

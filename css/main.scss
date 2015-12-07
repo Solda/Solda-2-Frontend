@@ -1369,4 +1369,28 @@ transform: translateX(-290px);
 
 .card-padding {
 	padding: 16px;
+
+	// 橫排的欄位
+
+	.section.horizontal {
+		display: flex;
+		& > div {
+			width: 140px;
+			margin-right: 1em;
+		}
+	}
+
+	.section {
+		padding: 4px 0 4px 0;
+		small {
+			color: rgba(0,0,0,0.54);
+		}
+	}
+	.self-fill, .credit-card {
+		&.show {
+			display: block;
+		}
+		display: none;
+		padding: 16px 24px 0 24px;
+	}
 }
