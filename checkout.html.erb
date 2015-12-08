@@ -5,6 +5,37 @@
 <div class="mdl-grid store-news-list">
 
 
+		<div class="cart-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+			<div class="mdl-card__supporting-text">
+				商品明細
+			</div>
+			<div>
+				<table class="mdl-data-table mdl-js-data-table">
+
+						<% 3.times do %>
+
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric product-img"><div class="img-wrapper" style="background: url('img/products/p<%= 1 + rand(20) %>.jpg') center / cover;"></div></td>
+				      <td class="mdl-data-table__cell--non-numeric item"><%= zh_lorem_words(4+rand(10)) %><br/>
+								<p>數量：1</p>
+				      </td>
+				      <td class="price">NT$ <%= 10 + rand(1500) %>
+							</td>
+				    </tr>
+
+						<% end %>
+	
+
+				</table>
+			</div>
+		  <div class="mdl-card__actions" style="padding: 12px;">
+		  	<div class="mdl-layout-spacer"></div>
+				<strong class="price">小計：NT$ <%= 10 + rand(1500) %></strong>	
+		  </div>
+
+		</div>
+
+
 		<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 			<div class="mdl-card__supporting-text mdl-card--border_bottom">
 				運送方式
@@ -111,48 +142,44 @@
 
 		</div>
 
+		<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+			<div class="mdl-card__supporting-text mdl-card--border_bottom">
+				寄送資訊
+			</div>
+			<div class="card-padding">
+
+		    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input class="mdl-textfield__input" type="text" id="sample3">
+			    <label class="mdl-textfield__label" for="sample3">收件人</label>
+			  </div>
+
+			  <div class="mdl-textfield mdl-js-textfield">
+			    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+			    <label class="mdl-textfield__label" for="sample5">地址</label>
+			  </div>
+
+			    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+				    <label class="mdl-textfield__label" for="sample4">郵遞區號</label>
+				    <span class="mdl-textfield__error">Input is not a number!</span>
+				  </div>
+
+				  <div class="section">
+				  	<select name="" id=""><option value="">台灣</option></select>
+				  </div>
+
+			    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+				    <label class="mdl-textfield__label" for="sample4">手機號碼</label>
+				    <span class="mdl-textfield__error">Input is not a number!</span>
+				  </div>
+
+			</div>
+		</div>
+
 </div>
 
 
-
-				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-				  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
-				  <span class="mdl-radio__label">First</span>
-				</label>
-
-				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-				  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-				  <span class="mdl-checkbox__label">Checkbox</span>
-				</label>
-
-
-				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-				  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
-				  <span class="mdl-radio__label">First</span>
-				</label>
-				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-				  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
-				  <span class="mdl-radio__label">Second</span>
-				</label>
-
-
-
-
-<!-- Simple Textfield -->
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" id="sample1">
-    <label class="mdl-textfield__label" for="sample1">Text...</label>
-  </div>
-</form>
-<!-- Numeric Textfield -->
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-    <label class="mdl-textfield__label" for="sample2">Number...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
-</form>
 
 
 
