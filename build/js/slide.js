@@ -38,4 +38,16 @@ $( document ).ready(function() {
 			$("#buy-now").addClass("normalize");
 		});
 
+		// 顯示自填運費
+
+		$( ".show-self-fill" ).click(function() {
+			$( ".self-fill" ).addClass( 'show' );
+		});	
+
+		// 顯示信用卡
+
+		$( ".show-credit-card" ).click(function() {
+			$( ".credit-card" ).addClass( 'show' );
+		});	
+
 });

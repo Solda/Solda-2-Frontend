@@ -1368,7 +1368,7 @@ transform: translateX(-290px);
 // checkout
 
 .card-padding {
-	padding: 16px;
+padding: 16px 16px 8px 16px;
 
 	// 橫排的欄位
 
@@ -1393,4 +1393,11 @@ transform: translateX(-290px);
 		display: none;
 		padding: 16px 24px 0 24px;
 	}
+}
+
+// icon 和 text 一起出現
+
+.material-icons.with-text {
+	vertical-align: middle;
+	margin-right: 16px;
 }

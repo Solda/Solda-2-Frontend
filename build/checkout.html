@@ -1,6 +1,71 @@
-<!-- 指定有 modal layout -->
-<% content_for :checkout do %>
-<% end %>
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>SOLDA 手打拍賣</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#3372DF">
+
+
+<!-- Material Design -->
+<link rel="stylesheet" href="css/material.min.css">
+<script src="js/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!--Leo's JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/slide.js"></script>
+
+
+<!-- Leo's Design -->
+<link rel="stylesheet" href="css/main.css">
+
+
+<!-- Live Reload -->
+
+  </head>
+  <body>
+    <div class="store-page mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+       
+
+      
+
+       <!-- 如果是結帳頁面 -->
+        
+        <header id="cart-bar" class="mdl-layout__header">
+          <div class="mdl-layout-icon">
+            <a href="product.html" class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons">close</i>
+            </a>
+          </div>
+          <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">結帳</span>
+
+          </div>
+        </header>
+
+
+      
+
+
+      <main class="mdl-layout__content">
+        <!-- 指定有 modal layout -->
 
 <div class="mdl-grid store-news-list">
 
@@ -12,18 +77,40 @@
 			<div>
 				<table class="mdl-data-table mdl-js-data-table">
 
-						<% 3.times do %>
+						
 
 				    <tr>
-				      <td class="mdl-data-table__cell--non-numeric product-img"><div class="img-wrapper" style="background: url('img/products/p<%= 1 + rand(20) %>.jpg') center / cover;"></div></td>
-				      <td class="mdl-data-table__cell--non-numeric item"><%= zh_lorem_words(4+rand(10)) %><br/>
+				      <td class="mdl-data-table__cell--non-numeric product-img"><div class="img-wrapper" style="background: url('img/products/p10.jpg') center / cover;"></div></td>
+				      <td class="mdl-data-table__cell--non-numeric item">爭了透前麼<br/>
 								<p>數量：1</p>
 				      </td>
-				      <td class="price">NT$ <%= 10 + rand(1500) %>
+				      <td class="price">NT$ 1175
 							</td>
 				    </tr>
 
-						<% end %>
+						
+
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric product-img"><div class="img-wrapper" style="background: url('img/products/p10.jpg') center / cover;"></div></td>
+				      <td class="mdl-data-table__cell--non-numeric item">戰爸短小<br/>
+								<p>數量：1</p>
+				      </td>
+				      <td class="price">NT$ 705
+							</td>
+				    </tr>
+
+						
+
+				    <tr>
+				      <td class="mdl-data-table__cell--non-numeric product-img"><div class="img-wrapper" style="background: url('img/products/p17.jpg') center / cover;"></div></td>
+				      <td class="mdl-data-table__cell--non-numeric item">了歲唯一的短終教啡一去堆性<br/>
+								<p>數量：1</p>
+				      </td>
+				      <td class="price">NT$ 497
+							</td>
+				    </tr>
+
+						
 	
 
 				</table>
@@ -31,7 +118,7 @@
 		  <div class="mdl-card__actions">
 		    <a disabled class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect"></a>
 		  	<div class="mdl-layout-spacer"></div>
-				<strong class="price">小計：NT$ <%= 10 + rand(1500) %></strong>	
+				<strong class="price">小計：NT$ 229</strong>	
 		  </div>
 
 		</div>
@@ -186,13 +273,25 @@
 				<i class="material-icons with-text">feedback</i>老闆的問題
 			</div>
 			<div class="card-padding">
-			 <% 3.times do %>
+			 
 				<div class="section">
-					<p><%= zh_lorem_words(4+rand(10)) %>？<br/>
-						<select name="" id=""><% 3.times do %><option value=""><%= zh_lorem_words(4+rand(10)) %></option><% end %></select>
+					<p>中雨他一番懷似？<br/>
+						<select name="" id=""><option value="">們絲啡廣</option><option value="">啊實去起如運次</option><option value="">地去呼或的不被</option></select>
 					</p>
 				</div>
-				<% end %>
+				
+				<div class="section">
+					<p>闊拚的慣金身門好走著８？<br/>
+						<select name="" id=""><option value="">亦兄冷要日煮</option><option value="">市有高狗去力</option><option value="">又沒還荊鳴易冷響有</option></select>
+					</p>
+				</div>
+				
+				<div class="section">
+					<p>一解上彼去麼？<br/>
+						<select name="" id=""><option value="">疲一呢和人的了來鬧</option><option value="">進何會一說</option><option value="">幾去卻懷</option></select>
+					</p>
+				</div>
+				
 			</div>
 		</div>
 
@@ -222,3 +321,7 @@
 
 
 </div>
+      </main>
+    </div>
+  </body>
+</html>
