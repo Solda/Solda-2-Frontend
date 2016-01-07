@@ -25,6 +25,12 @@ img {
 }
 
 
+// 修正 firefox 問題
+
+h2 {
+	min-width: 200px;
+}
+
 // 修正按鈕的兼具
 
 .mdl-layout__header-row a.mdl-navigation__link {
@@ -1372,6 +1378,8 @@ padding: 16px 16px 8px 16px;
 	// 橫排的欄位
 
 	.section.horizontal {
+		display: -webkit-flex;
+		display: -ms-flexbox;
 		display: flex;
 		& > div {
 			width: 140px;
@@ -1399,4 +1407,46 @@ padding: 16px 16px 8px 16px;
 .material-icons.with-text {
 	vertical-align: middle;
 	margin-right: 16px;
+}
+
+.list-view {
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding: 0;
+	}
+	li {
+		border-bottom: 1px solid #DDDDDD;
+		&:last-child {
+			border: none;
+		}
+		min-height: 72px;
+		height: auto;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		padding: 0 16px;
+	}
+	.col-left {
+		-webkit-align-self: flex-start;
+		    -ms-flex-item-align: start;
+		        align-self: flex-start;
+	}
+	.col-right {
+		-ms-flex-item-align: end;
+		    -webkit-align-self: flex-end;
+		        align-self: flex-end;
+	}
+}
+
+.list-view {
+	.voter {
+		width: 30px;
+		text-align: center;
+		background: red;
+		height: 72px;
+		i, small {
+			display: block;
+		}
+	}
 }

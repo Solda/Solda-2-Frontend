@@ -1,0 +1,39 @@
+<%= render :partial => "list-logo" %>
+
+<div class="mdl-grid">
+
+
+	<div class="list-view mdl-card mdl-cell mdl-cell--8-col">
+		<ul>
+			<% 14.times do %>
+			<li>
+				<div class="col-left">
+					<div class="voter">
+						<i class="material-icons">arrow_drop_up</i>
+						<small>12</small>
+					</div>
+				</div>
+				<div class="col-center">
+					<div class="primary">
+						<%= zh_lorem_sentence %>
+					</div>
+					<div class="secondary">
+						<%= zh_lorem_sentence %>
+					</div>
+					<div class="meta">
+						<%= zh_lorem_words(1+rand(5)) %>
+					</div>
+				</div>
+				<div class="col-right">button</div>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class="mdl-cell mdl-cell--4-col">
+		<h5>Lorem</h5>
+		<p><%= zh_lorem_paragraph %></p>
+	</div>
+
+
+</div>
