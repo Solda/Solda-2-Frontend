@@ -1,3 +1,11 @@
+// product-card
+
+// @TO-DO 把文字放到圖片下方，加上價格
+
+.product-card {
+	height: 150px;
+}
+
 // 一般
 
 body {
@@ -1012,6 +1020,7 @@ footer {
 .icon-list {
 	@extend .text-list;
 }
+
 
 // product
 
