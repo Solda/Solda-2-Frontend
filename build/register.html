@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>SOLDA 手打拍賣</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#3372DF">
+
+
+<!-- Material Design -->
+<link rel="stylesheet" href="css/material.min.css">
+<script src="js/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!--Leo's JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/slide.js"></script>
+
+
+<!-- Leo's Design -->
+<link rel="stylesheet" href="css/main.css">
+
+
+<!-- Live Reload -->
+
+  </head>
+  <body>
+<!--   	<div class="spinner-area">
+  		<div class="mdl-spinner mdl-js-spinner is-active"></div>
+  	</div>
+ -->    <div class="homepage mdl-layout mdl-js-layout">
+	    
+	    
+	    	<!-- 如果有 back 按鈕，就只顯示 back 按鈕 -->
+
+	      <div class="corner-area left">
+	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
+	      </div>
+
+	      <header class="mdl-layout__header mdl-layout__header--transparent mdl-cell--hide-desktop">
+	        <div class="mdl-layout-icon"></div>
+	        <div class="mdl-layout__header-row">
+	          <div class="mdl-layout-spacer"></div>
+	        </div>
+	      </header>
+
+	      
+      
+			
+      <main class="mdl-layout__content">
+        <div class="vertical-spacer mdl-layout--small-screen-only"></div>
+        <!-- 指定有 back icon 的 layout -->
+
+
+<div class="logo">
+  <a href="index.html"><img src="img/solda-pick.svg" alt=""></a>
+  
+  <!-- 如果未登入 -->
+<!--   <p class="mdl-typography--font-regular">追蹤商家，輕量通販，整合金流物流，三十秒免費開賣。
+  	<a href="#"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">exit_to_app</i></button> 馬上開店</a> &nbsp;&nbsp;
+  	<a href="#"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">info_outline</i></button> 瞭解更多</a> &nbsp;&nbsp;
+    <a href="/search"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">search</i></button> 搜尋商品</a>
+    <br/><br/><a href="http://solda-app.uservoice.com/forums/293622-手打網頁版" target="_blank" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">新版首頁測試中，點這裡回報問題</a>
+  </p>
+ -->
+	
+  <!-- 如果已登入 -->
+<!--   <p class="mdl-typography--font-regular">
+  	歡迎回到手打拍賣！點擊左上角的 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">menu</i></button> 可打開選單。&nbsp;&nbsp;
+    <a href="/search"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">search</i></button> 搜尋商品</a><br/><br/>
+    <a href="http://solda-app.uservoice.com/forums/293622-手打網頁版" target="_blank" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">新版首頁測試中，點這裡回報問題</a>
+  </p>
+ -->
+
+<!--   <hr class="little" />
+ --></div>
+<div class="page-description">
+	<p class="mdl-typography--font-regular">
+		為保障交易安全，請確實填寫資料。
+	</p>
+</div>
+
+<div class="mdl-grid login-form">
+
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet">
+				<div class="mdl-card__supporting-text mdl-card--border_bottom">
+					<i class="material-icons with-text">mood</i>註冊新帳號
+				</div>
+				<div class="card-padding">
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">使用者名稱（英數無空白）</label>
+				    <span class="mdl-textfield__error">使用者名稱格式錯誤</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="password" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">密碼（至少 8 個字元）</label>
+				    <span class="mdl-textfield__error">密碼格式錯誤</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">電子郵件</label>
+				    <span class="mdl-textfield__error">格式錯誤</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">真實姓名（超商用，最多五個字）</label>
+				    <span class="mdl-textfield__error">超商資料格式限制最多五個字</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">手機號碼（超商用）</label>
+				    <span class="mdl-textfield__error">格式錯誤</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">手打商號（個人網址，英數無空白）</label>
+				    <span class="mdl-textfield__error">格式錯誤</span>
+				  </div></div>
+
+				  <div>
+				  	<small>網址範例：http://solda.io/xxxxx</small>
+				  	<small><br/>給 Mark：當用戶在填使用者名稱的時候，網址就可以幫他同步填寫囉！</small>
+				  </div>
+
+
+
+				</div>
+
+			  <div class="mdl-card__actions">
+			    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      註冊
+			    </a>
+			    <div class="mdl-layout-spacer"></div>
+			  </div>
+
+
+	</div>
+
+
+
+
+</div>
+
+		    <hr class="little" />
+
+<footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">馬上開始</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#">瞭解手打拍賣</a></li>
+        <li><a href="#">馬上開店</a></li>
+        <li><a href="#">顧客查訂單</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">手打拍賣 APP</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a target="_blank" href="https://itunes.apple.com/tw/app/solda-shou-da-pai-mai-shou/id936562264">下載 iPhone 版</a></li>
+        <li><a target="_blank" href="https://play.google.com/store/apps/details?id=solda.io.android&hl=zh_TW">下載 Android 版</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">新消息</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a target="_blank" href="https://www.facebook.com/SoldaApp/">Facebook 粉絲專業</a></li>
+        <li><a target="_blank" href="http://blog.solda.io">手打部落格</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">支援服務</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#">回報網站問題</a></li>
+        <li><a target="_blank" href="https://solda-app.uservoice.com">常見問與答</a></li>
+        <li><a target="_blank" href="https://solda-app.uservoice.com">聯絡我們</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-logo">手打自販股份有限公司 © 2014 - 2015</div>
+    <ul class="mdl-mega-footer__link-list">
+      <li><a href="https://solda-app.uservoice.com/knowledgebase/articles/670999-手打拍賣違規商品項目">違禁商品列表</a></li>
+      <li><a href="http://solda.io/privacy.html">隱私權與使用條款</a></li>
+    </ul>
+  </div>
+
+</footer>
+      </main>
+    </div>
+  </body>
+</html>

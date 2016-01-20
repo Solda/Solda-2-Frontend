@@ -45,97 +45,106 @@
   	</div>
  -->    <div class="homepage mdl-layout mdl-js-layout">
 	    
+	    
+	    	<!-- 如果有 back 按鈕，就只顯示 back 按鈕 -->
 
-	    	<!-- 如果是首頁就顯示上方工具列，以及右上方通知 icon -->
-
-	      <div class="corner-area right">
-					<a href="#" class="mdl-navigation__link">瞭解更多</a>
-					<a href="login.html" class="mdl-navigation__link">登入</a>
-
-					<!-- 如果已經登入，就顯示這個 -->
-					<!-- <a href="#" class="mdl-navigation__link">登出</a> -->
-
-
-<!-- 	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">notifications</i></a>
- -->	        <!-- 如果有通知顯示下方 icon -->
-<!-- 	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons active-icon">notifications_active</i></a>
- -->	      </div>
+	      <div class="corner-area left">
+	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
+	      </div>
 
 	      <header class="mdl-layout__header mdl-layout__header--transparent mdl-cell--hide-desktop">
 	        <div class="mdl-layout-icon"></div>
 	        <div class="mdl-layout__header-row">
-	          <span class="mdl-layout-title mdl-layout--large-screen-only">SOLDA 手打拍賣</span>
 	          <div class="mdl-layout-spacer"></div>
 	        </div>
 	      </header>
-	      <div class="mdl-layout__drawer">
-	        <span class="mdl-layout__title"><img src="img/mrsolda.png" width="56" height="56" alt="">SOLDA 手打拍賣</span>
-	        <nav class="mdl-navigation">
-            <nav class="mdl-navigation">
-  <a class="mdl-navigation__link is-active" href="/"><i class="material-icons">stars</i>手打精選</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">assignment</i>訂單</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">question_answer</i>訊息</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">store</i>我的商店</a>
-  <hr>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">settings</i>商店設定</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">add_circle_outline</i>上架商品</a>
-  <hr>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">help</i>客服中心</a>
-  <a class="mdl-navigation__link" href="#"><i class="material-icons">account_circle</i>登出 solda-hero</a>
-</nav>
-	        </nav>
-	      </div>
-	
+
 	      
-			
+      
 			
       <main class="mdl-layout__content">
         <div class="vertical-spacer mdl-layout--small-screen-only"></div>
-        <!doctype html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>SOLDA 手打拍賣</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Add to homescreen for Chrome on Android -->
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-<!-- Add to homescreen for Safari on iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Material Design Lite">
-<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-
-<!-- Tile icon for Win8 (144x144 + tile color) -->
-<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-<meta name="msapplication-TileColor" content="#3372DF">
+        <!-- 指定有 back icon 的 layout -->
 
 
-<!-- Material Design -->
-<link rel="stylesheet" href="css/material.min.css">
-<script src="js/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="logo">
+  <a href="index.html"><img src="img/solda-pick.svg" alt=""></a>
+  
+  <!-- 如果未登入 -->
+<!--   <p class="mdl-typography--font-regular">追蹤商家，輕量通販，整合金流物流，三十秒免費開賣。
+  	<a href="#"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">exit_to_app</i></button> 馬上開店</a> &nbsp;&nbsp;
+  	<a href="#"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">info_outline</i></button> 瞭解更多</a> &nbsp;&nbsp;
+    <a href="/search"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">search</i></button> 搜尋商品</a>
+    <br/><br/><a href="http://solda-app.uservoice.com/forums/293622-手打網頁版" target="_blank" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">新版首頁測試中，點這裡回報問題</a>
+  </p>
+ -->
+	
+  <!-- 如果已登入 -->
+<!--   <p class="mdl-typography--font-regular">
+  	歡迎回到手打拍賣！點擊左上角的 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">menu</i></button> 可打開選單。&nbsp;&nbsp;
+    <a href="/search"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">search</i></button> 搜尋商品</a><br/><br/>
+    <a href="http://solda-app.uservoice.com/forums/293622-手打網頁版" target="_blank" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">新版首頁測試中，點這裡回報問題</a>
+  </p>
+ -->
 
-<!--Leo's JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/slide.js"></script>
+<!--   <hr class="little" />
+ --></div>
+<div class="page-description">
+	<p class="mdl-typography--font-regular">
+		為保障交易安全，請確實填寫資料。
+	</p>
+</div>
+
+<div class="mdl-grid login-form">
+
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet">
+				<div class="mdl-card__supporting-text mdl-card--border_bottom">
+					<i class="material-icons with-text">mood</i>註冊新帳號
+				</div>
+				<div class="card-padding">
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">真實姓名（超商用，最多五個字）</label>
+				    <span class="mdl-textfield__error">超商資料格式限制最多五個字</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">手機號碼（超商用）</label>
+				    <span class="mdl-textfield__error">格式錯誤</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">手打商號（個人網址，英數無空白）</label>
+				    <span class="mdl-textfield__error">格式錯誤</span>
+				  </div></div>
+
+				  <div>
+				  	<small>網址範例：http://solda.io/xxxxx</small>
+				  	<small><br/>給 Mark：當用戶在填使用者名稱的時候，網址就可以幫他同步填寫囉！</small>
+				  </div>
 
 
-<!-- Leo's Design -->
-<link rel="stylesheet" href="css/main.css">
+
+				</div>
+
+			  <div class="mdl-card__actions">
+			    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      註冊
+			    </a>
+			    <div class="mdl-layout-spacer"></div>
+			  </div>
 
 
-<!-- Live Reload -->
+	</div>
 
-  </head>
-  <body>
 
-  </body>
-</html>
+
+
+</div>
+
 		    <hr class="little" />
 
 <footer class="mdl-mega-footer">

@@ -91,51 +91,89 @@
 			
       <main class="mdl-layout__content">
         <div class="vertical-spacer mdl-layout--small-screen-only"></div>
-        <!doctype html>
-<html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>SOLDA 手打拍賣</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="logo">
+  <a href="index.html"><img src="img/solda-pick.svg" alt=""></a>
+  
+  <!-- 如果未登入 -->
+<!--   <p class="mdl-typography--font-regular">追蹤商家，輕量通販，整合金流物流，三十秒免費開賣。
+  	<a href="#"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">exit_to_app</i></button> 馬上開店</a> &nbsp;&nbsp;
+  	<a href="#"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">info_outline</i></button> 瞭解更多</a> &nbsp;&nbsp;
+    <a href="/search"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">search</i></button> 搜尋商品</a>
+    <br/><br/><a href="http://solda-app.uservoice.com/forums/293622-手打網頁版" target="_blank" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">新版首頁測試中，點這裡回報問題</a>
+  </p>
+ -->
+	
+  <!-- 如果已登入 -->
+<!--   <p class="mdl-typography--font-regular">
+  	歡迎回到手打拍賣！點擊左上角的 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">menu</i></button> 可打開選單。&nbsp;&nbsp;
+    <a href="/search"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--accent"><i class="material-icons">search</i></button> 搜尋商品</a><br/><br/>
+    <a href="http://solda-app.uservoice.com/forums/293622-手打網頁版" target="_blank" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">新版首頁測試中，點這裡回報問題</a>
+  </p>
+ -->
 
-<!-- Add to homescreen for Chrome on Android -->
-<meta name="mobile-web-app-capable" content="yes">
-<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+<!--   <hr class="little" />
+ --></div>
+<div class="page-description">
+	<p class="mdl-typography--font-regular">
+		請先登入才能繼續。
+	</p>
+</div>
 
-<!-- Add to homescreen for Safari on iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Material Design Lite">
-<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+<div class="mdl-grid login-form">
 
-<!-- Tile icon for Win8 (144x144 + tile color) -->
-<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-<meta name="msapplication-TileColor" content="#3372DF">
+	<div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet" style="text-align:center;">
 
-
-<!-- Material Design -->
-<link rel="stylesheet" href="css/material.min.css">
-<script src="js/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-<!--Leo's JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/slide.js"></script>
-
-
-<!-- Leo's Design -->
-<link rel="stylesheet" href="css/main.css">
+		<p><a style="width: 90%;" href="register-facebook.html" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">使用 Facebook 快速登入<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>	</p>
 
 
-<!-- Live Reload -->
+		<p><a style="width: 90%;"  href="register.html" class="mdl-button--accent mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">註冊新的帳號<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>	</p>
 
-  </head>
-  <body>
+		<p class="mdl-typography--caption" style="color: rgba(0,0,0,0.54);">
+			不想綁定 Facebook 登入或是要共用帳號的話，請註冊新帳號。
+		</p>
 
-  </body>
-</html>
+
+	</div>
+
+
+	<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet">
+				<div class="mdl-card__supporting-text mdl-card--border_bottom">
+					<i class="material-icons with-text">account_circle</i>直接登入
+				</div>
+				<div class="card-padding">
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="text" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">使用者名稱</label>
+				    <span class="mdl-textfield__error">使用者名稱格式錯誤</span>
+				  </div></div>
+
+			    <div><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded">
+				    <input class="mdl-textfield__input" type="password" id="sample3">
+				    <label class="mdl-textfield__label" for="sample3">密碼</label>
+				    <span class="mdl-textfield__error">密碼格式錯誤</span>
+				  </div></div>
+
+				</div>
+
+			  <div class="mdl-card__actions">
+			    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+			      登入
+			    </a>
+			    <div class="mdl-layout-spacer"></div>
+			    <a class="mdl-button mdl-button mdl-js-button mdl-js-ripple-effect">
+			      忘記密碼？
+			    </a>
+			  </div>
+
+
+	</div>
+
+
+
+
+</div>
+
 		    <hr class="little" />
 
 <footer class="mdl-mega-footer">

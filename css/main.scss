@@ -293,13 +293,12 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 // logo
 
-.logo {
+.logo,.page-description {
 	color: rgba(0,0,0,0.4);
 	hr.little {
 		margin-bottom: 1em;
 	}
 	text-align: center;
-	margin: 65px auto 0px auto;
 	a img {
 		width: 80px;
 		height: 80px;
@@ -321,6 +320,9 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 		color: rgba(0,0,0,0.81);
 		}
 	}
+}
+.logo {
+		margin: 65px auto 0px auto;
 }
 
 @media screen and (max-width:1024px) {
