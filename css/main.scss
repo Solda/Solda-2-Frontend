@@ -2,10 +2,6 @@
 
 // @TO-DO 把文字放到圖片下方，加上價格
 
-.product-card {
-	height: 150px;
-}
-
 // 一般
 
 body {
@@ -187,7 +183,7 @@ hr.little {
 }
 
 
-// 自己家的 border
+// 自己的 border
 
 .mdl-card--border_bottom {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -526,26 +522,52 @@ $page-width: 1024px;
 		        justify-content: flex-end;
 	}
 
+
+	.product-card {
+		height: 250px;
+	}
+
+
 	.store-news-card .mdl-card__actions, .product-card .mdl-card__actions {
-		height: 39px;
-	  padding: 16px;
-		background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.45) 66%);
-	  color: white;
-	  
-		a.product-title {
-			line-height: 24px;
-			max-width: 80%;
-			height: 24px;
-			font-size: 12px;
-		  color: white;
-		  text-decoration: none;
-		  font-weight: normal;
+	  padding: 8px 12px 12px 12px;
+	  line-height: 12px;
+		// background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.45) 66%);
+	  // color: white;
+	  div.name-title {
+			max-width: calc(100% - 30px);
 			text-overflow: ellipsis;
 		  overflow : hidden;
 		  white-space : nowrap;
+	  }
+		a.product-title {
+			line-height: 24px;
+			height: 24px;
+			font-size: 13px;
+		  color: rgba(0,0,0,0.87);
+		  text-decoration: none;
+		  font-weight: normal;
+		  display: inline-block;
+		  margin: 0;
+		  padding-bottom: 0;
 		}
-		i.favorite-button {
-			cursor: pointer;
+		small.price {
+			display: inline-block;
+			line-height: 14px;
+			font-size: 12px;
+			color: rgba(0,0,0,0.54);
+		}
+		.fav-count {
+			text-align: center;
+			width: 24px;
+			margin-top: 3px;
+			small {
+				font-size: 11px;
+				display: block;
+				margin-top: 3px;
+			}
+			i.favorite-button {
+				cursor: pointer;
+			}
 		}
 	}
 }
