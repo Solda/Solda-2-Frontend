@@ -50,4 +50,16 @@ $( document ).ready(function() {
 			$( ".credit-card" ).addClass( 'show' );
 		});	
 
+		// 首頁切換商城目錄與個人目錄
+		$("#user-nav").hide();
+
+		$(".my-solda").click(function(){
+			$("#user-nav").show();
+			$("#store-nav").hide();
+		});
+	$(".back-solda").click(function(){
+			$("#user-nav").hide();
+			$("#store-nav").show();
+		});
+
 });

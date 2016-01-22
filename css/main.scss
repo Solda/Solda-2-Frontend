@@ -318,7 +318,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 	}
 }
 .logo {
-		margin: 65px auto 0px auto;
+		margin: 65px auto 10px auto;
 }
 
 @media screen and (max-width:1024px) {
@@ -524,7 +524,7 @@ $page-width: 1024px;
 
 
 	.product-card {
-		height: 250px;
+		height: 280px;
 	}
 
 
@@ -691,6 +691,23 @@ $page-width: 1024px;
 	}
 }
 
+// 切換 store-nav user-nav
+
+// .store-nav, .user-nav {
+// 	transition: all 0.3s;
+// }
+
+// .nav-on {
+// 	display: inline-block;
+// 	opacity: 1;
+// }
+
+// .nav-off {
+// 	display: none;
+// 	transform: scale(0.5);
+// 	opacity: 0;
+// }
+
 // category
 
 .category-list {
@@ -751,7 +768,7 @@ $page-width: 1024px;
 		text-align: center;
 		width: 11%;
 		height: 90px;
-		background-size: 50px;
+		background-size: 45px;
 		margin-bottom: 5px;
 		text-decoration: none;
 		color: rgba(0,0,0,0.38);
@@ -766,6 +783,28 @@ $page-width: 1024px;
 .category-icon.favorite-products { background: url('../img/category/favorite-products.svg') center center no-repeat ; }
 .category-icon.favorite-stores { background: url('../img/category/favorite-stores.svg') center center no-repeat ; }
 .category-icon.search { background: url('../img/category/search.svg') center center no-repeat ; }
+
+
+
+.category-icon.line { background: url('../img/category/vertical.svg') center center no-repeat ; }
+
+
+
+// icon for users
+.category-icon._01 { background: url('../img/category/01.svg') center center no-repeat ; }
+.category-icon._02 { background: url('../img/category/02.svg') center center no-repeat ; }
+.category-icon._03 { background: url('../img/category/03.svg') center center no-repeat ; }
+.category-icon._04 { background: url('../img/category/04.svg') center center no-repeat ; }
+.category-icon._05 { background: url('../img/category/05.svg') center center no-repeat ; }
+.category-icon._06 { background: url('../img/category/06.svg') center center no-repeat ; }
+.category-icon._07 { background: url('../img/category/07.svg') center center no-repeat ; }
+.category-icon._08 { background: url('../img/category/08.svg') center center no-repeat ; }
+.category-icon._09 { background: url('../img/category/09.svg') center center no-repeat ; }
+.category-icon._010 { background: url('../img/category/010.svg') center center no-repeat ; }
+
+
+
+
 
 
 .category-icon._1 { background: url('../img/category/1.svg') center center no-repeat ; }
@@ -797,6 +836,13 @@ $page-width: 1024px;
 .category-icon._27 { background: url('../img/category/27.svg') center center no-repeat ; }
 .category-icon._28 { background: url('../img/category/28.svg') center center no-repeat ; }
 .category-icon._29 { background: url('../img/category/29.svg') center center no-repeat ; }
+
+
+
+
+
+
+
 
 // 在不同 size 顯示的數量與寬度
 
