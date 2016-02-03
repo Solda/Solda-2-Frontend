@@ -4,65 +4,70 @@
     <%= render :partial => "header" %>
   </head>
   <body>
-<!--   	<div class="spinner-area">
-  		<div class="mdl-spinner mdl-js-spinner is-active"></div>
-  	</div>
- -->    <div class="homepage mdl-layout mdl-js-layout">
-	    <% if content_for? :back %>
-	    
-	    	<!-- 如果有 back 按鈕，就只顯示 back 按鈕 -->
-
-	      <div class="corner-area left">
-	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">arrow_back</i></a>
-	      </div>
-
-	      <header class="mdl-layout__header mdl-layout__header--transparent mdl-cell--hide-desktop">
-	        <div class="mdl-layout-icon"></div>
-	        <div class="mdl-layout__header-row">
-	          <div class="mdl-layout-spacer"></div>
-	        </div>
-	      </header>
-
-	      
-      <% else %>
-
-	    	<!-- 如果是首頁就顯示上方工具列，以及右上方通知 icon -->
-
-	      <div class="corner-area right">
-					<a href="#" class="mdl-navigation__link">瞭解更多</a>
-					<a href="login.html" class="mdl-navigation__link">登入</a>
-
-					<!-- 如果已經登入，就顯示這個 -->
-					<!-- <a href="#" class="mdl-navigation__link">登出</a> -->
 
 
-<!-- 	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">notifications</i></a>
- -->	        <!-- 如果有通知顯示下方 icon -->
-<!-- 	        <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons active-icon">notifications_active</i></a>
- -->	      </div>
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-	      <header class="mdl-layout__header mdl-layout__header--transparent mdl-cell--hide-desktop">
-	        <div class="mdl-layout-icon"></div>
-	        <div class="mdl-layout__header-row">
-	          <span class="mdl-layout-title mdl-layout--large-screen-only">SOLDA 手打拍賣</span>
-	          <div class="mdl-layout-spacer"></div>
-	        </div>
-	      </header>
-	      <div class="mdl-layout__drawer">
-	        <span class="mdl-layout__title"><img src="img/mrsolda.png" width="56" height="56" alt="">SOLDA 手打拍賣</span>
-	        <nav class="mdl-navigation">
-            <%= render :partial => "nav" %>
-	        </nav>
-	      </div>
-	
-	      
-			<% end %>
-			
+        <!-- 商品頁面的 header -->
+
+        <header id="topbar" class="mdl-layout__header--transparent mdl-layout__header mdl-layout__header--scroll mdl-layout__header--seamed" style="border-bottom: 1px solid rgba(0,0,0,0.18);">
+          <div class="mdl-layout__header-row" style="padding-left: 58px;">
+						<div class="mdl-layout-spacer"></div>
+
+
+						<div class="search-field mdl-textfield mdl-js-textfield">
+						  <input class="mdl-textfield__input" type="text" id="sample1">
+						  <label class="mdl-textfield__label" for="sample1">搜尋商家或商品</label>
+						</div>
+
+
+			        <% if content_for? :logged_in %>
+
+            <nav class="mdl-navigation hide-when-search">
+              <a class="mdl-navigation__link" href="#">我的手打</a>
+              <a class="mdl-navigation__link" href="#">熱賣商品</a>
+              <a class="mdl-navigation__link show-search-field" href="#"><i class="material-icons">search</i></a>
+            </nav>
+
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation hide-when-search">
+							<a class="mdl-navigation__link" href="index.html">登出</a>
+            </nav>	
+
+
+			        <% else %>
+
+            <nav class="mdl-navigation hide-when-search">
+              <a class="mdl-navigation__link" href="#">精選</a>
+              <a class="mdl-navigation__link" href="#">熱賣商品</a>
+              <a class="mdl-navigation__link show-search-field" href="#"><i class="material-icons">search</i></a>
+            </nav>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation hide-when-search">
+							<a class="mdl-navigation__link" href="index-logged_in.html">登入</a>
+            </nav>	
+
+
+				        <% end %>
+
+          </div>
+        </header>
+
+        <div class="corner-area left">
+          <a href="index.html" class="logo avatar">
+            <img src="img/solda-pick.svg" alt="">
+          </a>
+        </div>
+
+
+        
+
       <main class="mdl-layout__content">
-        <div class="vertical-spacer mdl-layout--small-screen-only"></div>
         <%= yield %>
-		    <%= render :partial => "footer" %>
+        <%= render :partial => "footer-store" %>
+        <%= render :partial => "checkout-fab" %>
       </main>
+
     </div>
   </body>
 </html>

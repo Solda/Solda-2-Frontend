@@ -1,5 +1,7 @@
-<%#= render :partial => "category-mini" %>
+<!-- 指定有 prodcut layout -->
+<% content_for :logged_in do %>
+<% end %>
+<%= render :partial => "category-mini" %>
 <%= render :partial => "product-list-item-only" %>
-<%#= render :partial => "product-list-alt" %>
 <%#= render :partial => "product-list-alt" %>
 <%#= render :partial => "news" %>
