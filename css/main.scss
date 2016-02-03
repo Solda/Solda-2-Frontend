@@ -418,6 +418,13 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 }
 
 
+// 首頁上方有標記現在頁面
+
+a.nav-active {
+	box-sizing: border-box;
+	border-bottom: 3px solid #ff4081;
+}
+
 // 小螢幕時撐開 app bar 和下方內容區塊
 
 .vertical-spacer {
