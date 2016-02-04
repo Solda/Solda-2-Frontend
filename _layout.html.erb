@@ -10,7 +10,7 @@
 
         <!-- 商品頁面的 header -->
 
-        <header id="topbar" class="mdl-layout__header--transparent mdl-layout__header mdl-layout__header--scroll mdl-layout__header--seamed" style="border-bottom: 1px solid rgba(0,0,0,0.11);">
+        <header id="topbar" class="mdl-layout__header--transparent mdl-layout__header mdl-layout__header--scroll mdl-layout__header--seamed" style="border-bottom: 1px solid rgba(0,0,0,0.1);">
           <div class="mdl-layout__header-row" style="padding-left: 58px;">
 						<div class="mdl-layout-spacer"></div>
 
@@ -24,7 +24,7 @@
 			        <% if content_for? :logged_in %>
 
             <nav class="mdl-navigation hide-when-search">
-              <a class="mdl-navigation__link nav-activ" href="#">我的手打</a>
+              <a class="mdl-navigation__link nav-active" href="#">我的手打</a>
               <a class="mdl-navigation__link" href="#">熱賣商品</a>
               <a class="mdl-navigation__link show-search-field" href="#"><i class="material-icons">search</i></a>
             </nav>
@@ -44,7 +44,7 @@
             </nav>
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation hide-when-search">
-							<a class="mdl-navigation__link" href="index-logged_in.html">登入</a>
+							<a style="color:#ff4081;" class="mdl-navigation__link" href="index-logged_in.html">登入</a>
             </nav>	
 
 

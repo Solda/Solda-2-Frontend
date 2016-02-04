@@ -35,11 +35,72 @@ h2 {
 	min-width: 200px;
 }
 
-// 修正按鈕的兼具
+// tags
 
-.mdl-layout__header-row a.mdl-navigation__link {
-	padding: 0 8px 0 16px;
+.tags {
+	a {
+		font-size: 13px;
+		border-radius: 2px;
+		background: white;
+		display: inline-block;
+		padding: 4px 8px;
+		border: 1px solid rgba(0,0,0,0.1);
+		text-decoration: none;
+		color: rgba(0,0,0,0.54);
+		margin: 0 4px 7px 0;
+	}
 }
+
+// 兩欄位版刑
+
+.layout_wrapper {
+	margin: auto;
+	max-width: 1200px;
+	width: auto;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+	article {
+		-webkit-flex-grow: 1;
+		    -ms-flex-positive: 1;
+		        flex-grow: 1;
+	}
+	aside {
+  	max-width: 340px;
+  	padding: 0 16px;
+  	width: auto;
+	}
+}
+
+.product-card {
+	min-height: 200px; 
+}
+
+@media (max-width: 1020px) {
+.layout_wrapper {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  	aside {
+		  -webkit-order: 1;
+		      -ms-flex-order: 1;
+		          order: 1;
+	  	width: 100%;
+		}
+		article {
+			-webkit-order:  2;
+			    -ms-flex-order:  2;
+			        order:  2;
+		}
+  }
+}
+
 
 
 // 商家業和商品業尚方
@@ -419,10 +480,17 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 
 // 首頁上方有標記現在頁面
-
+a.mdl-navigation__link {
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;	
+	box-sizing: border-box;
+	height: 100%;
+}
 a.nav-active {
 	box-sizing: border-box;
-	border-bottom: 3px solid #ff4081;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid #ff4081;
+	padding: 0 8px;
 }
 
 // 小螢幕時撐開 app bar 和下方內容區塊
@@ -512,10 +580,6 @@ $page-width: 1024px;
 		        justify-content: flex-end;
 	}
 
-
-	.product-card {
-		height: 220px;
-	}
 
 
 	.store-news-card .mdl-card__actions, .product-card .mdl-card__actions {
@@ -1508,7 +1572,7 @@ padding: 16px 16px 8px 16px;
 	}
 	.col-left {
 		-ms-flex-item-align: start;
-		    -webkit-align-self: flex-start;
+		        -webkit-align-self: flex-start;
 		        align-self: flex-start;
 	}
 	.col-right {
