@@ -1,0 +1,37 @@
+<!-- 指定有 prodcut layout -->
+<% content_for :product do %>
+<% end %>
+
+<%= render :partial => "logo" %>
+<%#= render :partial => "search" %>
+
+<%= render :partial => "search" %>
+<%= render :partial => "category-mini" %>
+
+
+<div class="mdl-grid">
+
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+	  <div class="mdl-tabs__tab-bar">
+	      <a href="#essential-panel" class="mdl-tabs__tab is-active">基本資料</a>
+	      <a href="#storeinfo-panel" class="mdl-tabs__tab">商店資訊</a>
+	      <a href="#bank-panel" class="mdl-tabs__tab">銀行帳號</a>
+	      <a href="#cart-panel" class="mdl-tabs__tab">購物車運費設定</a>
+	      <a href="#seven-panel" class="mdl-tabs__tab">7-11 寄送資訊設定</a>
+	      <a href="#plurk-panel" class="mdl-tabs__tab">推廣商品</a>
+	  </div>
+
+	  <div class="mdl-tabs__panel is-active" id="essential-panel">
+	    基本資料
+	  </div>
+	  <div class="mdl-tabs__panel" id="storeinfo-panel">
+
+	  </div>
+	  <div class="mdl-tabs__panel" id="bank-panel">
+
+	  </div>
+		
+
+
+	</div>
+</div>
