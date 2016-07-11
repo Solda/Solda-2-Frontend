@@ -1,0 +1,21 @@
+= render :partial => "list-logo"
+.mdl-grid
+  .list-view.mdl-card.mdl-cell.mdl-cell--8-col
+    %ul
+      - 14.times do
+        %li
+          .col-left
+            .voter
+              %i.material-icons arrow_drop_up
+              %small 12
+          .col-center
+            .primary
+              = zh_lorem_sentence
+            .secondary
+              = zh_lorem_sentence
+            .meta
+              = zh_lorem_words(1+rand(5))
+          .col-right button
+  .mdl-cell.mdl-cell--4-col
+    %h5 Lorem
+    %p= zh_lorem_paragraph

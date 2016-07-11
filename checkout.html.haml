@@ -1,0 +1,139 @@
+.mdl-grid.store-news-list
+  .cart-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text
+      %i.material-icons.with-text receipt
+      商品明細
+    %div
+      %table.mdl-data-table.mdl-js-data-table
+        - 3.times do
+          %tr
+            %td.mdl-data-table__cell--non-numeric.product-img
+              .img-wrapper{style: "background: url('img/products/p#{1 + rand(20)}.jpg') center / cover;"}
+            %td.mdl-data-table__cell--non-numeric.item
+              = zh_lorem_words(4+rand(10))
+              %br/
+              %p 數量：1
+            %td.price
+              NT$ #{10 + rand(1500)}
+    .mdl-card__actions
+      %a.mdl-button.mdl-button--accent.mdl-js-button.mdl-js-ripple-effect{disabled: "disabled"}
+      .mdl-layout-spacer
+      %strong.price
+        小計：NT$ #{10 + rand(1500)}
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> local_shipping
+      運送方式
+    .card-padding
+      .section
+        %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-1"}
+          %input#option-1.mdl-radio__button{checked: "checked", name: "options", type: "radio", value: "1"}/
+          %span.mdl-radio__label 郵局
+          %small + NT$30
+      .section
+        %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-2"}
+          %input#option-2.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+          %span.mdl-radio__label 統一超商取貨
+          %small + NT$60
+      .section.show-self-fill
+        %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-3"}
+          %input#option-3.mdl-radio__button{name: "options", type: "radio", value: "3"}/
+          %span.mdl-radio__label 國際運費
+          %small 請依照說明自行填寫運費
+        .self-fill
+          %p
+            港澳 250，美國 140，歐洲 480，大洋洲 510
+            %br/
+            %small 若運費金額填寫錯誤，賣家有權取消該筆訂單。
+          %form{action: "#"}
+            .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+              %input#sample4.mdl-textfield__input{pattern: "-?[0-9]*(\\.[0-9]+)?", type: "text"}/
+              %label.mdl-textfield__label{for: "sample4"} 輸入運費金額
+              %span.mdl-textfield__error 輸入錯誤
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> attach_money
+      付款方式
+    .mdl-card__supporting-text.mdl-card--border_bottom{style: "display: flex;"}
+      %span.mdl-typography--body-1 總計：
+      %span.mdl-typography--body-2.mdl-color-text--accent NT$ 1400
+      .mdl-layout-spacer
+      %span.mdl-typography--body-1 含運費 NT$ 60
+    .card-padding
+      .section
+        %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-5"}
+          %input#option-5.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+          %span.mdl-radio__label ATM 轉帳
+          %small 虛擬帳號，三日內繳費
+      .section.show-credit-card
+        %label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-4"}
+          %input#option-4.mdl-radio__button{checked: "checked", name: "options", type: "radio", value: "1"}/
+          %span.mdl-radio__label 信用卡
+          %small VISA / MasterCar / JCB
+      .section.credit-card
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+          %input#sample4.mdl-textfield__input{pattern: "-?[0-9]*(\\.[0-9]+)?", type: "text"}/
+          %label.mdl-textfield__label{for: "sample4"} 信用卡號
+          %span.mdl-textfield__error 輸入錯誤
+        .section.horizontal
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            %input#sample4.mdl-textfield__input{pattern: "-?[0-9]*(\\.[0-9]+)?", type: "text"}/
+            %label.mdl-textfield__label{for: "sample4"} 月月 /  年年
+            %span.mdl-textfield__error 輸入錯誤
+          .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+            %input#sample4.mdl-textfield__input{pattern: "-?[0-9]*(\\.[0-9]+)?", type: "text"}/
+            %label.mdl-textfield__label{for: "sample4"} 檢核碼
+            %span.mdl-textfield__error 輸入錯誤
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> location_on
+      寄送資訊
+    .card-padding
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 收件人
+      %div
+        .mdl-textfield.mdl-js-textfield
+          %textarea#sample5.mdl-textfield__input{rows: "3", type: "text"}
+          %label.mdl-textfield__label{for: "sample5"} 地址
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+          %input#sample4.mdl-textfield__input{pattern: "-?[0-9]*(\\.[0-9]+)?", type: "text"}/
+          %label.mdl-textfield__label{for: "sample4"} 郵遞區號
+          %span.mdl-textfield__error Input is not a number!
+      .section
+        %select{id: "", name: ""}
+          %option{value: ""} 台灣
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+          %input#sample4.mdl-textfield__input{pattern: "-?[0-9]*(\\.[0-9]+)?", type: "text"}/
+          %label.mdl-textfield__label{for: "sample4"} 手機號碼
+          %span.mdl-textfield__error Input is not a number!
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> feedback
+      老闆的問題
+    .card-padding
+      - 3.times do
+        .section
+          %p
+            = zh_lorem_words(4+rand(10))
+            ？
+            %br/
+            %select{id: "", name: ""}
+              - 3.times do
+                %option{value: ""}= zh_lorem_words(4+rand(10))
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> create
+      我的備註
+    .card-padding
+      .mdl-textfield.mdl-js-textfield
+        %textarea#sample5.mdl-textfield__input{rows: "3", type: "text"}
+        %label.mdl-textfield__label{for: "sample5"} 備註內容
+  .mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    %p
+      %a.mdl-button--accent.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect{href: "order.html"} 送出訂單
+    %p.mdl-typography--body-1{style: "color: rgba(0,0,0,0.54);"}
+      收到出貨通知七天內若沒有收到貨物，可以在訂單畫面提出「凍結訂單」，這樣手打便會暫緩撥款給賣家，直到問題解決，可保障您的購物安全。（適用於信用卡與 ATM 的訂單，貨到付款或面交不在此限。）

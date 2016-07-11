@@ -1,0 +1,91 @@
+/ 指定有 modal layout
+.mdl-grid.store-news-list
+  / 預告
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      商家介紹
+    .mdl-card__supporting-text
+      %p.mdl-typography--body-1.mdl-color-text--black
+        = zh_lorem_paragraphs(2)
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      聯絡方式
+    .mdl-card__supporting-text
+      %ul.icon-list
+        %li
+          %i.material-icons phone
+          %a{href: "tel:0912-345-678"} 0912-345-678
+        %li
+          %i
+            %img{src: "img/profile/facebook.svg"}/
+          %a{href: "#"} 手打拍賣粉絲專業
+        %li
+          %i
+            %img{src: "img/profile/twitter.svg"}/
+          %a{href: "#"} @sillyleo
+        %li
+          %i
+            %img{src: "img/profile/instagram.svg"}/
+          %a{href: "#"} @ken.is.photographer
+        %li
+          %i
+            %img{src: "img/profile/address.svg"}/
+          %a{href: "https://www.google.com.tw/maps/place/台北市新生南路三段/@25.0212125,121.531932,17z/data=!3m1!4b1!4m2!3m1!1s0x3442a988f6b28787:0xf93d3d26e9917cbb"} 台北市大安區新生南路三段 280 號
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      評價
+    .mdl-card__supporting-text.mdl-typography--text-center
+      最近兩個月的
+      %strong.mdl-color-text--black 27
+      筆訂單有
+      %strong.mdl-color-text--black 100%
+      的優良評價。
+    .mdl-tabs.mdl-js-tabs
+      .mdl-tabs__tab-bar.rating-tab
+        %a.mdl-tabs__tab.is-active{href: "#tab1"}
+          優良
+          %br/
+          %img{alt: "", src: "img/profile/good.svg"}/
+          %br/
+          %strong 160
+        %a.mdl-tabs__tab{href: "#tab2"}
+          可接受
+          %br/
+          %img{alt: "", src: "img/profile/ok.svg"}/
+          %br/
+          %strong 4
+        %a.mdl-tabs__tab{href: "#tab3"}
+          不滿意
+          %br/
+          %img{alt: "", src: "img/profile/bad.svg"}/
+          %br/
+          %strong 1
+      #tab1.mdl-tabs__panel.is-active
+        .rating-container
+          - 7.times do
+            .rating-unit
+              .buyer
+                %a{href: "store.html"}>= zh_lorem_name
+                ：#{zh_lorem_words(4+rand(10))}
+                %small
+                  \- #{lorem_date}
+              .product
+                %a{href: "#"}
+                  %img{alt: "", src: "img/products/p#{1 + rand(78)}.jpg"}/
+            .rating-unit
+              .buyer
+                %a{href: "store.html"}>= zh_lorem_name
+                ：#{zh_lorem_words(4+rand(10))}
+                %small
+                  \- #{lorem_date}
+              .product
+                %a{href: "#"}
+                  %img{alt: "", src: "img/products/p#{1 + rand(78)}.jpg"}/
+                %a{href: "#"}
+                  %img{alt: "", src: "img/products/p#{1 + rand(78)}.jpg"}/
+      #tab2.mdl-tabs__panel
+        .mdl-card__supporting-text.mdl-typography--text-center
+          沒有資料。
+      #tab3.mdl-tabs__panel
+        .mdl-card__supporting-text.mdl-typography--text-center
+          沒有資料。

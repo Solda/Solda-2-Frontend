@@ -1,0 +1,70 @@
+.hide-when-search
+  .section-title.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      %h2.mdl-typography--headline-color-contrast
+        商家動態
+        %small
+          %br>/
+          已追蹤商家的新商品
+      .mdl-layout-spacer
+      %a.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--colored{href: "#"}
+        更多
+        %i.material-icons chevron_right
+  /
+    <div class="icon-divider">
+    <i style="color:#795548;" class="material-icons">store</i>
+    <p class="mdl-typography--caption-color-contrast">商家動態</p>
+    </div>
+  .mdl-grid.store-news-list
+    / 只要有追蹤，這張卡片就不會顯示
+    .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone{style: "background: #d6f4ff;"}
+      .mdl-card__title
+        %h4.mdl-card__title-text 目前沒有追蹤的商家
+      .mdl-card__media.mdl-card--expand{style: "background: transparent; text-align: center;"}
+        %img{alt: "", src: "img/category/favorite-stores.svg", style: "width: 100px;"}/
+      .mdl-card__supporting-text
+        在商店頁面點下「
+        %i.material-icons{style: "font-size:14px; vertical-align: middle;"}> star_outline
+        」可開始追蹤，新商品會出現在這裡。多加利用來發現有趣商品吧！
+    - 3.times do
+      / 無 favortite
+      .store-news-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone
+        .mdl-card--media.mdl-card--expand{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+          %a.link-to-product{href: "product.html"}
+          .mdl-card__actions
+            %a.product-title{href: "product.html"}= zh_lorem_words(4+rand(10))
+            .mdl-layout-spacer
+            %i.favorite-button.material-icons favorite_outline
+        .mdl-card__supporting-text
+          %a.avatar{href: "store.html"}
+            %img{src: "img/avatar/a#{1 + rand(20)}.jpg"}/
+            = zh_lorem_words(4+rand(10))
+            ∙ 1 天
+      / 有 favortite
+      .store-news-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone
+        .mdl-card--media.mdl-card--expand{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+          %a.link-to-product{href: "product.html"}
+          .mdl-card__actions
+            %a.product-title{href: "product.html"}= zh_lorem_words(4+rand(10))
+            .mdl-layout-spacer
+            %i.favorite-button.material-icons.active-icon favorite
+        .mdl-card__supporting-text
+          %a.avatar{href: "store.html"}
+            %img{src: "img/avatar/a#{1 + rand(20)}.jpg"}/
+            = zh_lorem_words(4+rand(10))
+            ∙ 1 天
+    / 預告
+    .billboard-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone
+      .mdl-card__supporting-text.mdl-card--border_bottom
+        %a.avatar{href: "store.html"}
+          %img{src: "img/avatar/a#{1 + rand(20)}.jpg"}/
+          = zh_lorem_words(4+rand(10))
+          ∙ 1 天
+      .mdl-card__title.link-to-product.mdl-card--border
+        %h4.mdl-card__title-text= zh_lorem_words(10+rand(10))
+        %p= zh_lorem_paragraphs(3)
+      .mdl-card__actions
+        %a.mdl-button.mdl-js-button.mdl-button--colored{href: "store.html"}
+          前往商店
+          %i.material-icons chevron_right
+/ 應該要加一個建議的商家列表，既在這裡

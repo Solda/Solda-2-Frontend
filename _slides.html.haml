@@ -1,0 +1,22 @@
+/
+  <div class="icon-divider mdl-layout--small-screen-only">
+  <i style="color:#3E4EB8;" class="material-icons">stars</i>
+  <p class="mdl-typography--caption-color-contrast">手打精選</p>
+  </div>
+.mdl-grid
+  #slideshow.slide-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--12-col
+    .slide-wrap{style: "background: url('img/products/p9.jpg') center / cover;"}
+      %a.full-link{href: "#"}
+      .card-content
+        %h1= zh_lorem_words(4+rand(10))
+        %p= zh_lorem_paragraph
+    .slide-wrap{style: "background: url('img/products/p40.jpg') center / cover;"}
+      %a.full-link{href: "#"}
+      .card-content
+        %h1= zh_lorem_words(4+rand(10))
+        %p= zh_lorem_paragraph
+    .slide-wrap{style: "background: url('img/products/p16.jpg') center / cover;"}
+      %a.full-link{href: "#"}
+      .card-content
+        %h1= zh_lorem_words(4+rand(10))
+        %p= zh_lorem_paragraph

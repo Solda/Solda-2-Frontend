@@ -1,0 +1,44 @@
+.mdl-grid.product-list
+  - 24.times do
+    .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
+      .mdl-card--expand.mdl-card--border_bottom{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+        %a.link-to-product{href: "product.html"}
+      .mdl-card__actions
+        .name-title
+          %a.product-title{href: "product.html"}
+            = zh_lorem_words(10+rand(20))
+          %br/
+          %small.price $1000
+        .mdl-layout-spacer
+        .fav-count
+          %i.favorite-button.material-icons favorite_outline
+          %br/
+          %small.price{alt: "收藏次數"} 23
+    .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
+      .mdl-card--expand.mdl-card--border_bottom{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+        %a.link-to-product{href: "product.html"}
+      .mdl-card__actions
+        .name-title
+          %a.product-title{href: "product.html"}
+            = zh_lorem_words(10+rand(20))
+          %br/
+          %small.price 售完
+        .mdl-layout-spacer
+        .fav-count
+          %i.favorite-button.active-icon.material-icons favorite
+          %br/
+          %small.price{alt: "收藏次數"} 23
+    .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
+      .mdl-card--expand.mdl-card--border_bottom{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+        %a.link-to-product{href: "product.html"}
+      .mdl-card__actions
+        .name-title
+          %a.product-title{href: "product.html"}
+            = zh_lorem_words(10+rand(20))
+          %br/
+          %small.price 傳訊詢價
+        .mdl-layout-spacer
+        .fav-count
+          %i.favorite-button.active-icon.material-icons favorite
+          %br/
+          %small.price{alt: "收藏次數"} 23

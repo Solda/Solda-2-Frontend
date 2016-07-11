@@ -1,0 +1,22 @@
+!!!
+%html.no-js{lang: ""}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = render :partial => "header"
+  %body
+    .homepage.mdl-layout.mdl-js-layout
+      .corner-area.right
+        %a.mdl-navigation__link{href: "#"} 瞭解更多
+        %a.mdl-navigation__link{href: "login.html"} 登入
+      .corner-area.left
+        %a.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon{href: "index.html"}
+          %i.material-icons arrow_back
+      %header.mdl-layout__header.mdl-layout__header--transparent.mdl-cell--hide-desktop
+        .mdl-layout-icon
+        .mdl-layout__header-row
+          %span.mdl-layout-title.mdl-layout--large-screen-only SOLDA 手打拍賣
+          .mdl-layout-spacer
+      %main.mdl-layout__content
+        .vertical-spacer.mdl-layout--small-screen-only
+        = yield
+        = render :partial => "footer"

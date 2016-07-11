@@ -1,0 +1,35 @@
+!!!
+%html.no-js{lang: ""}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = render :partial => "header"
+  %body
+    /
+      <div class="spinner-area">
+      <div class="mdl-spinner mdl-js-spinner is-active"></div>
+      </div>
+    .homepage.mdl-layout.mdl-js-layout
+      / 如果是首頁就顯示上方工具列，以及右上方通知 icon
+      .corner-area.right
+        %a.mdl-navigation__link{href: "#"} 瞭解更多
+        %a.mdl-navigation__link{href: "login.html"} 登入
+        / 如果已經登入，就顯示這個
+        / <a href="#" class="mdl-navigation__link">登出</a>
+        /
+          <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons">notifications</i></a>
+        / 如果有通知顯示下方 icon
+        /
+          <a href="index.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons active-icon">notifications_active</i></a>
+      %header.mdl-layout__header.mdl-layout__header--transparent.mdl-cell--hide-desktop
+        .mdl-layout-icon
+        .mdl-layout__header-row
+          %span.mdl-layout-title.mdl-layout--large-screen-only SOLDA 手打拍賣
+          .mdl-layout-spacer
+      .mdl-layout__drawer
+        %span.mdl-layout__title SOLDA 手打拍賣
+        %nav.mdl-navigation
+          = render :partial => "nav"
+      %main.mdl-layout__content
+        .vertical-spacer.mdl-layout--small-screen-only
+        = yield
+        = render :partial => "footer"

@@ -1,0 +1,23 @@
+/ 指定有 back icon 的 layout
+- content_for :back do
+= render :partial => "logo"
+.section-title.mdl-grid
+  .mdl-cell.mdl-cell--12-col
+    %h2.mdl-typography--headline-color-contrast 已追蹤商家
+.mdl-grid.seller-list
+  - 30.times do
+    / normal
+    .seller-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--2-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
+      .mdl-card--expand.mdl-card--border_bottom
+        %a.avatar{href: "store.html"}
+          %img{alt: "", src: "img/avatar/a#{1 + rand(20)}.jpg"}/
+      .seller-name.pro.mdl-typography--text-center
+        = zh_lorem_words(4+rand(12))
+  .pager.mdl-cell.mdl-cell--12-col
+    %a.previous-page{href: "#"}
+      / 在第一頁的時候 在 button 裡加上 disabled 即可變換樣式
+      %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised{disabled: "disabled"}
+        %i.material-icons arrow_back
+    %a.next-page{href: "#"}
+      %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised
+        %i.material-icons arrow_forward

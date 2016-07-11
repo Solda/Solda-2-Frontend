@@ -1,0 +1,39 @@
+= render :partial => "logo"
+.page-description
+  %p.mdl-typography--font-regular
+    請先登入才能繼續。
+.mdl-grid.login-form
+  .mdl-cell.mdl-cell--4-col.mdl-cell--4-offset.mdl-cell--2-offset-tablet{style: "text-align:center;"}
+    %p
+      %a.mdl-button--colored.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect{href: "register-facebook.html", style: "width: 90%;"}
+        使用 Facebook 快速登入
+        %span.mdl-button__ripple-container
+          %span.mdl-ripple
+    %p
+      %a.mdl-button--accent.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect{href: "register.html", style: "width: 90%;"}
+        註冊新的帳號
+        %span.mdl-button__ripple-container
+          %span.mdl-ripple
+    %p.mdl-typography--caption{style: "color: rgba(0,0,0,0.54);"}
+      不想綁定 Facebook 登入或是要共用帳號的話，請註冊新帳號。
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--4-col.mdl-cell--4-offset.mdl-cell--2-offset-tablet
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> account_circle
+      直接登入
+    .card-padding
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 使用者名稱
+          %span.mdl-textfield__error 使用者名稱格式錯誤
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "password"}/
+          %label.mdl-textfield__label{for: "sample3"} 密碼
+          %span.mdl-textfield__error 密碼格式錯誤
+    .mdl-card__actions
+      %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+        登入
+      .mdl-layout-spacer
+      %a.mdl-button.mdl-button.mdl-js-button.mdl-js-ripple-effect
+        忘記密碼？

@@ -1,0 +1,53 @@
+#search-result
+  .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+    #tab-bar.mdl-grid
+      .mdl-cell.mdl-cell--12-col
+        .mdl-tabs__tab-bar
+          %a.mdl-tabs__tab.is-active{href: "#tab1"} 商品
+          %a.mdl-tabs__tab{href: "#tab2"} 商家
+    #tab1.mdl-tabs__panel.is-active
+      %p{style: "text-align: center; color: rgba(0,0,0,0.54); margin: 40px;"} 沒有搜尋結果。
+      .mdl-grid.product-list
+        - 10.times do
+          / 沒有 favorite
+          .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+            .mdl-card--expand
+              %a.link-to-product{href: "product.html"}
+            .mdl-card__actions
+              %a.product-title{href: "product.html"}= zh_lorem_words(4+rand(10))
+              .mdl-layout-spacer
+              %i.favorite-button.material-icons favorite_outline
+          / 有 favorite
+          .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+            .mdl-card--expand
+              %a.link-to-product{href: "product.html"}
+            .mdl-card__actions
+              %a.product-title{href: "product.html"}= zh_lorem_words(4+rand(10))
+              .mdl-layout-spacer
+              %i.favorite-button.active-icon.material-icons favorite
+        .pager.mdl-cell.mdl-cell--12-col
+          %a.previous-page{href: "#"}
+            / 在第一頁的時候 在 button 裡加上 disabled 即可變換樣式
+            %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised{disabled: "disabled"}
+              %i.material-icons arrow_back
+          %a.next-page{href: "#"}
+            %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised
+              %i.material-icons arrow_forward
+    #tab2.mdl-tabs__panel
+      .mdl-grid.seller-list
+        - 30.times do
+          / normal
+          .seller-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--2-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
+            .mdl-card--expand.mdl-card--border_bottom
+              %a.avatar{href: "store.html"}
+                %img{alt: "", src: "img/avatar/a#{1 + rand(20)}.jpg"}/
+            .seller-name.pro.mdl-typography--text-center
+              = zh_lorem_words(4+rand(12))
+        .pager.mdl-cell.mdl-cell--12-col
+          %a.previous-page{href: "#"}
+            / 在第一頁的時候 在 button 裡加上 disabled 即可變換樣式
+            %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised{disabled: "disabled"}
+              %i.material-icons arrow_back
+          %a.next-page{href: "#"}
+            %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised
+              %i.material-icons arrow_forward

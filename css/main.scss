@@ -2,6 +2,32 @@
 
 // @TO-DO 把文字放到圖片下方，加上價格
 
+
+// avatar in settings
+
+.avatar {
+	width: 72px;
+	border-radius: 2px;
+	margin-bottom: 5px;
+}
+
+// custom 2 col layout
+
+.two-col {
+	width: 80%;
+	margin: 0 auto;
+	.left-col {
+		display: inline-block;
+		text-align: right;
+		min-width: 30%;
+		padding-right: 5%;
+	}
+	.right-col {
+		display: inline-block;
+		text-align: left;
+	}
+}
+
 // 一般
 
 a.category-icon.active { 

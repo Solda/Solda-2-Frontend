@@ -1,0 +1,41 @@
+.store-profile
+  %a.avatar{href: "store.html"}
+    %img{alt: "", src: "img/avatar/a6.jpg"}/
+  %h1 寶物淘淘網
+  %p @cloud-tou•87 % 好評
+  %a#tt1.profile_excerpt{href: "profile.html"}
+    = zh_lorem_paragraphs(2)
+    %span.mdl-tooltip{for: "tt1"} 看商家介紹
+.mdl-tabs.mdl-js-tabs
+  .mdl-tabs__tab-bar
+    %a.mdl-tabs__tab.is-active{href: "#tab1"} 商品
+    %a.mdl-tabs__tab{href: "#tab2"} 分類
+  #tab1.mdl-tabs__panel.is-active
+    .mdl-grid.store-news-list
+      / 預告
+      /
+        <div class="billboard-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop  mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card__supporting-text mdl-card--border_bottom">
+        <a class="avatar" href="store.html"><img src="img/avatar/a<haml_loud> 1 + rand(20) </haml_loud>.jpg" /><haml_loud> zh_lorem_words(4+rand(10)) </haml_loud> ∙ 1 天</a>
+        </div>
+        <div class="mdl-card__title link-to-product mdl-card--border">
+        <h4 class="mdl-card__title-text"><haml_loud> zh_lorem_words(10+rand(10)) </haml_loud></h4>
+        <p><haml_loud> zh_lorem_paragraphs(3) </haml_loud></p>
+        </div>
+        <div class="mdl-card__actions">
+        <a href="#" class="expand-more mdl-button mdl-js-button mdl-button--colored">展開<i class="material-icons">expand_more</i></a>
+        <a href="#" class="expand-less mdl-button mdl-js-button mdl-button--colored">關閉<i class="material-icons">expand_less</i></a>
+        <div class="mdl-layout-spacer"></div>
+        <a href="#" class="mdl-button mdl-button--icon mdl-js-button mdl-button--colored"><i class="material-icons">message</i></a>
+        </div>
+        </div>
+    = render :partial => "product-list-item-only"
+  #tab2.mdl-tabs__panel
+    .mdl-grid
+      .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--4-col-tablet.mdl-cell--2-offset-tablet.mdl-cell--4-col-phone
+        %ul.text-list
+          - 15.times do
+            %li
+              %a{href: "#"}
+                = zh_lorem_words(1+rand(6))
+                %small= rand(30)

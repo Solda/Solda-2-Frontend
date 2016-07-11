@@ -1,0 +1,26 @@
+.hide-when-search
+  .section-title.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      %h2.mdl-typography--headline-color-contrast 大分類
+      .mdl-layout-spacer
+      %a.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--colored{href: "#"}
+        更多商品
+        %i.material-icons chevron_right
+  .mdl-grid.product-list
+    - 4.times do
+      / 沒有 favorite
+      .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+        .mdl-card--expand
+          %a.link-to-product{href: "product.html"}
+        .mdl-card__actions
+          %a.product-title{href: "product.html"}= zh_lorem_words(4+rand(10))
+          .mdl-layout-spacer
+          %i.favorite-button.material-icons favorite_outline
+      / 有 favorite
+      .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
+        .mdl-card--expand
+          %a.link-to-product{href: "product.html"}
+        .mdl-card__actions
+          %a.product-title{href: "product.html"}= zh_lorem_words(4+rand(10))
+          .mdl-layout-spacer
+          %i.favorite-button.active-icon.material-icons favorite

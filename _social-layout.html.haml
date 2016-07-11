@@ -1,0 +1,10 @@
+!!!
+%html.no-js{lang: ""}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = render :partial => "header"
+  %body
+    .mdl-layout.mdl-js-layout
+      %main.mdl-layout__content
+        .vertical-spacer.mdl-layout--small-screen-only
+        = yield

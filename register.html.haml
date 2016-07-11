@@ -1,0 +1,44 @@
+/ 指定有 back icon 的 layout
+- content_for :back do
+= render :partial => "logo"
+.page-description
+  %p.mdl-typography--font-regular
+    為保障交易安全，請確實填寫資料。
+.mdl-grid.login-form
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--4-col.mdl-cell--4-offset.mdl-cell--2-offset-tablet
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> mood
+      註冊新帳號
+    .card-padding
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 使用者名稱 / 網址（英數無空白）
+          %span.mdl-textfield__error 使用者名稱格式錯誤
+        %div
+          %p.mdl-typography--caption
+            商店網址：http://solda.io/xxxxx
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "password"}/
+          %label.mdl-textfield__label{for: "sample3"} 密碼（至少 8 個字元）
+          %span.mdl-textfield__error 密碼格式錯誤
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} Email（交易通知用）
+          %span.mdl-textfield__error 格式錯誤
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 真實姓名（超商用，最多五個字）
+          %span.mdl-textfield__error 超商資料格式限制最多五個字
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 手機號碼（超商用）
+          %span.mdl-textfield__error 格式錯誤
+    .mdl-card__actions
+      %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+        註冊
+      .mdl-layout-spacer

@@ -1,0 +1,28 @@
+.mdl-grid.store-news-list
+  - 3.times do
+    .cart-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+      .mdl-card__supporting-text
+        %a.avatar{href: "store.html"}
+          %img{src: "img/avatar/a#{1 + rand(20)}.jpg"}/
+          = zh_lorem_words(4+rand(10))
+      %div
+        %table.mdl-data-table.mdl-js-data-table
+          - 3.times do
+            %tr
+              %td.mdl-data-table__cell--non-numeric.product-img
+                .img-wrapper{style: "background: url('img/products/p#{1 + rand(20)}.jpg') center / cover;"}
+              %td.mdl-data-table__cell--non-numeric.item
+                = zh_lorem_words(4+rand(10))
+                %a{href: "#"} （移除）
+                %br/
+                %p
+                  數量：
+                  %select{id: "", name: ""}
+                    %option 3
+              %td.price
+                NT$ #{10 + rand(1500)}
+      .mdl-card__actions
+        %a.mdl-button.mdl-button--accent.mdl-js-button.mdl-js-ripple-effect{href: "checkout.html"} 開始結帳
+        .mdl-layout-spacer
+        %strong.price
+          小計：NT$ #{10 + rand(1500)}
