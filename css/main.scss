@@ -475,10 +475,10 @@ main.mdl-layout__content {
 // 小螢幕時撐開 app bar 和下方內容區塊
 
 .vertical-spacer {
- display: block;
- display: none;
- width: 100%;
- height: 32px;
+	display: block;
+	display: none;
+	width: 100%;
+	height: 32px;
 }
 
 // 寬度
@@ -504,8 +504,35 @@ $page-width: 1024px;
 
 }
 
-// 產品列與商家追蹤列表
+// 相關產品
 
+#related-product {
+	&::-webkit-scrollbar { 
+    display: none; 
+	}
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	overflow-x: scroll;
+	overflow-y: hidden; 
+	display: flex;
+	flex-direction: row;
+	.product-card {
+		z-index: 3;
+		min-width: 200px;
+	}
+}
+
+@media (max-width: 479px) {
+	#related-product {
+		.product-card {
+			height: 200px;
+		}
+	}
+}
+
+
+// 產品列與商家追蹤列表
 
 .product-list, .store-news-list {
 
@@ -558,6 +585,7 @@ $page-width: 1024px;
 		    -ms-flex-pack: end;
 		        justify-content: flex-end;
 	}
+
 
 
 	.product-card {
@@ -1154,7 +1182,7 @@ footer {
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
  		}
  		#buy-now.normalize {
- 							box-shadow: none;
+				box-shadow: none;
 				color: #ff4081;
 				background: transparent;
 			  &.mdl-button:hover {
@@ -1182,21 +1210,21 @@ footer {
 			z-index: 1;
 			padding: 0 16px;
 			margin-bottom: 0;
-			#buy-now {
-				box-shadow: none;
-				color: #ff4081;
-				background: transparent;
-			  &.mdl-button:hover {
-			    background-color: rgba(158,158,158, 0.20); }
-			  &.mdl-button:focus:not(:active) {
-			    background-color: rgba(0,0,0, 0.12); }
-			  &.mdl-button:active {
-			    background-color: rgba(158,158,158, 0.40); }
-			  &.mdl-button.mdl-button--colored {
-			    color: rgb(63,81,181); }
-			  &.mdl-button.mdl-button--colored:focus:not(:active) {
-			      background-color: rgba(0,0,0, 0.12); } 		
-			}
+			// #buy-now {
+			// 	box-shadow: none;
+			// 	color: #ff4081;
+			// 	background: transparent;
+			//   &.mdl-button:hover {
+			//     background-color: rgba(158,158,158, 0.20); }
+			//   &.mdl-button:focus:not(:active) {
+			//     background-color: rgba(0,0,0, 0.12); }
+			//   &.mdl-button:active {
+			//     background-color: rgba(158,158,158, 0.40); }
+			//   &.mdl-button.mdl-button--colored {
+			//     color: rgb(63,81,181); }
+			//   &.mdl-button.mdl-button--colored:focus:not(:active) {
+			//       background-color: rgba(0,0,0, 0.12); } 		
+			// }
 		}
 	}
 

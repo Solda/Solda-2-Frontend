@@ -31,37 +31,46 @@
       .buy-bar
         %button#buy-now.mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect
           馬上購買
-        %button.mdl-button.mdl-js-button.mdl-button--icon
-          %i.material-icons favorite_outline
+        -# %button.mdl-button.mdl-js-button.mdl-button--icon
+        -#   %i.material-icons favorite_outline
         %button#add-to-cart.mdl-button.mdl-js-button.mdl-button--icon
           %i.material-icons add_shopping_cart
+        %button.mdl-button.mdl-js-button.mdl-button--icon#tt1
+          %span.mdl-tooltip{:for => "tt1"} 傳訊息給賣家
+          %i.material-icons
+            message
       .product-description
         %p= zh_lorem_paragraph
         - 2.times do
           %p= zh_lorem_paragraphs(2)
         %p.mdl-typography--caption-color-contrast 瀏覽 40•庫存 7•銷售 3•更新於 2015/06/26
-      #share-section
-        %hr/
-        %button.mdl-button.mdl-js-button.mdl-button--colored
-          傳訊詢問
-        %button#share.mdl-button.mdl-js-button.mdl-button--icon
-          %img{alt: "", src: "img/profile/facebook.svg"}/
-        %button#share.mdl-button.mdl-js-button.mdl-button--icon
-          %img{alt: "", src: "img/profile/twitter.svg"}/
+      -# #share-section
+      -#   %hr/
+      -#   %button#share.mdl-button.mdl-js-button.mdl-button--icon
+      -#     %img{alt: "", src: "img/profile/facebook.svg"}/
+      -#   %button#share.mdl-button.mdl-js-button.mdl-button--icon
+      -#     %img{alt: "", src: "img/profile/twitter.svg"}/
+.mdl-grid
+  .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    %h5
+      相關商品
+
+#related-product
+  = render :partial => "product-related"
 #sub-product-info
   .mdl-grid
+    -# .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    -#   .store-info-card
+    -#     %a{href: "store.html"}
+    -#       %img{alt: "", src: "img/avatar/a6.jpg"}/
+    -#       %span
+    -#         %h1 寶物淘淘網
+    -#         %p @cloud-tou•87 % 好評
+    -#     .mdl-layout-spacer
+    -#     %button#follow.mdl-button.mdl-js-button.mdl-button--colored
+    -#       追蹤商家
     .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
-      .store-info-card
-        %a{href: "store.html"}
-          %img{alt: "", src: "img/avatar/a6.jpg"}/
-          %span
-            %h1 寶物淘淘網
-            %p @cloud-tou•87 % 好評
-        .mdl-layout-spacer
-        %button#follow.mdl-button.mdl-js-button.mdl-button--colored
-          追蹤商家
-    .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
-      %hr/
+      %h5 關於本產品
       %h6 寄送資訊
       %p
         郵局 NT$ 50
