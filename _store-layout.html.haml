@@ -5,31 +5,13 @@
     = render :partial => "header"
   %body
     %div{class: "if content_for? :product product-page else store-page mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll"}
-      - if content_for? :product
-        .corner-area.left
-          %a#store-name.avatar{href: "store.html"}
-            %img{alt: "", src: "img/avatar/a6.jpg"}/
-            %span.mdl-tooltip{for: "store-name"} 寶物淘淘網
-        .corner-area.right
-          %a.mdl-navigation__link{href: ""}
-            %i.material-icons share
-          %a.mdl-navigation__link{href: ""}
-            %i.material-icons message
-      - else
-        .corner-area.left
-          %a.avatar.logo{href: "index.html"}
-            %img{alt: "", src: "img/solda-pick.svg"}/
-        .corner-area.right
-          %a.mdl-navigation__link{href: ""}
-            %i.material-icons share
-          %a.mdl-navigation__link{href: ""}
-            %i.material-icons message
-          %a#tt2.mdl-navigation__link{href: ""}
-            %i.material-icons star_outline
-            %span.mdl-tooltip{for: "tt2"} 追蹤商家
-          / 以追蹤就顯示這個狀態：
-          /
-            <a class="mdl-navigation__link" href="" id="tt2" ><i class="material-icons active-icon">star</i><span class="mdl-tooltip" for="tt2">取消追蹤此商家</span></a>
+      .corner-area.left
+        %a.avatar.logo{href: "index.html"}
+          %img{alt: "", src: "img/solda-pick.svg"}/
+      .corner-area.right
+        %a.mdl-navigation__link{href: "login.html"} 登入        
+        %a.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon{:href => "#"}
+          %i.material-icons notifications
       %main.mdl-layout__content
         = yield
         = render :partial => "footer-store"

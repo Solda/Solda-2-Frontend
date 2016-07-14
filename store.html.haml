@@ -2,33 +2,25 @@
   %a.avatar{href: "store.html"}
     %img{alt: "", src: "img/avatar/a6.jpg"}/
   %h1 寶物淘淘網
-  %p @cloud-tou•87 % 好評
-  %a#tt1.profile_excerpt{href: "profile.html"}
-    = zh_lorem_paragraphs(2)
-    %span.mdl-tooltip{for: "tt1"} 看商家介紹
+  %p
+    @cloud-tou•97 % 好評
+  %p
+    %button.mdl-button.mdl-js-button.mdl-button--icon#tt1
+      %span.mdl-tooltip{:for => "tt1"} 傳訊息給賣家
+      %i.material-icons
+        message
+    %button.mdl-button.mdl-js-button.mdl-button--icon#tt2
+      %span.mdl-tooltip{:for => "tt2"} Facebook and line?
+      %i.material-icons
+        edit
+
 .mdl-tabs.mdl-js-tabs
   .mdl-tabs__tab-bar
     %a.mdl-tabs__tab.is-active{href: "#tab1"} 商品
     %a.mdl-tabs__tab{href: "#tab2"} 分類
+    %a.mdl-tabs__tab{href: "#tab3"} 關於我
   #tab1.mdl-tabs__panel.is-active
     .mdl-grid.store-news-list
-      / 預告
-      /
-        <div class="billboard-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop  mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-        <div class="mdl-card__supporting-text mdl-card--border_bottom">
-        <a class="avatar" href="store.html"><img src="img/avatar/a<haml_loud> 1 + rand(20) </haml_loud>.jpg" /><haml_loud> zh_lorem_words(4+rand(10)) </haml_loud> ∙ 1 天</a>
-        </div>
-        <div class="mdl-card__title link-to-product mdl-card--border">
-        <h4 class="mdl-card__title-text"><haml_loud> zh_lorem_words(10+rand(10)) </haml_loud></h4>
-        <p><haml_loud> zh_lorem_paragraphs(3) </haml_loud></p>
-        </div>
-        <div class="mdl-card__actions">
-        <a href="#" class="expand-more mdl-button mdl-js-button mdl-button--colored">展開<i class="material-icons">expand_more</i></a>
-        <a href="#" class="expand-less mdl-button mdl-js-button mdl-button--colored">關閉<i class="material-icons">expand_less</i></a>
-        <div class="mdl-layout-spacer"></div>
-        <a href="#" class="mdl-button mdl-button--icon mdl-js-button mdl-button--colored"><i class="material-icons">message</i></a>
-        </div>
-        </div>
     = render :partial => "product-list-item-only"
   #tab2.mdl-tabs__panel
     .mdl-grid
@@ -39,3 +31,91 @@
               %a{href: "#"}
                 = zh_lorem_words(1+rand(6))
                 %small= rand(30)
+  #tab3.mdl-tabs__panel
+    .mdl-grid.store-news-list
+      / 預告
+      .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+        .mdl-card__supporting-text.mdl-card--border_bottom
+          商家介紹
+        .mdl-card__supporting-text
+          %p.mdl-typography--body-1.mdl-color-text--black
+            = zh_lorem_paragraphs(2)
+      .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+        .mdl-card__supporting-text.mdl-card--border_bottom
+          聯絡方式
+        .mdl-card__supporting-text
+          %ul.icon-list
+            %li
+              %i.material-icons phone
+              %a{href: "tel:0912-345-678"} 0912-345-678
+            %li
+              %i
+                %img{src: "img/profile/facebook.svg"}/
+              %a{href: "#"} 手打拍賣粉絲專業
+            %li
+              %i
+                %img{src: "img/profile/twitter.svg"}/
+              %a{href: "#"} @sillyleo
+            %li
+              %i
+                %img{src: "img/profile/instagram.svg"}/
+              %a{href: "#"} @ken.is.photographer
+            %li
+              %i
+                %img{src: "img/profile/address.svg"}/
+              %a{href: "https://www.google.com.tw/maps/place/台北市新生南路三段/@25.0212125,121.531932,17z/data=!3m1!4b1!4m2!3m1!1s0x3442a988f6b28787:0xf93d3d26e9917cbb"} 台北市大安區新生南路三段 280 號
+      .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+        .mdl-card__supporting-text.mdl-card--border_bottom
+          評價
+        .mdl-card__supporting-text.mdl-typography--text-center
+          最近兩個月的
+          %strong.mdl-color-text--black 27
+          筆訂單有
+          %strong.mdl-color-text--black 100%
+          的優良評價。
+        .mdl-tabs.mdl-js-tabs
+          .mdl-tabs__tab-bar.rating-tab
+            %a.mdl-tabs__tab{href: "#"}
+              優良
+              %br/
+              %img{alt: "", src: "img/profile/good.svg"}/
+              %br/
+              %strong 160
+            %a.mdl-tabs__tab{href: "#"}
+              可接受
+              %br/
+              %img{alt: "", src: "img/profile/ok.svg"}/
+              %br/
+              %strong 4
+            %a.mdl-tabs__tab{href: "#"}
+              不滿意
+              %br/
+              %img{alt: "", src: "img/profile/bad.svg"}/
+              %br/
+              %strong 1
+          #tab-good
+            .rating-container
+              - 7.times do
+                .rating-unit
+                  .buyer
+                    %img{alt: "", src: "img/profile/good.svg", :style => "width: 18px; vertical-align: text-top; margin-right: 0.5em;"}/ 
+                    %a{href: "store.html"}>= zh_lorem_name
+                    ：#{zh_lorem_words(4+rand(10))}
+                    %small
+                      \- #{lorem_date}
+                  .product
+                    %a{href: "#"}
+                      %img{alt: "", src: "img/products/p#{1 + rand(78)}.jpg"}/
+                .rating-unit
+                  .buyer
+                    %img{alt: "", src: "img/profile/ok.svg", :style => "width: 18px; vertical-align: text-top; margin-right: 0.5em;"}/ 
+                    %a{href: "store.html"}>= zh_lorem_name
+                    ：#{zh_lorem_words(4+rand(10))}
+                    %small
+                      \- #{lorem_date}
+                  .product
+                    %a{href: "#"}
+                      %img{alt: "", src: "img/products/p#{1 + rand(78)}.jpg"}/
+                    %a{href: "#"}
+                      %img{alt: "", src: "img/products/p#{1 + rand(78)}.jpg"}/
+

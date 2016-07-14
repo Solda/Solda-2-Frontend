@@ -360,14 +360,31 @@
       .mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
         %h5 在噗浪推廣你的商品！
         %p 開啟開關並連結噗浪帳號後，手打會為你成立噗浪門市，將商品曝光給噗浪用戶，若是透過噗浪連結而成交的訂單，則收取總計 10% 推廣費用（內含金流手續費）。若噗浪沒有為你帶來新訂單，則不會收取任何費用；此外，沒有透過噗浪成交的訂單也不會產生額外費用。
-        %p
-          %label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => "switch-1"}
-            %input#switch-1.mdl-switch__input{:type => "checkbox", :disabled => "disabled"}/
-            %span.mdl-switch__label 噗浪門市
+        %h5
+          噗浪推廣狀態：停用
+          %i.material-icons{:style => "color: gray; font-size: 24px; vertical-align: text-top;"} visibility_off
         %p 
-          尚未連結噗浪帳號，請先
-          %a{:href => "#"} 連結噗浪帳號
-          才可啟用。
+          尚未連結噗浪帳號，連結噗浪帳號後即可啟用。
+        %p
+          %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored 連結噗浪帳號來啟用
+        %h6 曝光管道
+        %ol
+          %li 個人河道顯示商店連結
+          %li 河道切換為商品模式時會出現你的商品
+          %li 噗浪官方會在首頁提供曝光機會
+      .mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+        %h5 在噗浪推廣你的商品！
+        %p 開啟開關並連結噗浪帳號後，手打會為你成立噗浪門市，將商品曝光給噗浪用戶，若是透過噗浪連結而成交的訂單，則收取總計 10% 推廣費用（內含金流手續費）。若噗浪沒有為你帶來新訂單，則不會收取任何費用；此外，沒有透過噗浪成交的訂單也不會產生額外費用。
+        %h5
+          噗浪推廣狀態：曝光中
+          %i.material-icons{:style => "color: green; font-size: 24px; vertical-align: text-top;"} visibility_on
+        %p 
+          已連結噗浪帳號
+          %a{:href => "#"} sillyleo
+          的噗浪帳號，努力推廣中！
+        %p
+          %button.mdl-button.mdl-js-button.mdl-button--raised 中斷噗浪連結
+        %p 注意：中斷連結後，噗浪河道上張貼的商品還是會留著，但不會有特別的顯示方式。
         %h6 曝光管道
         %ol
           %li 個人河道顯示商店連結

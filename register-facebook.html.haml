@@ -1,5 +1,3 @@
-/ 指定有 back icon 的 layout
-- content_for :back do
 = render :partial => "logo"
 .page-description
   %p.mdl-typography--font-regular
@@ -10,6 +8,14 @@
       %i.material-icons.with-text> mood
       註冊新帳號
     .card-padding
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 網址（英數無空白）
+          %span.mdl-textfield__error 格式錯誤
+        %div
+          %p.mdl-typography--caption
+            商店網址：http://solda.io/xxxxx
       %div
         .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
           %input#sample3.mdl-textfield__input{type: "text", value: "john@example.com"}/
@@ -24,16 +30,6 @@
           %input#sample3.mdl-textfield__input{type: "text"}/
           %label.mdl-textfield__label{for: "sample3"} 手機號碼（超商用）
           %span.mdl-textfield__error 格式錯誤
-      %div
-        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
-          %input#sample3.mdl-textfield__input{type: "text"}/
-          %label.mdl-textfield__label{for: "sample3"} 手打商號（個人網址，英數無空白）
-          %span.mdl-textfield__error 格式錯誤
-      %div
-        %small 網址範例：http://solda.io/xxxxx
-        %small
-          %br>/
-          給 Mark：當用戶在填使用者名稱的時候，網址就可以幫他同步填寫囉！
     .mdl-card__actions
       %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
         註冊

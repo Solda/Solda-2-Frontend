@@ -5,20 +5,19 @@
     = render :partial => "header"
   %body
     %div.product-page.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-      / 商品頁面的 header
       %header#topbar.mdl-layout__header--seamed.mdl-layout__header--transparent.mdl-layout__header.mdl-layout__header--scroll.mdl-layout__header--seamed
-        .mdl-layout__header-row
-          / Add spacer, to align navigation to the right
-          .mdl-layout-spacer
-          / Navigation. We hide it in small screens.
-          %nav.mdl-navigation
-            %a.mdl-navigation__link{href: ""} 編輯商品
-      .corner-area.left
-        %a.avatar.logo{href: "index.html"}
-          %img{alt: "", src: "img/solda-pick.svg"}/
+      .corner-area.right
+        %a.mdl-navigation__link{href: "login.html"} 登入
+        %a.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon{:href => "#"}
+          %i.material-icons notifications
+      .corner-area.center
         %a#store-name.avatar{href: "store.html"}
           %img{alt: "", src: "img/avatar/a6.jpg"}/
           %span.mdl-tooltip{for: "store-name"} 寶物淘淘網
+
+      .corner-area.left
+        %a.avatar.logo{href: "index.html"}
+          %img{alt: "", src: "img/solda-pick.svg"}/
       %main.mdl-layout__content
         = yield
         = render :partial => "footer-store"

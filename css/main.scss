@@ -245,6 +245,12 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 
 .corner-area {
+	&.center {
+		margin: 0 auto;
+		left: calc(50% - 30px);
+		width: 60px;
+		text-align: center;
+	}
 	a.avatar {
 		text-decoration: none;
 		.product-page &.logo {
@@ -1015,9 +1021,9 @@ footer {
 
 	.store-profile {
 		text-align: center;
-		background: #FFFFFF;
+		background: white;
 		padding-top: 36px;
-		padding-bottom: 16px;
+		padding-bottom: 1px;
 		a.avatar img {
 			width: 80px;
 			height: 80px;
@@ -1277,11 +1283,6 @@ footer {
 		}
 	}
 
-	// icon 辯白
-
-	.corner-area i {
-		color: white;
-	}
 	// 上方添加 gradient
 
 	#product-gallery {

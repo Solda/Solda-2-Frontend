@@ -1,5 +1,3 @@
-/ 指定有 back icon 的 layout
-- content_for :back do
 = render :partial => "logo"
 .page-description
   %p.mdl-typography--font-regular
@@ -20,14 +18,14 @@
             商店網址：http://solda.io/xxxxx
       %div
         .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
-          %input#sample3.mdl-textfield__input{type: "password"}/
-          %label.mdl-textfield__label{for: "sample3"} 密碼（至少 8 個字元）
-          %span.mdl-textfield__error 密碼格式錯誤
-      %div
-        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
           %input#sample3.mdl-textfield__input{type: "text"}/
           %label.mdl-textfield__label{for: "sample3"} Email（交易通知用）
           %span.mdl-textfield__error 格式錯誤
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "password"}/
+          %label.mdl-textfield__label{for: "sample3"} 密碼（至少 8 個字元）
+          %span.mdl-textfield__error 密碼格式錯誤
       %div
         .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
           %input#sample3.mdl-textfield__input{type: "text"}/
