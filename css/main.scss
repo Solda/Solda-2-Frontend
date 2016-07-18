@@ -1,6 +1,35 @@
 // product-card
 
-// @TO-DO 把文字放到圖片下方，加上價格
+select#order-filter {
+	background: transparent;
+	outline: none;
+	line-height: 36px;
+	font-weight: 500;
+	width: 6em;
+	font-size: 14px;
+  padding: 0 16px;
+	border:none;
+	border-radius: 2px;
+	margin: 0 8px;
+	&:hover {
+		background: rgba(226, 226, 226, 1);
+	}
+}
+
+.order-status {
+	color: white;
+	background: gray;
+	font-size: 11px;
+	border-radius: 3px;
+	padding: 4px 8px;
+	text-shadow: 0 0 2px rgba(0,0,0,0.2);
+	&.green {
+		background: rgba(139, 195, 74, 1);
+	}
+	&.yellow {
+		background: darken(rgba(255, 152, 0, 1), 5%);
+	}
+}
 
 
 // avatar in settings
@@ -866,6 +895,7 @@ $page-width: 1024px;
 .category-icon._08 { background: url('../img/category/08.svg') center center no-repeat ; }
 .category-icon._09 { background: url('../img/category/09.svg') center center no-repeat ; }
 .category-icon._010 { background: url('../img/category/010.svg') center center no-repeat ; }
+.category-icon._011 { background: url('../img/category/011.svg') center center no-repeat ; }
 
 
 

@@ -1,0 +1,183 @@
+= render :partial => "logo"
+= render :partial => "category-mini"
+
+
+.mdl-grid
+  .mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+    .mdl-tabs__tab-bar
+      %a.mdl-tabs__tab.is-active{:href => "#essential-panel"} 訂單
+      %a.mdl-tabs__tab{:href => "#storeinfo-panel"} 撥款
+    #essential-panel.mdl-tabs__panel.is-active
+      %div{:style => "width: 1020px; margin-top: 20px; border-radius: 2px; padding: 8px 16px; box-sizing: border-box; display: flex;"}
+        %i.material-icons{:style => "line-height: 36px;"} sort
+        %select#order-filter{:name => ""}
+          %option{:value => ""} 全部訂單
+          %option{:value => ""} 尚未出貨
+          %option{:value => ""} 已出貨
+          %option{:value => ""} 已取消
+          %option{:value => ""} 等待匯款（訂單不算成立）
+        %i.material-icons{:style => "line-height: 36px; margin-left: 20px;"} event
+        %select#order-filter{:name => ""}
+          %option{:value => ""} 全部時間
+          %option{:value => ""} 2016.10
+          %option{:value => ""} 2016.9
+          %option{:value => ""} 2016.8
+          %option{:value => ""} 2016.7
+          %option{:value => ""} 2016.6
+        .search-area{:style => "height: 36px; width: 200px; margin-left: 20px; background: transparent;"}
+          %i.material-icons search
+          %input#search{placeholder: "訂單編號、姓名、品項", type: "text",:style => "background: transparent; font-size: 14px;"}/
+
+        .mdl-layout-spacer
+        %a.mdl-button{:href => "#"}
+          %i.material-icons file_download
+          下載 excel
+        %a.mdl-button{:href => "#"}
+          %i.material-icons print
+          列印超商出貨單
+        %button#menu2.mdl-button.mdl-js-button
+          %i.material-icons more_vert
+          批次動作
+        %ul.mdl-menu.mdl-js-menu{:for => "menu2"}
+          %li.mdl-menu__item 標記為出貨
+          %li.mdl-menu__item 列印超商出貨單
+          %li.mdl-menu__item 取消訂單
+
+
+
+      %table.mdl-data-table.mdl-js-data-table.mdl-data-table--selectable.mdl-shadow--2dp{:style => "width: 1020px; margin-top: 10px;"}
+        %thead
+          %tr
+            %th.mdl-data-table__cell--non-numeric 訂單編號
+            %th.mdl-data-table__cell--non-numeric 成立時間
+            %th.mdl-data-table__cell--non-numeric 金額
+            %th.mdl-data-table__cell--non-numeric 品項
+            %th.mdl-data-table__cell--non-numeric 姓名
+            %th.mdl-data-table__cell--non-numeric 聯絡方式
+            %th.mdl-data-table__cell--non-numeric 寄送
+            %th.mdl-data-table__cell--non-numeric 訂單狀態
+            %th.mdl-data-table__cell--non-numeric 動作
+        %tbody
+          - 6.times do
+            %tr
+              %td.mdl-data-table__cell--non-numeric
+                %a{:href => "order-detail.html"} #82395
+              %td.mdl-data-table__cell--non-numeric
+                =lorem_date("%Y.%m.%d", 2015..2016)
+              %td $250
+              %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                = zh_lorem_words(13+rand(20))
+              %td.mdl-data-table__cell--non-numeric
+                = zh_lorem_name
+              %td.mdl-data-table__cell--non-numeric{:style => "max-width: 200px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                0921757696
+                %br/
+                %a{:href => "mailto:leolin@me.com"}
+                  = zh_lorem_email
+              %td.mdl-data-table__cell--non-numeric 超商取貨
+              %td.mdl-data-table__cell--non-numeric
+                %span.order-status.yellow 尚未出貨
+              %td.mdl-data-table__cell--non-numeric 
+                %button#menu1.mdl-button.mdl-js-button.mdl-button--icon
+                  %i.material-icons more_vert
+                %ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right{:for => "menu1"}
+                  %li.mdl-menu__item 標記為出貨
+                  %li.mdl-menu__item 取消訂單
+            %tr
+              %td.mdl-data-table__cell--non-numeric
+                %a{:href => "order-detail.html"} #83695
+              %td.mdl-data-table__cell--non-numeric
+                =lorem_date("%Y.%m.%d", 2015..2016)
+              %td $570
+              %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                = zh_lorem_words(13+rand(20))
+              %td.mdl-data-table__cell--non-numeric
+                = zh_lorem_name
+              %td.mdl-data-table__cell--non-numeric{:style => "max-width: 200px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                0921476736
+                %br/
+                %a{:href => "mailto:leolin@me.com"}
+                  = zh_lorem_email
+              %td.mdl-data-table__cell--non-numeric 宅配
+              %td.mdl-data-table__cell--non-numeric
+                %span.order-status.green 已出貨
+              %td.mdl-data-table__cell--non-numeric 
+                %button#menu1.mdl-button.mdl-js-button.mdl-button--icon
+                  %i.material-icons more_vert
+                %ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right{:for => "menu1"}
+                  %li.mdl-menu__item 標記為出貨
+                  %li.mdl-menu__item 取消訂單
+
+            %tr
+              %td.mdl-data-table__cell--non-numeric
+                %a{:href => "order-detail.html"} #83695
+              %td.mdl-data-table__cell--non-numeric
+                =lorem_date("%Y.%m.%d", 2015..2016)
+              %td $570
+              %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                = zh_lorem_words(13+rand(20))
+              %td.mdl-data-table__cell--non-numeric
+                = zh_lorem_name
+              %td.mdl-data-table__cell--non-numeric{:style => "max-width: 200px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                0921476736
+                %br/
+                %a{:href => "mailto:leolin@me.com"}
+                  = zh_lorem_email
+              %td.mdl-data-table__cell--non-numeric 宅配
+              %td.mdl-data-table__cell--non-numeric
+                %span.order-status 已取消
+              %td.mdl-data-table__cell--non-numeric 
+                %button#menu1.mdl-button.mdl-js-button.mdl-button--icon
+                  %i.material-icons more_vert
+                %ul.mdl-menu.mdl-js-menu.mdl-menu--bottom-right{:for => "menu1"}
+                  %li.mdl-menu__item 標記為出貨
+                  %li.mdl-menu__item 取消訂單
+
+
+      %div{:style => "width: 1020px; margin-top: 20px; box-sizing: border-box; display: flex;"}
+        %a.mdl-button{:href => "#"}
+          %i.material-icons navigate_before
+          上一頁
+        .mdl-layout-spacer
+        %select#order-filter{:name => "", :style => "width: auto;"}
+          %option{:value => ""} 第 1 頁
+          %option{:value => ""} 第 2 頁
+          %option{:value => ""} 第 3 頁
+          %option{:value => ""} 第 4 頁
+        .mdl-layout-spacer
+        %a.mdl-button{:href => "#"}
+          下一頁
+          %i.material-icons navigate_next
+
+
+
+    #storeinfo-panel.mdl-tabs__panel
+      %div{:style => "width: 1020px; margin-top: 20px; border-radius: 2px; padding: 8px 16px; box-sizing: border-box; display: flex; line-height: 36px;"}
+        帳款將統一使用中國信託帳戶撥款，非中信帳號需負擔 $15 轉帳手續費，所有代收款項都由中國信託保證質押。
+      %table.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp{:style => "width: 1020px; margin-top: 10px;"}
+        %thead
+          %tr
+            %th.mdl-data-table__cell--non-numeric 預計撥款日期
+            %th.mdl-data-table__cell--non-numeric 訂單期間
+            %th.mdl-data-table__cell--non-numeric 撥款金額
+            %th.mdl-data-table__cell--non-numeric 撥款狀態
+            %th.mdl-data-table__cell--non-numeric 明細
+        %tbody
+          - 3.times do
+            %tr
+              %td.mdl-data-table__cell--non-numeric 2016.08.26
+              %td.mdl-data-table__cell--non-numeric 2016.08.1 ~ 2016.08.10
+              %td.mdl-data-table__cell--non-numeric $1230
+              %td.mdl-data-table__cell--non-numeric
+                %span.order-status 尚未撥款
+              %td.mdl-data-table__cell--non-numeric
+                %a{:href => "bokuan-detail.html"} 2 筆訂單
+          - 16.times do
+            %tr
+              %td.mdl-data-table__cell--non-numeric 2016.08.26
+              %td.mdl-data-table__cell--non-numeric 2016.08.1 ~ 2016.08.10
+              %td.mdl-data-table__cell--non-numeric $1230
+              %td.mdl-data-table__cell--non-numeric
+                %span.order-status.green 已撥款
+              %td.mdl-data-table__cell--non-numeric
+                %a{:href => "bokuan-detail.html"} 2 筆訂單
