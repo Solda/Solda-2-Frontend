@@ -1,0 +1,15 @@
+!!!
+%html.no-js{lang: ""}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = render :partial => "header"
+  %body
+    .store-page.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      %header#cart-bar.mdl-layout__header
+        .mdl-layout-icon
+          %a.mdl-button.mdl-js-button.mdl-button--icon{href: "/"}
+            %i.material-icons close
+        .mdl-layout__header-row
+          %span.mdl-layout-title 訂單內容
+      %main.mdl-layout__content
+        = yield

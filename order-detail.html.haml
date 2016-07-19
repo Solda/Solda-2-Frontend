@@ -1,0 +1,117 @@
+.mdl-grid.store-news-list
+  .cart-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__title
+      訂單編號 ##{rand(99999)}
+      .mdl-layout-spacer
+      %span.order-status.yellow 尚未出貨
+    %div
+      %table.mdl-data-table
+        - 3.times do
+          %tr
+            %td.mdl-data-table__cell--non-numeric.product-img
+              .img-wrapper{style: "background: url('img/products/p#{1 + rand(20)}.jpg') center / cover;"}
+            %td.mdl-data-table__cell--non-numeric.item
+              %a{:href => "product.html"}
+                = zh_lorem_words(4+rand(10))
+              %p
+                數量： #{rand(4)}
+            %td.price
+              NT$ #{10 + rand(1500)}
+        %tr
+          %td.mdl-data-table__cell--non-numeric 運費
+          %td.mdl-data-table__cell--non-numeric 超商取貨
+          %td.price{:style => "line-height:36px;"} NT$ 65
+        %tr
+          %td.mdl-data-table__cell--non-numeric 總計
+          %td.mdl-data-table__cell--non-numeric
+          %td.price{:style => "line-height:36px;"} NT$ #{2000 + rand(1500)}
+    .mdl-card__actions.mdl-card--border_bottom
+      %a.mdl-button.mdl-button--accent.mdl-js-button.mdl-js-ripple-effect
+        %i.material-icons check
+        標記為出貨
+      .mdl-layout-spacer
+      %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+        %i.material-icons delete
+        取消訂單
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        處理記錄
+    %div{:style => "padding: 0 16px"}
+      %p
+        訂單成立 - 
+        %span{:style => "color: rgba(0,0,0,0.54);"}
+          =lorem_date("%Y/%m/%d", 2015..2016)
+          19:23
+        %br/
+        ATM 付款成功 - 
+        %span{:style => "color: rgba(0,0,0,0.54);"}
+          =lorem_date("%Y/%m/%d", 2015..2016)
+          16:29
+        %br/
+        評價：值得推薦的好賣家！ - 
+        %span{:style => "color: rgba(0,0,0,0.54);"}
+          =lorem_date("%Y/%m/%d", 2015..2016)
+          16:29
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        寄送資訊
+    %div{:style => "padding: 0 16px"}
+      %p
+        林長逸
+        %br/
+        3F., No.14, Aly. 2, Ln. 39, Sec. 2, Zhongxiao E. Rd. 
+        台灣, Taiwan 
+        %br/
+        100
+        %br/
+        0921757696
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        訂購備註
+    %div{:style => "padding: 0 16px"}
+      %p 不要加辣，謝謝。
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        買家資訊
+    %div{:style => "padding: 0 16px"}
+      %p
+        林長逸
+        %br/
+        0921757696
+        %br/
+        Email：
+        %a{:href => "#"} leo@solda.io
+        %br/
+        手打商號：
+        %a{:href => "#"} @solda-hero
+      %p
+        %a.mdl-button.mdl-button-js.mdl-button--primary{:href => "#"}
+          %i.material-icons message
+          傳送站內訊息
+      %p 
+        並非每個用戶都會即時收到，因此若需緊急聯絡，請直接透過手機聯繫。
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        交易問題處理
+    %div{:style => "padding: 0 16px 16px 16px"}
+      %p
+        本訂單透過手打拍賣平台成交，手打拍賣是個人買賣家交易的平台，遇到問題請先聯繫對方，秉持互相尊重的態度來解決問題。
+        %br/
+        %br/
+        %strong 1. 出貨問題：
+        請聯繫對方
+        %br/
+        %strong 2. 超商取貨問題：
+        查詢
+        %a{:href => "https://eservice.7-11.com.tw/e-tracking/search.aspx"} 統一超商交貨便代碼
+        %br/
+        %strong 3. 已透過手打之金流付款，欲取消訂單：
+        附上訂單編號告知
+        %a{:href => "mailto:support@solda.io"} 手打客服
+        ，手打會將未出貨訂單的款項退刷或退回原銀行帳戶（需負擔 $15 匯款手續費）。若該筆訂單已出貨，請買賣雙方協議後告知手打退款事宜，為避免交易爭議請保留出貨單據。
+        %br/
+        %strong 4. 退貨若牽涉到退款：
+        若訂單交易正常，代收款項也已經撥款給賣家，則請買賣雙方自行解決退貨問題。
+        %br/
+        %strong 5. 訂購錯誤或需要加訂：
+        請取消此筆訂單另行下單，訂單一旦成立無法更改。

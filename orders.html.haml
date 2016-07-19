@@ -15,7 +15,7 @@
           %option{:value => ""} 尚未出貨
           %option{:value => ""} 已出貨
           %option{:value => ""} 已取消
-          %option{:value => ""} 等待匯款（訂單不算成立）
+          %option{:value => ""} 等待匯款
         %i.material-icons{:style => "line-height: 36px; margin-left: 20px;"} event
         %select.plain-select{:name => ""}
           %option{:value => ""} 全部時間
@@ -52,7 +52,7 @@
             %th.mdl-data-table__cell--non-numeric 成立時間
             %th.mdl-data-table__cell--non-numeric 金額
             %th.mdl-data-table__cell--non-numeric 品項
-            %th.mdl-data-table__cell--non-numeric 姓名
+            %th.mdl-data-table__cell--non-numeric 收件人
             %th.mdl-data-table__cell--non-numeric 聯絡方式
             %th.mdl-data-table__cell--non-numeric 寄送
             %th.mdl-data-table__cell--non-numeric 訂單狀態
@@ -64,7 +64,7 @@
                 %a{:href => "order-detail.html"} #82395
               %td.mdl-data-table__cell--non-numeric
                 =lorem_date("%Y.%m.%d", 2015..2016)
-              %td $250
+              %td $#{10 + rand(1500)}
               %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
                 = zh_lorem_words(13+rand(20))
               %td.mdl-data-table__cell--non-numeric
@@ -113,7 +113,7 @@
                 %a{:href => "order-detail.html"} #83695
               %td.mdl-data-table__cell--non-numeric
                 =lorem_date("%Y.%m.%d", 2015..2016)
-              %td $570
+              %td $#{10 + rand(1500)}
               %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
                 = zh_lorem_words(13+rand(20))
               %td.mdl-data-table__cell--non-numeric
