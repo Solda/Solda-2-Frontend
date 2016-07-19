@@ -10,14 +10,14 @@
     #essential-panel.mdl-tabs__panel.is-active
       %div{:style => "width: 1020px; margin-top: 20px; border-radius: 2px; padding: 8px 16px; box-sizing: border-box; display: flex;"}
         %i.material-icons{:style => "line-height: 36px;"} sort
-        %select#order-filter{:name => ""}
+        %select.plain-select{:name => ""}
           %option{:value => ""} 全部訂單
           %option{:value => ""} 尚未出貨
           %option{:value => ""} 已出貨
           %option{:value => ""} 已取消
           %option{:value => ""} 等待匯款（訂單不算成立）
         %i.material-icons{:style => "line-height: 36px; margin-left: 20px;"} event
-        %select#order-filter{:name => ""}
+        %select.plain-select{:name => ""}
           %option{:value => ""} 全部時間
           %option{:value => ""} 2016.10
           %option{:value => ""} 2016.9
@@ -139,7 +139,7 @@
           %i.material-icons navigate_before
           上一頁
         .mdl-layout-spacer
-        %select#order-filter{:name => "", :style => "width: auto;"}
+        %select.plain-select{:name => "", :style => "width: auto;"}
           %option{:value => ""} 第 1 頁
           %option{:value => ""} 第 2 頁
           %option{:value => ""} 第 3 頁

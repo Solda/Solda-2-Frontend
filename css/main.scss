@@ -1,11 +1,12 @@
 // product-card
 
-select#order-filter {
+select.plain-select {
+	-webkit-appearance: none;
 	background: transparent;
 	outline: none;
 	line-height: 36px;
 	font-weight: 500;
-	width: 6em;
+	width: 7em;
 	font-size: 14px;
   padding: 0 16px;
 	border:none;
