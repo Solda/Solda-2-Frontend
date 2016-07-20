@@ -67,7 +67,15 @@
                 =lorem_date("%Y.%m.%d", 2015..2016)
               %td $#{10 + rand(1500)}
               %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
-                = zh_lorem_words(13+rand(20))
+                %span.order-status.light #{rand(6)}
+                = zh_lorem_words(13+rand(4))
+                %br/
+                %span.order-status.light #{rand(6)}
+                = zh_lorem_words(2+rand(6))
+                %br/
+                %span.order-status.light #{rand(6)}
+                = zh_lorem_words(6+rand(8))
+
               %td.mdl-data-table__cell--non-numeric
                 = zh_lorem_name
               %td.mdl-data-table__cell--non-numeric{:style => "max-width: 200px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
@@ -91,6 +99,7 @@
                 =lorem_date("%Y.%m.%d", 2015..2016)
               %td $570
               %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                %span.order-status.light #{rand(6)}
                 = zh_lorem_words(13+rand(20))
               %td.mdl-data-table__cell--non-numeric
                 = zh_lorem_name
@@ -116,6 +125,7 @@
                 =lorem_date("%Y.%m.%d", 2015..2016)
               %td $#{10 + rand(1500)}
               %td.mdl-data-table__cell--non-numeric{:style => "max-width: 160px; overflow : hidden; white-space: nowrap; text-overflow: ellipsis;"}
+                %span.order-status.light #{rand(6)}
                 = zh_lorem_words(13+rand(20))
               %td.mdl-data-table__cell--non-numeric
                 = zh_lorem_name

@@ -1,0 +1,50 @@
+.mdl-grid
+  .cart-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+    .mdl-card__title.mdl-card--border_bottom
+      2016-07-26 撥款
+      .mdl-layout-spacer
+      %span.order-status.green 已撥款
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        摘要
+    %div{:style => "padding: 0 16px 0 16px"}
+      %p
+        %strong 訂單期間：
+        2016-07-01 ~ 2016-07-10 出貨之訂單
+        %br/
+        %strong 撥款金額：
+        NT$ 12948
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        備註
+    %div{:style => "padding: 0 16px 0 16px"}
+      %p 非中國信託銀行轉帳需負擔 $15 手續費，此外，金額少於 $15 也無法撥款。撥款日期若遇假日則會彈性提早或延遲數天入帳，實際時間依銀行作業時間而定。
+    .mdl-card__title
+      .mdl-card__subtitle-text
+        明細
+    %div
+      %table.mdl-data-table
+        %thead
+          %tr
+            %th.mdl-data-table__cell--non-numeric 訂單編號
+            %th 金額
+        - 10.times do
+          %tr
+            %td.mdl-data-table__cell--non-numeric 
+              %a{:href => "order-detail.html"}
+                \##{10000 + rand(99999)}
+            %td.price
+              NT$ #{10 + rand(1500)}
+        %tr
+          %td.mdl-data-table__cell--non-numeric 噗浪推廣手續費 3%
+          %td.price{:style => "line-height:36px;"} - NT$ 294
+        %tr
+          %td.mdl-data-table__cell--non-numeric ATM 金流手續費 0%
+          %td.price{:style => "line-height:36px;"} - NT$ 65
+
+        %tr
+          %td.mdl-data-table__cell--non-numeric 信用卡金流手續費 2.8%
+          %td.price{:style => "line-height:36px;"} - NT$ 491
+        %tr
+          %td.mdl-data-table__cell--non-numeric 應撥款金額
+          %td.price{:style => "line-height:36px;"} NT$ #{2000 + rand(1500)}
