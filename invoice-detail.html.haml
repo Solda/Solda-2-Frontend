@@ -3,7 +3,7 @@
     .mdl-card__title
       訂單編號 ##{rand(99999)}
       .mdl-layout-spacer
-      %span.order-status.yellow 尚未出貨
+      %span.order-status.green 已出貨
     %div
       %table.mdl-data-table
         - 3.times do
@@ -27,12 +27,12 @@
           %td.price{:style => "line-height:36px;"} NT$ #{2000 + rand(1500)}
     .mdl-card__actions.mdl-card--border_bottom
       %a.mdl-button.mdl-button--accent.mdl-js-button.mdl-js-ripple-effect
-        %i.material-icons check
-        標記為出貨
+        %i.material-icons mood
+        評價
       .mdl-layout-spacer
       %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
-        %i.material-icons delete
-        取消訂單
+        %i.material-icons pause
+        暫緩撥款
     .mdl-card__title
       .mdl-card__subtitle-text
         處理記錄
@@ -72,7 +72,7 @@
       %p 不要加辣，謝謝。
     .mdl-card__title
       .mdl-card__subtitle-text
-        買家資訊
+        賣家資訊
     %div{:style => "padding: 0 16px"}
       %p
         林長逸
