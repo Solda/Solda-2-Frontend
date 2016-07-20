@@ -12,7 +12,7 @@
               .img-wrapper{style: "background: url('img/products/p#{1 + rand(20)}.jpg') center / cover;"}
             %td.mdl-data-table__cell--non-numeric.item
               %a{:href => "product.html"}
-                = zh_lorem_words(4+rand(10))
+                = zh_lorem_words(2+rand(20))
               %p
                 數量： #{rand(4)}
             %td.price
@@ -98,20 +98,26 @@
         本訂單透過手打拍賣平台成交，手打拍賣是個人買賣家交易的平台，遇到問題請先聯繫對方，秉持互相尊重的態度來解決問題。
         %br/
         %br/
-        %strong 1. 出貨問題：
+        %strong 1. 商品、出貨時間、訂購等問題：
         請聯繫對方
         %br/
         %strong 2. 超商取貨問題：
         查詢
         %a{:href => "https://eservice.7-11.com.tw/e-tracking/search.aspx"} 統一超商交貨便代碼
         %br/
-        %strong 3. 已透過手打之金流付款，欲取消訂單：
-        附上訂單編號告知
+        %strong 3. 選擇超商卻不取貨：
+        請告知
         %a{:href => "mailto:support@solda.io"} 手打客服
-        ，手打會將未出貨訂單的款項退刷或退回原銀行帳戶（需負擔 $15 匯款手續費）。若該筆訂單已出貨，請買賣雙方協議後告知手打退款事宜，為避免交易爭議請保留出貨單據。
+        ，我們會統計次數，次數過多則停權。
         %br/
-        %strong 4. 退貨若牽涉到退款：
-        若訂單交易正常，代收款項也已經撥款給賣家，則請買賣雙方自行解決退貨問題。
+        %strong 4. 收到貨發現有問題，而款項仍在手打保管中：
+        買家可按下「凍結訂單」按鈕，暫緩給予商家的撥款，等待事情解決後再撥款。
         %br/
-        %strong 5. 訂購錯誤或需要加訂：
-        請取消此筆訂單另行下單，訂單一旦成立無法更改。
+        %strong 5. 收到貨發現有問題，但款項已經撥給賣家：
+        請買賣雙方自行解決退貨問題。
+        %br/
+        %strong 6. 已付款未出貨，欲取消訂單：
+        點下「取消訂單」按鈕，手打會將未出貨訂單的款項退刷或退回原銀行帳戶（需負擔 $15 匯款手續費）。
+        %br/
+        %strong 7. 已付款已出貨，欲取消訂單：
+        請聯繫對方
