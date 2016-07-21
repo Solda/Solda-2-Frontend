@@ -1,3 +1,18 @@
+.gray {
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.link-normalizer {
+	a {
+		color: inherit;
+		text-decoration: inherit;
+		&:hover {
+			color: rgb(255,64,129);
+			text-decoration: underline;
+		}
+	}
+}
+
 // product-card
 
 select.plain-select {
@@ -250,7 +265,7 @@ hr.little {
   height: 1px;
   border: 0;
   opacity: 0.4;
-  border-top: 3px solid grey;
+  border-top: 3px solid gray;
   margin: 3em auto;
   width: 40px;
   padding: 0;
@@ -911,6 +926,7 @@ $page-width: 1024px;
 .category-icon._09 { background: url('../img/category/09.svg') center center no-repeat ; }
 .category-icon._010 { background: url('../img/category/010.svg') center center no-repeat ; }
 .category-icon._011 { background: url('../img/category/011.svg') center center no-repeat ; }
+.category-icon._012 { background: url('../img/category/012.svg') center center no-repeat ; }
 
 
 

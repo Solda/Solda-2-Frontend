@@ -1,0 +1,56 @@
+= render :partial => "logo"
+= render :partial => "category-mini"
+
+
+.mdl-grid
+  %div{:style => "width: 1020px; margin-top: 20px; border-radius: 2px; padding: 8px 16px; box-sizing: border-box; display: flex;"}
+    以下系統通知寄到 john@example.com。若沒有收到信件，請查看垃圾郵件匣，或是將 notifications@solda.io 加入通訊錄；系統通知請勿直接回覆。
+
+  %table.link-normalizer.mdl-data-table.mdl-js-data-table.mdl-shadow--2dp{:style => "width: 1020px; margin-top: 10px;"}
+    %tbody
+      - 4.times do
+        %tr
+          %td.mdl-data-table__cell--non-numeric{:style => "width: 150px;"}
+            %span.gray
+              =lorem_date("%Y.%m.%d", 2015..2016)
+              18:20
+          %td.mdl-data-table__cell--non-numeric
+            %a{:href => "#"} 來自「秘密讀者」的新訊息
+        %tr
+          %td.mdl-data-table__cell--non-numeric{:style => "width: 150px;"}
+            %span.gray
+              =lorem_date("%Y.%m.%d", 2015..2016)
+              18:20
+          %td.mdl-data-table__cell--non-numeric
+            %a{:href => "#"} 訂單 #89105 已被手打取消
+        %tr
+          %td.mdl-data-table__cell--non-numeric{:style => "width: 150px;"}
+            %span.gray
+              =lorem_date("%Y.%m.%d", 2015..2016)
+              18:20
+          %td.mdl-data-table__cell--non-numeric
+            %a{:href => "#"} 交易成功：訂單確認 #36591（秘密讀者）
+        %tr
+          %td.mdl-data-table__cell--non-numeric{:style => "width: 150px;"}
+            %span.gray
+              =lorem_date("%Y.%m.%d", 2015..2016)
+              18:20
+          %td.mdl-data-table__cell--non-numeric
+            %a{:href => "#"} 收到新訂單 #95256
+
+
+
+  %div{:style => "width: 1020px; margin-top: 20px; box-sizing: border-box; display: flex;"}
+    %a.mdl-button{:href => "#"}
+      %i.material-icons navigate_before
+      上一頁
+    .mdl-layout-spacer
+    %select.plain-select{:name => "", :style => "width: auto;"}
+      %option{:value => ""} 第 1 頁
+      %option{:value => ""} 第 2 頁
+      %option{:value => ""} 第 3 頁
+      %option{:value => ""} 第 4 頁
+    .mdl-layout-spacer
+    %a.mdl-button{:href => "#"}
+      下一頁
+      %i.material-icons navigate_next
