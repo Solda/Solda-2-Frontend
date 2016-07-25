@@ -4,7 +4,7 @@
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     = render :partial => "header"
   %body
-    %div{class: "if content_for? :product product-page else store-page mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--scroll"}
+    %div.store-page.mdl-layout.mdl-js-layout.mdl-layout--fixed-header.mdl-layout__header--scroll
       .corner-area.left
         %a.avatar.logo{href: "index.html"}
           %img{alt: "", src: "img/solda-pick.svg"}/
