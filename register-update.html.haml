@@ -1,0 +1,26 @@
+= render :partial => "logo"
+.page-description
+  %p.mdl-typography--font-regular{:style => "max-width: 300px; margin:0 auto;"}
+    為保障交易安全，請補充填寫以下資料。
+    %br/
+    以下資訊只用於超商取件、結帳自動帶入、以及買賣雙方的聯繫方式。我們不發廣告簡訊，不販賣個資。
+.mdl-grid.login-form
+  .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--4-col.mdl-cell--4-offset.mdl-cell--2-offset-tablet
+    .mdl-card__supporting-text.mdl-card--border_bottom
+      %i.material-icons.with-text> lock
+      補完資訊
+    .card-padding
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 真實姓名（超商用，最多五個字）
+          %span.mdl-textfield__error 超商資料格式限制最多五個字
+      %div
+        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded
+          %input#sample3.mdl-textfield__input{type: "text"}/
+          %label.mdl-textfield__label{for: "sample3"} 手機號碼（超商用）
+          %span.mdl-textfield__error 格式錯誤
+    .mdl-card__actions
+      %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+        送出
+      .mdl-layout-spacer
