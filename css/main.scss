@@ -314,7 +314,6 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 
 // 產品頁讓 商店名稱後退一點
 
-
 .corner-area {
 	&.center {
 		margin: 0 auto;
@@ -343,7 +342,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 		}
 	}
 	color: rgba(0,0,0,0.54);
-	z-index: 4;
+	z-index: 3;
 	position: absolute;
 	a.mdl-navigation__link {
 		padding: 4px 8px;
