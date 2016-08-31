@@ -164,6 +164,13 @@ h2 {
 	}
 }
 
+.mdl-layout__header--transparent.mdl-layout__header {
+	color: rgba(0,0,0,0.54);
+	a {
+		color: rgba(0,0,0,0.54);
+	}
+}
+
 // 購物車內容
 
 .cart-card {

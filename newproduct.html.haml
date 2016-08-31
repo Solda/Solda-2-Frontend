@@ -1,0 +1,26 @@
+.mdl-grid
+	.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--8-col.mdl-cell--2-offset
+		.mdl-card__supporting-text.mdl-card--border_bottom
+			%i.material-icons.with-text> build
+			商品型態
+		.card-padding
+			.section
+				%label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-1"}
+					%input#option-1.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+					%span.mdl-radio__label 實體商品
+					%small 需寄送之商品
+			.section
+				%label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-2"}
+					%input#option-2.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+					%span.mdl-radio__label 數位商品（或服務）
+					%small 透過 Email 出貨或是不需寄送之商品
+			.section
+				%label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-3"}
+					%input#option-3.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+					%span.mdl-radio__label 手打加一（適合團購、預購、登記...等）
+					%small 使用 Google 表單收單，批次傳訊息與收款。
+			.section
+				%label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-4"}
+					%input#option-4.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+					%span.mdl-radio__label 手打支持
+					%small 定期定額收費，批次傳訊息、批次收款。
