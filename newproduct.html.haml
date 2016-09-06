@@ -1,6 +1,29 @@
+.vertical-spacer-alt
 .mdl-grid
-	.mdl-cell.mdl-cell--12-col
-	%h2 上架哪種商品？
+	.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--10-col.mdl-cell--1-offset
+		.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+			.mdl-tabs__tab-bar
+				%a.mdl-tabs__tab.is-active{:href => "#physical-goods"} 實體商品
+				%a.mdl-tabs__tab{:href => "#virtual-goods"} 虛擬商品
+			#physical-goods.mdl-tabs__panel.is-active
+				.mdl-card__supporting-text.mdl-card--border_bottom
+					商品圖片（第一張是封面）
+				.image-pool
+					- 7.times do
+						.image-holder
+							%img{:src => "img/products/p#{1 + rand(78)}.jpg", :alt => ""}/
+							%span
+								%i.material-icons close
+					%p
+						一次把多張照片拉到視窗上，或是選擇檔案上傳
+						%input{:type => "file"}/
+
+			#virtual-goods.mdl-tabs__panel
+				%ul
+					%li Tywin
+					%li Cersei
+					%li Jamie
+					%li Tyrion
 
 .mdl-grid
 	.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col
