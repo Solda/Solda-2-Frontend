@@ -6,24 +6,334 @@
 				%a.mdl-tabs__tab.is-active{:href => "#physical-goods"} 實體商品
 				%a.mdl-tabs__tab{:href => "#virtual-goods"} 虛擬商品
 			#physical-goods.mdl-tabs__panel.is-active
-				.mdl-card__supporting-text.mdl-card--border_bottom
-					商品圖片（第一張是封面）
-				.image-pool
+				.card-padding
+					%h2.mdl-card__title-text
+						商品圖片
+				.mdl-card__supporting-text
+					%input{:type => "file"}/
+					選擇檔案上傳或是 一次把多張照片拉到視窗上。
+					%br/
+				.mdl-progress.mdl-js-progress.mdl-progress__indeterminate{:style => "width: 100%; height: 3px;"}
+				/ MDL Progress Bar with Indeterminate Progress
+				.image-pool.mdl-card--border_bottom
 					- 7.times do
 						.image-holder
 							%img{:src => "img/products/p#{1 + rand(78)}.jpg", :alt => ""}/
 							%span
-								%i.material-icons close
+								%i.material-icons delete
+				.card-padding
+					%h2.mdl-card__title-text
+						基本資訊
+				.mdl-card__supporting-text.full-width-form
+					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+						%input#sample3.mdl-textfield__input{:type => "text", :placeholder => "你想賣什麼？"}/
+						%label.mdl-textfield__label{:for => "sample3"} 商品名稱
+					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+						%input#sample2.mdl-textfield__input{:pattern => "-?[0-9]*(\\.[0-9]+)?", :type => "text", :placeholder => "若價格欄位留空，客人會看到「傳訊詢價」的訊息"}/
+						%label.mdl-textfield__label{:for => "sample2"} 價格（NT$）
+						%span.mdl-textfield__error 只能輸入數字
+					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+						%textarea#sample5.mdl-textfield__input{:rows => "3", :type => "text", :placeholder => "說說更多關於這個物品的事吧。例如尺寸、材質、狀態、特點...。也可以加上商品分類標籤像是 #家具 #椅子"}
+						%label.mdl-textfield__label{:for => "sample5"} 商品描述
+
+					%h6.toggle{:style => "color:#444;"}
+						產品相關網址
+					.toggle-content
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text", :placeholder => "http://example.com"}/
+							%label.mdl-textfield__label{:for => "sample3"} 網址一
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text"}/
+							%label.mdl-textfield__label{:for => "sample3"} 網址一說明	
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text", :placeholder => "http://example.com"}/
+							%label.mdl-textfield__label{:for => "sample3"} 網址二
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text"}/
+							%label.mdl-textfield__label{:for => "sample3"} 網址二說明	
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text", :placeholder => "http://example.com"}/
+							%label.mdl-textfield__label{:for => "sample3"} 網址三
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text"}/
+							%label.mdl-textfield__label{:for => "sample3"} 網址三說明	
+
+				.card-padding
+					%label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect{:for => "switch-2"}
+						%input#switch-2.mdl-switch__input{:type => "checkbox"}/
+						%span.mdl-switch__label 在指定時間停止販售
+					.section
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample2.mdl-textfield__input{:type => "text"}/
+							%label.mdl-textfield__label{:for => "sample2"} 日期與時間
+						%br/
+						%small 超過時間後客人無法購買。
+
+				.card-padding
+					%h2.mdl-card__title-text
+						運費設定
+				.card-padding.mdl-card--border_bottom
+					.section
+						%label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-1"}
+							%input#option-1.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+							%span.mdl-radio__label 獨立運費
+							%small 此商品有自己的運費規則，只能直接購買，無法加入購物車
+					.section
+						%label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect{for: "option-2"}
+							%input#option-2.mdl-radio__button{name: "options", type: "radio", value: "2"}/
+							%span.mdl-radio__label 商店運費
+							%small
+								套用商店運費，可以直接購買，也可以加入購物車。要變更商店運費，請前往
+								%a{:href => "http://localhost:24681/settings.html"}「商店設定」
+								。
+				.shipping1.card-padding
 					%p
-						一次把多張照片拉到視窗上，或是選擇檔案上傳
-						%input{:type => "file"}/
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox",:checked => "checked"}/
+							%span.mdl-checkbox__label 貨到付款
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。
+				.shipping2.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox"}/
+							%span.mdl-checkbox__label 郵局
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。
+				.shipping3.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox"}/
+							%span.mdl-checkbox__label 宅配
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。
+				.shipping4.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox",:checked => "checked"}/
+							%span.mdl-checkbox__label 面交（或店取）
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。
+				.shipping5.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox"}/
+							%span.mdl-checkbox__label 付款後面交（或店取）
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。        .shipping5
+				.shipping6.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox"}/
+							%span.mdl-checkbox__label 7-11 純取貨
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。
+							%hr/
+							%h5 超商交貨便注意事項（商家必讀）
+							%ol
+								%li 超商將於貨品到店「當日」與「第四日」均會發送取貨通知簡訊
+								%li
+									%a{:href => "https://eservice.7-11.com.tw/E-Tracking/search.aspx"} 線上即時查詢貨品配送進度
+								%li 取件者若未於貨到後7日內取貨，貨品將退回原寄件門市，並通知寄件者取回；未取貨件取回服務費用原價 $35元，實際金額依超商為準。
+								%li 手打自動產生的交貨便代碼會再過期後自動更新，在出貨時請避免在「午夜十二點整前後寄貨」，有可能在寄貨時遇到交貨便代碼更新，導致手打無法追蹤到商品寄送狀態，也無法判定是否應該撥款。
+								%li 運送規格：需 ≦ 45cm*30cm*30cm，最長邊 ≦ 45cm，其他兩邊則需均 ≦ 30cm；重量不得超過5公斤。
+								%li 禁運品與包裝方式請參照官方說明。
+								%li 若收單時客人選擇了超商交貨便，但商品過多無法寄送，請自行以其他方式補寄商品，或是在商品說明內告知客人使用別的運送方式。
+							%p
+								詳細說明請參照
+								%a{:href => "https://www.7-11.com.tw/service/accept.asp"}交貨便官網
+								。
+				.shipping7.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox"}/
+							%span.mdl-checkbox__label 7-11 取貨付款
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p
+							類型：
+							%select
+								%option 固定運費
+								%option 變動運費
+						.fixed
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 運費金額
+							%p 根據以上設定，您的客人消費時，不管一次購買幾件，運費都是 NT$ 0。
+						.varied
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 訂單金額門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 低於門檻
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%input#sample3.mdl-textfield__input{:type => "text"}
+								%label.mdl-textfield__label 高於門檻
+							%p 根據以上設定，消費金額等於或超過 NT$ 0，收取 NT$ 0 運費，否則收取 NT$ 0 運費。
+							%hr/
+							%h5 超商交貨便注意事項（商家必讀）
+							%ol
+								%li 超商將於貨品到店「當日」與「第四日」均會發送取貨通知簡訊
+								%li
+									%a{:href => "https://eservice.7-11.com.tw/E-Tracking/search.aspx"} 線上即時查詢貨品配送進度
+								%li 取件者若未於貨到後7日內取貨，貨品將退回原寄件門市，並通知寄件者取回；未取貨件取回服務費用原價 $35元，實際金額依超商為準。
+								%li 手打自動產生的交貨便代碼會再過期後自動更新，在出貨時請避免在「午夜十二點整前後寄貨」，有可能在寄貨時遇到交貨便代碼更新，導致手打無法追蹤到商品寄送狀態，也無法判定是否應該撥款。
+								%li 運送規格：需 ≦ 45cm*30cm*30cm，最長邊 ≦ 45cm，其他兩邊則需均 ≦ 30cm；重量不得超過5公斤。
+								%li 禁運品與包裝方式請參照官方說明。
+								%li 若收單時客人選擇了超商交貨便，但商品過多無法寄送，請自行以其他方式補寄商品，或是在商品說明內告知客人使用別的運送方式。
+							%p
+								詳細說明請參照
+								%a{:href => "https://www.7-11.com.tw/service/accept.asp"}交貨便官網
+								。
+				.shipping8.card-padding
+					%p
+						%label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect{:for => "checkbox-1"}
+							%input#checkbox-1.mdl-checkbox__input{:type => "checkbox",:checked => "checked"}/
+							%span.mdl-checkbox__label 自填運費
+				.shipping-box
+					%div{:style => "padding: 16px;"}
+						%p 設定完成後，顧客在結帳時可以「自行填寫運費」。可支援其他運費寄送方式，如國際運費，或依重量或品項計算的運費。
+						.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+							%input#sample3.mdl-textfield__input{:type => "text"}
+							%label.mdl-textfield__label 名稱
+						%p
+							.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+								%textarea#sample5.mdl-textfield__input{:rows => "3", :type => "text",:placeholder =>"例如美國 $350，英國 $150，港澳 $350，離島 $250..."}
+								%label.mdl-textfield__label 規則說明
+						%p 以簡明的規則讓顧客知道要填寫多少運費。
+
+
 
 			#virtual-goods.mdl-tabs__panel
-				%ul
-					%li Tywin
-					%li Cersei
-					%li Jamie
-					%li Tyrion
+				.card-padding
+					%p 尚在規劃中。
 
 .mdl-grid
 	.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col

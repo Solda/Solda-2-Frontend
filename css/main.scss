@@ -1,20 +1,37 @@
-// 上傳畫面
+
+
+// 上架畫面
+
+#physical-goods .mdl-card__title-text {
+	margin-top: 40px;
+}
+
+.card-padding {
+	p {
+		padding-bottom: 8px;
+		margin-bottom: 0;
+	}
+}
+.shipping-box {
+	display: none;
+	padding: 20px;
+	background: rgba(245, 245, 245, 1);	
+	.mdl-textfield {
+		display: block;
+	}
+}
 
 .image-pool {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
+	min-height: 250px;
+	padding: 20px;
+	background: rgba(245, 245, 245, 1);
 	.image-holder {
-		&.placeholder {
-			box-sizing: border-box;
-			padding: 20px;
-			color: darken(rgba(118, 193, 186, 1), 20%);
-			background: rgba(128, 203, 196, 0.2);
-			border: 1px solid rgba(128, 203, 196, 0.5);
-		}
 		border-radius: 2px;
+		width: calc(25% - 20px);
 		margin: 10px;
-		width: 150px;
 		height: 150px;
 		text-align: center;
 		display: flex;
@@ -23,21 +40,25 @@
 		position: relative;
 		&:hover {
 			span {
-				opacity: 1;
+				opacity: 0.8;
 			}
 		}
 		span {
+			i.material-icons {
+				font-size: 24px;
+				line-height: 32px;
+				color: white;
+			}
 			cursor: pointer;
 			opacity: 0;
-			width: 24px;
-			height: 24px;
+			width: 32px;
+			height: 32px;
 			border-radius: 2px;
 			font-size: 16px;
 			position: absolute;
 			top: 5px;
 			left: 5px;
 			background: red;
-			color: white;
 		}
 		img {
 			max-width: 100%;
@@ -45,6 +66,12 @@
 		}
 	}
 
+}
+
+.full-width-form {
+	.mdl-textfield {
+		width: 100%;
+	}
 }
 
 // utilities
