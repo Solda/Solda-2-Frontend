@@ -5,11 +5,13 @@
     = render :partial => "header"
   %body
     %div.product-page.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-      %header#topbar.mdl-layout__header--seamed.mdl-layout__header--transparent.mdl-layout__header.mdl-layout__header--scroll.mdl-layout__header--seamed
+      %header#topbar.mdl-layout__header--seamed.mdl-layout__header--transparent.mdl-layout__header.mdl-layout__header--scroll
       .corner-area.right{:style => "z-index:40;"}
+        /如果尚未登入
         %a.mdl-navigation__link{href: "login.html"} 登入
-        %a.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon{:href => "#"}
-          %i.material-icons notifications
+        /如果已經登入
+        %a.mdl-navigation__link{href: "store.html"} 我的商店       
+        %a.mdl-navigation__link{href: "login.html"} 登出        
       .corner-area.center
         %a#store-name.avatar{href: "store.html"}
           %img{alt: "", src: "img/avatar/a6.jpg"}/
@@ -18,6 +20,10 @@
       .corner-area.left
         %a.avatar.logo{href: "index.html"}
           %img{alt: "", src: "img/solda-pick.svg"}/
+      .mdl-layout__drawer
+        %span.mdl-layout__title SOLDA 手打拍賣
+        %nav.mdl-navigation
+          = render :partial => "nav"
       %main.mdl-layout__content
         = yield
         = render :partial => "footer-store"

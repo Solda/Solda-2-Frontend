@@ -4,21 +4,31 @@
   %h1 寶物淘淘網
   %p
     @cloud-tou•97 % 好評
+  /如果是別人的商店
   %p
-    %button.mdl-button.mdl-js-button.mdl-button--icon#tt1
-      %span.mdl-tooltip{:for => "tt1"} 傳訊息給賣家
-      %i.material-icons
-        message
-    %button.mdl-button.mdl-js-button.mdl-button--icon#tt2
-      %span.mdl-tooltip{:for => "tt2"} Facebook and line?
-      %i.material-icons
-        edit
+    %a.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored{href: "#"}
+      聯絡我
+      /# 點了會打開介紹與聯絡方式 tab
+  /如果是自己的商店
+  %p.store-nav
+    %a.mdl-navigation__link{href: "#"}
+      %i.material-icons> subtitles
+      商家收單
+    %a.mdl-navigation__link{href: "#"}
+      %i.material-icons> question_answer
+      訊息
+    %a.mdl-navigation__link{href: "#"}
+      %i.material-icons> add_circle_outline
+      上架商品
+    %a.mdl-navigation__link{href: "#"}
+      %i.material-icons> settings
+      商店設定
 
 .mdl-tabs.mdl-js-tabs
   .mdl-tabs__tab-bar
-    %a.mdl-tabs__tab.is-active{href: "#tab1"} 商品
-    %a.mdl-tabs__tab{href: "#tab2"} 分類
-    %a.mdl-tabs__tab{href: "#tab3"} 關於我
+    %a.mdl-tabs__tab.is-active{href: "#tab1"} 全部商品
+    %a.mdl-tabs__tab{href: "#tab2"} 類別
+    %a.mdl-tabs__tab{href: "#tab3"} 介紹與聯絡方式
   #tab1.mdl-tabs__panel.is-active
     .mdl-grid
     = render :partial => "product-list-item-only"
@@ -45,6 +55,9 @@
           聯絡方式
         .mdl-card__supporting-text
           %ul.icon-list
+            %li
+              %i.material-icons email
+              %a{href: "mailto:leolin@me.com"} leolin@me.com
             %li
               %i.material-icons phone
               %a{href: "tel:0912-345-678"} 0912-345-678

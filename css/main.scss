@@ -1,5 +1,26 @@
 
 
+// store / product page 樣式微調
+
+
+.store-page, .product-page {
+	header .material-icons {
+		color: rgba(0,0,0,0.54);
+	}	
+}
+
+
+.store-nav {
+	a {
+		margin: 10px;
+		i {
+			color: #00BCD4;
+			font-size: 24px;
+			padding-right: 5px;
+		}
+	}
+}
+
 // 上架畫面
 
 .independent-shipping {
@@ -420,9 +441,6 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 	a.avatar {
 		text-decoration: none;
 		.product-page &.logo {
-			padding-right: 16px; 
-			margin-right: 18px;
-			border-right: 1px solid rgba(0,0,0,0.2);
 		}
 		&.logo img {
 			box-shadow: none;
@@ -459,7 +477,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 			right: 12px;
 		}
 		&.left {
-			left: 12px;
+			left: 60px;
 		}
 	}
 }
@@ -471,7 +489,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 			right: 12px;
 		}
 		&.left {
-			left: 12px;
+			left: 60px;
 		}
 	}
 }
@@ -483,7 +501,7 @@ header.mdl-layout__header.mdl-layout__header--transparent {
 			right: 19px;
 		}
 		&.left {
-			left: 19px;
+			left: 67px;
 		}
 	}
 }
@@ -1425,10 +1443,7 @@ footer {
 	}
 }
 
-
-
 .product-page {
-
 
 	// 調整 social button
 
@@ -1592,6 +1607,9 @@ footer {
 .rating-container {
 	padding: 16px;
 	.rating-unit {
+		a:any-link {
+			text-decoration: none;
+		}
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		padding-top: 8px;
 		padding-bottom: 8px;

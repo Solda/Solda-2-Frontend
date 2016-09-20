@@ -10,10 +10,11 @@
           %br/
           %small.price $1000
         .mdl-layout-spacer
+        /如果是自己的商品
         .fav-count
-          %i.favorite-button.material-icons favorite_outline
+          %i.favorite-button.material-icons edit
           %br/
-          %small.price{alt: "收藏次數"} 23
+          %small.price{alt: "收藏次數"} 編輯
     .product-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--3-col.mdl-cell--2-col-tablet.mdl-cell--2-col-phone
       .mdl-card--expand.mdl-card--border_bottom{style: "background: url('img/products/p#{1 + rand(78)}.jpg') center / cover;"}
         %a.link-to-product{href: "product.html"}
