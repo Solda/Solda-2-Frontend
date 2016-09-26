@@ -1,15 +1,20 @@
 #main-product-info
-  #product-gallery
-    / 設 link 到下一張的 id，這樣點一下圖片就可以看下一張，並非完美解，但是堪用
-    %a#1.img-container{href: "#2", style: "background: url('img/products/p12.jpg') center / cover;"}
-    %a#2.img-container{href: "#3", style: "background: url('img/products/p13.jpg') center / cover;"}
-    %a#3.img-container{href: "#4", style: "background: url('img/products/p14.jpg') center / cover;"}
-    %a#4.img-container{href: "#5", style: "background: url('img/products/p15.jpg') center / cover;"}
-    %a#5.img-container{href: "#6", style: "background: url('img/products/p16.jpg') center / cover;"}
-    %a#6.img-container{href: "#7", style: "background: url('img/products/p17.jpg') center / cover;"}
-    %a#7.img-container{href: "#8", style: "background: url('img/products/p28.jpg') center / cover;"}
-    %a#8.img-container{href: "#1", style: "background: url('img/products/p29.jpg') center / cover;"}
-    / 點最後一張會連到第一張
+  .mdl-grid.mdl-grid--no-spacing 
+
+    #image-holder.mdl-cell.mdl-cell--8-col-desktop.mdl-cell--2-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
+      %a.go-next.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab{:href => "#2"}
+        %i.material-icons navigate_next
+      %a.go-prev.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab{:href => "#2"}
+        %i.material-icons navigate_before
+      %a#1.img-container{href: "#2", style: "background: url('img/products/p12.jpg') center / cover;"}
+      %a#2.img-container{href: "#3", style: "background: url('img/products/p13.jpg') center / cover;"}
+      %a#3.img-container{href: "#4", style: "background: url('img/products/p14.jpg') center / cover;"}
+      %a#4.img-container{href: "#5", style: "background: url('img/products/p15.jpg') center / cover;"}
+      %a#5.img-container{href: "#6", style: "background: url('img/products/p16.jpg') center / cover;"}
+      %a#6.img-container{href: "#7", style: "background: url('img/products/p17.jpg') center / cover;"}
+      %a#7.img-container{href: "#8", style: "background: url('img/products/p28.jpg') center / cover;"}
+      %a#8.img-container{href: "#1", style: "background: url('img/products/p29.jpg') center / cover;"}
+      /基本上一直點就會跳到下一張～
 
   .mdl-grid
     .product-detail.mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
@@ -21,7 +26,7 @@
         .mdl-layout-spacer
         %p.mdl-typography--caption-color-contrast 台北市•剩餘 0 天 0:59
       .buy-bar
-        %button#buy-now.mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect
+        %button#buy-now.mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect{:disabled => "disabled"}
           馬上購買
         -# %button.mdl-button.mdl-js-button.mdl-button--icon
         -#   %i.material-icons favorite_outline
@@ -40,12 +45,26 @@
         - 2.times do
           %p= zh_lorem_paragraphs(2)
         %p.mdl-typography--caption-color-contrast 瀏覽 40•庫存 7•銷售 3•更新於 2015/06/26
-      -# #share-section
-      -#   %hr/
-      -#   %button#share.mdl-button.mdl-js-button.mdl-button--icon
-      -#     %img{alt: "", src: "img/profile/facebook.svg"}/
-      -#   %button#share.mdl-button.mdl-js-button.mdl-button--icon
-      -#     %img{alt: "", src: "img/profile/twitter.svg"}/
+      .social-links
+        %div
+           
+          / plurk button
+          %a.plurk-button{:href => "#", "ng-click" => "shareToPlurk()"}
+            %span 分享到噗浪
+          / line button
+          %a.line-button{:href => "line://msg/text/〈 卡貼 貼紙 〉代客訂做 製作 客製化 TWICE EXID GFRIEND BTS GOT7 .. (全館消費滿399元免運費)%0D%0Ahttps%3A//solda.io/products/86818", :style => "display: inline-block;"}
+            %img{:alt => "", :height => "20", :src => "img/profile/line-button.png", :width => "68"}/
+             
+          / fb like
+          %div{:style => "display: inline-block; width: auto; height:20px; padding: 0;"}
+            .fb-share-button.fb_iframe_widget{"data-href" => "https://solda.io/products/86818", "data-layout" => "button", "fb-iframe-plugin-query" => "app_id=1396825883930843&container_width=73&href=https%3A%2F%2Fsolda.io%2Fproducts%2F86818&layout=button&locale=en_US&sdk=joey", "fb-xfbml-state" => "rendered", :style => "padding:0;"}
+              %span{:style => "vertical-align: bottom; width: 59px; height: 20px;"}
+                %iframe{:allowfullscreen => "true", :allowtransparency => "true", :frameborder => "0", :height => "1000px", :name => "f570dd99b7d04", :scrolling => "no", :src => "https://www.facebook.com/v2.3/plugins/share_button.php?app_id=1396825883930843&channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FP5DLcu0KGJB.js%3Fversion%3D42%23cb%3Df3f81807576e5c%26domain%3Dsolda.io%26origin%3Dhttps%253A%252F%252Fsolda.io%252Ff2485a8a7d681dc%26relation%3Dparent.parent&container_width=73&href=https%3A%2F%2Fsolda.io%2Fproducts%2F86818&layout=button&locale=en_US&sdk=joey", :style => "border: none; visibility: visible; width: 59px; height: 20px;", :title => "fb:share_button Facebook Social Plugin", :width => "1000px"}
+          / tweet button
+          %div{:style => "margin-left: -10px;"}
+            %script{:src => "https://platform.twitter.com/widgets.js"}
+            %iframe#twitter-widget-0.twitter-share-button.twitter-share-button-rendered.twitter-tweet-button{:allowtransparency => "true", "data-url" => "https://solda.io/products/86818", :frameborder => "0", :scrolling => "no", :src => "https://platform.twitter.com/widgets/tweet_button.289140617d6d66fbee36bb5f0535b846.en.html#dnt=false&id=twitter-widget-0&lang=en&original_referer=https%3A%2F%2Fsolda.io%2Fproducts%2F86818&size=m&text=%E3%80%88%20%E5%8D%A1%E8%B2%BC%20%E8%B2%BC%E7%B4%99%20%E3%80%89%E4%BB%A3%E5%AE%A2%E8%A8%82%E5%81%9A%20%E8%A3%BD%E4%BD%9C%20%E5%AE%A2%E8%A3%BD%E5%8C%96%20TWICE%20EXID%20GFRIEND%20BTS%20GOT7%20..%20(%E5%85%A8%E9%A4%A8%E6%B6%88%E8%B2%BB%E6%BB%BF399%E5%85%83%E5%85%8D%E9%81%8B%E8%B2%BB)%20-%20Solda&time=1474864564299&type=share&url=https%3A%2F%2Fsolda.io%2Fproducts%2F86818", :style => "position: static; visibility: visible; width: 61px; height: 20px;", :title => "Twitter Tweet Button"}
+
 .mdl-grid
   .mdl-cell.mdl-cell--6-col-desktop.mdl-cell--3-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
     %h5

@@ -1,3 +1,65 @@
+// 商品頁按鈕
+
+#checkout-fab .mdl-badge.mdl-badge--white-background[data-badge]:after {
+		color: white;
+    background: none;
+    box-shadow: none;
+    top: -16px;
+    left: 0px;
+    text-align: center;
+}
+
+#checkout-fab {
+	.mdl-button--fab .material-icons  {
+		top: 59%;
+	}
+}
+
+.social-links div {
+	a {
+	  text-decoration: none;
+	}
+	.line-button {
+		position: relative;
+		top: -2px;
+		width: 68px;
+	}
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	a, div {
+		margin-right: 10px;
+	}
+}
+
+
+a.plurk-button {
+  display: block;
+  float: left;
+  background: red;
+  border-radius: 2px;
+  height: 20px;
+  width: auto;
+  white-space: nowrap;
+  line-height: 20px;
+  padding: 0 10px;
+  background: #A34F00;
+  text-decoration: none;
+  font-weight: normal;
+  background-image: linear-gradient(-180deg, #a34f00 4%, #6c451f 100%);
+  border-radius: 3px;
+	span {
+    display: block;
+    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAAAXNSR0IArs4c6QAAAlpJREFUSA2tVU1oE1EQnrdJk60U0ZSStdAeGil4FwQPBhIarzkXETwV8eJBK9560/ageFDoxZv11uYeJHoRBAuit4DgXxqSmvbQYluT3ed8W198++Nuan0wvJlv5s3sm52ZJyhiNZ5emkil00tEIi8EnQkzlSR3Gd8gKd4yX/myu1U5P7fe9dsKP6BkBEmb5juWMwobZJdEHx1H3s5eqa7p9oYu6PzhTY4WBOf5y3MJQ6xurswsLixQ33+f0YMc8iIfxAZHBIn5G9Mz99QJQ0qZYrrPtPGbwKf0fyL2e5R636Lhl59cAg8sbiHY95ViGXYCQXi/4zu02Hl+2cXg0Hz9lUTP8ZjIpEH7FydImkkP7hfwzz7vdM4hdVf9Sh0bqncCQWCPwNDFLfyzyZFMGakLVB5jQ8pBYmtPsYE9SqcbcwrLotlsPrEs67quiOL3rp31qH+Uch45TOD+qhuFQuFho9FYtm277ThOfC7CPMVj40Y2m92JtzumhRQyWavVbrKbuWO6ij4uZBO1Gag6pHD9UX4Up80330h0/5R27mS/TkimEtEBlJbn4N+qzlY29ilTsYHdzgwHsDAAw9ZotVqe4QfDdru9OmWdINDkhXGayqQJN/Hchhu2O+1eOsx3H0PDYqJ7qg6VhwosFosPlCU6HxOgZ424qUK6wA8yFeADkxzPBpoVn3UaoLa2N5+VPujzTtMNzHLKlsZmq+4owwhC72wzYUqCwDMmX/H+zwtBHterd5UDNRERzNOsPw8O5vnhKzF+5IdPkH1rbPZFRQXBHphzuvJ/PuW/AF8IA173F8xUAAAAAElFTkSuQmCC') left center no-repeat;
+    background-size: 13px 10px;
+    padding-left: 19px;
+    font-size: 11px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+	}
+}
+
 // 商品頁面的「類別」捲軸
 
 .horizontal-scroller {
@@ -1381,7 +1443,7 @@ footer {
 // product
 
 	.buy-bar {
-		z-index: 20;
+		z-index: 10;
 		height: 64px;
 		margin-top: 0;
 		margin-bottom: 12px;
@@ -1530,20 +1592,63 @@ footer {
 
 	// 上方添加 gradient
 
-	#product-gallery {
+		@media (min-width: 839px) {
+	#image-holder {
+			border-radius: 4px;
+}		}
+
+		@media (min-width: 839px) {
+			.go-next, .go-prev {
+				i {
+					color: black;
+				}
+			}
+			.go-next {
+				right: 90px;
+			}
+			.go-prev {
+				left: 90px;
+			}
+		}
+
+	#image-holder {
+
+		.go-next, .go-prev {
+			position: absolute;
+				i {
+					color: white;
+				}
+			top: 220PX;
+		}
+		.go-next {
+			right: 10px;
+		}
+		.go-prev {
+			left: 10px;
+		}
+		border-radius: 0;
+		height: 500px;
 		overflow-x: auto;
+		overflow-y: hidden;
     white-space: nowrap;
 		-webkit-overflow-scrolling: touch;
-		vertical-align: top;
+
 		.img-container {
-			vertical-align: top;
-			width: 90vw;
-			height: 90vw;
-			max-height: 500px;
-			max-width: 800px;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			box-sizing: border-box;
 			display: inline-block;
 		}
+
+		.img-container:first-child {
+			// width: 100%;
+			// max-width: 100%;
+		}
+
 	}
+
 	h1.mdl-typography--headline {
 		margin-top: 10px;
 		margin-bottom: 10px;
@@ -1723,7 +1828,7 @@ transform: translateX(-290px);
 	}
 	bottom: 44px;
 	right: 32px;
-	z-index: 2;
+	z-index: 11;
 	display: block;
 	transition: all 0.4s;
 	-webkit-transform: rotate(180deg) scale(0);
