@@ -1,7 +1,7 @@
 // 商品頁按鈕
 
 #checkout-fab .mdl-badge.mdl-badge--white-background[data-badge]:after {
-		color: white;
+	color: white;
     background: none;
     box-shadow: none;
     top: -16px;
@@ -1592,62 +1592,76 @@ footer {
 
 	// 上方添加 gradient
 
-		@media (min-width: 839px) {
+@media (max-width: 839px) {
 	#image-holder {
-			border-radius: 4px;
-}		}
-
-		@media (min-width: 839px) {
-			.go-next, .go-prev {
-				i {
-					color: black;
-				}
-			}
-			.go-next {
-				right: 90px;
-			}
-			.go-prev {
-				left: 90px;
-			}
-		}
-
-	#image-holder {
-
-		.go-next, .go-prev {
-			position: absolute;
-				i {
-					color: white;
-				}
-			top: 220PX;
-		}
-		.go-next {
-			right: 10px;
-		}
-		.go-prev {
-			left: 10px;
-		}
-		border-radius: 0;
-		height: 500px;
-		overflow-x: auto;
-		overflow-y: hidden;
-    white-space: nowrap;
-		-webkit-overflow-scrolling: touch;
-
-		.img-container {
-			width: 100%;
-			padding: 0;
-			margin: 0;
-			height: 100%;
-			box-sizing: border-box;
-			display: inline-block;
-		}
-
-		.img-container:first-child {
-			// width: 100%;
-			// max-width: 100%;
-		}
-
+		background: red;
 	}
+}
+
+#image-control {
+	height: 0px;
+	background:red;
+	display: block;
+	position: relative;
+	.go-next, .go-prev {
+		position: absolute;
+			i {
+				color: rgba(0,0,0,0.8);
+			}
+		top: 220PX;
+	}
+	.go-next {
+		right: -60px;
+	}
+	.go-prev {
+		left: -60px;
+	}
+}
+
+@media (max-width: 840px) {
+	#image-control {
+		.go-next, .go-prev {
+			display: none;
+			background:rgba(255,255,255,0.27);
+	position: absolute;
+		i {
+			color: rgba(0,0,0,0.8);
+		}
+	top: 220PX;
+}
+	.go-next {
+		right: 6px;
+	}
+	.go-prev {
+		left: 6px;
+	}
+	}
+}
+
+#image-holder {
+
+	border-radius: 4px;
+	height: 500px;
+	overflow-x: auto;
+	overflow-y: hidden;
+  white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+
+	.img-container {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+
+	.img-container:first-child {
+		// width: 100%;
+		// max-width: 100%;
+	}
+
+}
 
 	h1.mdl-typography--headline {
 		margin-top: 10px;

@@ -27,6 +27,7 @@
     <script src='js/slide.js'></script>
     <!-- Leo's Design -->
     <link href='css/main.css' rel='stylesheet'>
+    <script src='http://localhost:35729/livereload.js'></script>
   </head>
   <body>
     <div class='product-page mdl-layout mdl-js-layout mdl-layout--fixed-header'>
@@ -80,23 +81,34 @@
       </div>
       <main class='mdl-layout__content'>
         <div id='main-product-info'>
-          <div id='product-gallery'>
-            <!-- 設 link 到下一張的 id，這樣點一下圖片就可以看下一張，並非完美解，但是堪用 -->
-            <a class='img-container' href='#2' id='1' style="background: url('img/products/p12.jpg') center / cover;"></a>
-            <a class='img-container' href='#3' id='2' style="background: url('img/products/p13.jpg') center / cover;"></a>
-            <a class='img-container' href='#4' id='3' style="background: url('img/products/p14.jpg') center / cover;"></a>
-            <a class='img-container' href='#5' id='4' style="background: url('img/products/p15.jpg') center / cover;"></a>
-            <a class='img-container' href='#6' id='5' style="background: url('img/products/p16.jpg') center / cover;"></a>
-            <a class='img-container' href='#7' id='6' style="background: url('img/products/p17.jpg') center / cover;"></a>
-            <a class='img-container' href='#8' id='7' style="background: url('img/products/p28.jpg') center / cover;"></a>
-            <a class='img-container' href='#1' id='8' style="background: url('img/products/p29.jpg') center / cover;"></a>
-            <!-- 點最後一張會連到第一張 -->
+          <div class='mdl-grid mdl-grid--no-spacing'>
+            <div class='mdl-cell mdl-cell--10-col-desktop mdl-cell--1-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone' id='image-control'>
+              <a class='go-next mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab' href='#2'>
+                <i class='material-icons'>navigate_next</i>
+              </a>
+              <a class='go-prev mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab' href='#2'>
+                <i class='material-icons'>navigate_before</i>
+              </a>
+            </div>
+          </div>
+          <div class='mdl-grid mdl-grid--no-spacing'>
+            <div class='mdl-cell mdl-cell--10-col-desktop mdl-cell--1-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone' id='image-holder'>
+              <a class='img-container' href='#2' id='1' style="background: url('img/products/p12.jpg') center / cover;"></a>
+              <a class='img-container' href='#3' id='2' style="background: url('img/products/p13.jpg') center / cover;"></a>
+              <a class='img-container' href='#4' id='3' style="background: url('img/products/p14.jpg') center / cover;"></a>
+              <a class='img-container' href='#5' id='4' style="background: url('img/products/p15.jpg') center / cover;"></a>
+              <a class='img-container' href='#6' id='5' style="background: url('img/products/p16.jpg') center / cover;"></a>
+              <a class='img-container' href='#7' id='6' style="background: url('img/products/p17.jpg') center / cover;"></a>
+              <a class='img-container' href='#8' id='7' style="background: url('img/products/p28.jpg') center / cover;"></a>
+              <a class='img-container' href='#1' id='8' style="background: url('img/products/p29.jpg') center / cover;"></a>
+              <!-- 基本上一直點就會跳到下一張～ -->
+            </div>
           </div>
           <div class='mdl-grid'>
-            <div class='product-detail mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='product-detail mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
               <h1 class='mdl-typography--headline'>
-                他情趕功啦就有割市他啦在著拚褲不說過這想那著新不的無幸點愈啊
-                - 了檢門很了爸
+                在沒閒.輕裡入因奇憑是短黑折兩紅點就亦擔侶傍在人弟不腕是一
+                - 忙值始內團
               </h1>
               <div class='product-price'>
                 <p class='mdl-typography--body-2 mdl-color-text--accent'>NT$ 450</p>
@@ -106,6 +118,15 @@
               <div class='buy-bar'>
                 <button class='mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect' id='buy-now'>
                   馬上購買
+                </button>
+                <button class='mdl-button mdl-js-button mdl-button mdl-js-ripple-effect' disabled='disabled'>
+                  過期
+                </button>
+                <button class='mdl-button mdl-js-button mdl-button mdl-js-ripple-effect' disabled='disabled'>
+                  完售
+                </button>
+                <button class='mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect'>
+                  傳訊詢價
                 </button>
                 <button class='mdl-button mdl-js-button mdl-button--icon' id='add-to-cart'>
                   <i class='material-icons'>add_shopping_cart</i>
@@ -118,7 +139,7 @@
                 </button>
               </div>
               <div class='product-description'>
-                <p>有些餓了翻身下床，在成堆的人們中，接連鬥過兩三晚，只有中國酒店，握著有很大權威，在這黑暗之中，就是很需要咖啡因。兄弟們來！地方領導人。捲下中街去。愈會碰著痛苦。</p>
+                <p>和純真的孩童們，一層層堆聚起來。幫忙打掃整理家裡！也就不容易，捲下中街去。在閃爍地放亮。幫忙打掃整理家裡！就再開始。我在兒童時代，甲哈哈地笑著說。</p>
                 <p>
                   <a href='#'>https://www.youtube.com/watch?v=2b1VPqCrk2c</a>
                 </p>
@@ -126,22 +147,49 @@
                   <iframe allowfullscreen='' frameborder='0' height='315' src='https://www.youtube.com/embed/2b1VPqCrk2c' width='560'></iframe>
                 </p>
                 <p>
-                  因為不高興了。雖亦有人反對，一邊的行列，繞來穿去。捨此一身和他一拚！手一插進衣袋，歲月真容易過！憑這雙腕！
+                  互有參差，說得很高興似的。這原因就不容妄測。捧出滿腔誠意，又有人不平地說，頂部放上奶油。兄弟們來！雖受過欺負，昨晚喝了三杯，就會想過去喝一杯。
                   
-                  你喜歡就都給你。來和他們一拚！把我們龍頭割去！奉行正朔，分辨出浩蕩的溪聲。這是如何地悲悽！
+                  自己走出家來，現在台南好悶熱，晚上早早走人，愈會賺錢，下了10顆。有點疲憊！擋不住大的拳頭，都有可能。
                 </p>
                 <p>
-                  將要千圓。一類的試筆詩，就算加了再多糖，說我乖巧識禮，籠罩著街上的煙，到城裡去啊！眩眼一縷的光明，被逐的前人之子。
+                  這是如何地悲悽！有沒有人要揪團！有沒有人要揪團！心情真的很差。
                   
-                  只有風先生的慇懃，甘失掉了麵皮！甲哈哈地笑著說。我們是在空地上，說得很高興似的。卻自奉行唯謹。愈會碰著痛苦。真的太好吃了啦！
+                  本該挨罵。喝杯咖啡。不問是誰，且新正閒著的時候，因為市街的鬧熱日，在冷靜的街尾，葡萄柚最棒了！說我乖巧識禮，都很讚成，但這是所謂大勢，不教臉紅而已。是鬧哪樣啊！
                 </p>
                 <p class='mdl-typography--caption-color-contrast'>瀏覽 40•庫存 7•銷售 3•更新於 2015/06/26</p>
+              </div>
+              <div class='social-links'>
+                <div>
+                   
+                  <!-- plurk button -->
+                  <a class='plurk-button' href='#' ng-click='shareToPlurk()'>
+                    <span>分享到噗浪</span>
+                  </a>
+                  <!-- line button -->
+                  <a class='line-button' href='line://msg/text/〈 卡貼 貼紙 〉代客訂做 製作 客製化 TWICE EXID GFRIEND BTS GOT7 .. (全館消費滿399元免運費)%0D%0Ahttps%3A//solda.io/products/86818' style='display: inline-block;'>
+                    <img alt='' height='20' src='img/profile/line-button.png' width='68'>
+                     
+                  </a>
+                  <!-- fb like -->
+                  <div style='display: inline-block; width: auto; height:20px; padding: 0;'>
+                    <div class='fb-share-button fb_iframe_widget' data-href='https://solda.io/products/86818' data-layout='button' fb-iframe-plugin-query='app_id=1396825883930843&amp;container_width=73&amp;href=https%3A%2F%2Fsolda.io%2Fproducts%2F86818&amp;layout=button&amp;locale=en_US&amp;sdk=joey' fb-xfbml-state='rendered' style='padding:0;'>
+                      <span style='vertical-align: bottom; width: 59px; height: 20px;'>
+                        <iframe allowfullscreen='true' allowtransparency='true' frameborder='0' height='1000px' name='f570dd99b7d04' scrolling='no' src='https://www.facebook.com/v2.3/plugins/share_button.php?app_id=1396825883930843&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FP5DLcu0KGJB.js%3Fversion%3D42%23cb%3Df3f81807576e5c%26domain%3Dsolda.io%26origin%3Dhttps%253A%252F%252Fsolda.io%252Ff2485a8a7d681dc%26relation%3Dparent.parent&amp;container_width=73&amp;href=https%3A%2F%2Fsolda.io%2Fproducts%2F86818&amp;layout=button&amp;locale=en_US&amp;sdk=joey' style='border: none; visibility: visible; width: 59px; height: 20px;' title='fb:share_button Facebook Social Plugin' width='1000px'></iframe>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- tweet button -->
+                  <div style='margin-left: -10px;'>
+                    <script src='https://platform.twitter.com/widgets.js'></script>
+                    <iframe allowtransparency='true' class='twitter-share-button twitter-share-button-rendered twitter-tweet-button' data-url='https://solda.io/products/86818' frameborder='0' id='twitter-widget-0' scrolling='no' src='https://platform.twitter.com/widgets/tweet_button.289140617d6d66fbee36bb5f0535b846.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fsolda.io%2Fproducts%2F86818&amp;size=m&amp;text=%E3%80%88%20%E5%8D%A1%E8%B2%BC%20%E8%B2%BC%E7%B4%99%20%E3%80%89%E4%BB%A3%E5%AE%A2%E8%A8%82%E5%81%9A%20%E8%A3%BD%E4%BD%9C%20%E5%AE%A2%E8%A3%BD%E5%8C%96%20TWICE%20EXID%20GFRIEND%20BTS%20GOT7%20..%20(%E5%85%A8%E9%A4%A8%E6%B6%88%E8%B2%BB%E6%BB%BF399%E5%85%83%E5%85%8D%E9%81%8B%E8%B2%BB)%20-%20Solda&amp;time=1474864564299&amp;type=share&amp;url=https%3A%2F%2Fsolda.io%2Fproducts%2F86818' style='position: static; visibility: visible; width: 61px; height: 20px;' title='Twitter Tweet Button'></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class='mdl-grid'>
-          <div class='mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+          <div class='mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
             <h5>
               相關商品
             </h5>
@@ -150,13 +198,13 @@
         <div id='related-product'>
           <div class='product-list' id='related-product'>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p43.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p53.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    其這金卻悽負方不肉的最麼一須人面決明看雙哈就了去樂苦
+                    喝餃年解一一易宣可真
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -170,13 +218,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p6.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p68.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    的葡拚運第情這些他不和極內腳住存說煮的在２上這光可實了在-
+                    在天上短不失一這所哪啦紅劑台走攜片來餘
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -190,13 +238,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p73.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p76.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    白子２鬧止來去啊拚頓了的像曾爭走蛋憑利想去他上臉上拚錢
+                    子人人啡說準說月咖將的再
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -210,13 +258,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p26.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p64.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    好肉地杯有就和會掉言預一十啡是他揪義前不暫
+                    大什的這是過咖氣間本來惑來在
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -230,33 +278,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p60.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p53.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    做憊去頂不頭本啦答像悽些時因
-                  </a>
-                  <br>
-                  <small class='price'>$1000</small>
-                </div>
-                <div class='mdl-layout-spacer'></div>
-                <div class='fav-count'>
-                  <i class='favorite-button material-icons'>favorite_outline</i>
-                  <br>
-                  <small alt='收藏次數' class='price'>23</small>
-                </div>
-              </div>
-            </div>
-            <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p20.jpg') center / cover;">
-                <a class='link-to-product' href='product.html'></a>
-              </div>
-              <div class='mdl-card__actions'>
-                <div class='name-title'>
-                  <a class='product-title' href='product.html'>
-                    幫去人的一團也失回一力不本
+                    哪教年山們甘出真番顛用去
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -276,7 +304,7 @@
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    無問們拚門鼓將一分何時的將水了金一前爭人身意餃又的龍借家
+                    們跳的來白的動的了但們了相上氛爍也
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -290,13 +318,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p65.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p27.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    人害過自哪它國他那來人比竟狗行口啊月們很賴臉啊良頭走
+                    臉漏捨中利啊有明輾處人義年爭亮前拚走黎日有這能麼街要邊現三
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -310,13 +338,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p4.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p2.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    眼明戒你鍛邊新我差真哈一街啡高花你上領使
+                    失奉行家柱我也Q處看便了點不揪在熱個晚場較餐歲高蛋出
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -330,13 +358,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p58.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p47.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    是的一覺人要了啊失地現和責不一明去鑼時了
+                    一卻亮未人可放無又他續不一可裡害萄的中區樂很我
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -350,13 +378,13 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p54.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p34.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    輸們進吶走走這農者那興啊世樣葡環腕憑來一雙
+                    前或到了驗樣丙的去加的何死當實你地列愈我使一啡本
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -370,13 +398,33 @@
               </div>
             </div>
             <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
-              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p51.jpg') center / cover;">
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p14.jpg') center / cover;">
                 <a class='link-to-product' href='product.html'></a>
               </div>
               <div class='mdl-card__actions'>
                 <div class='name-title'>
                   <a class='product-title' href='product.html'>
-                    此是們想圓蕩地又番去是的狗門定了在到閒亦把我比情上勵皮場那
+                    山幾地不老的人覺還腕啦這我我
+                  </a>
+                  <br>
+                  <small class='price'>$1000</small>
+                </div>
+                <div class='mdl-layout-spacer'></div>
+                <div class='fav-count'>
+                  <i class='favorite-button material-icons'>favorite_outline</i>
+                  <br>
+                  <small alt='收藏次數' class='price'>23</small>
+                </div>
+              </div>
+            </div>
+            <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+              <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p15.jpg') center / cover;">
+                <a class='link-to-product' href='product.html'></a>
+              </div>
+              <div class='mdl-card__actions'>
+                <div class='name-title'>
+                  <a class='product-title' href='product.html'>
+                    易街以容弟不黎有的層的一的運頭在可行煩堆
                   </a>
                   <br>
                   <small class='price'>$1000</small>
@@ -394,7 +442,7 @@
         </div>
         <div id='sub-product-info'>
           <div class='mdl-grid'>
-            <div class='mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
               <h5>關於本產品</h5>
               <h6>寄送資訊</h6>
               <p>
@@ -407,24 +455,24 @@
                 宅配 NT$ 88
               </p>
             </div>
-            <div class='mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
               <hr>
               <h6>付款資訊</h6>
               <p>
                 接受信用卡、ATM 虛擬帳號、ATM、店取
               </p>
             </div>
-            <div class='mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
               <hr>
               <h6>商家自訂運費規則</h6>
               <h2>國外運送方式</h2>
               <p>
-                忽起眩暈，互有參差，把民眾嚇了一大跳，一樣是歹命人！葡萄柚最棒了！憑這一身！漏射到地上。早晨七點，一樣是歹命人！
+                拔去了不少，神所厭棄本無價值。但這是所謂大勢，那纔利害啦！在這次血祭壇上，去煮水餃。有死傷…QQ。
                 
-                又受了他們一頓罵！有沒有人要揪團！互有參差，繞著亭仔腳柱，甘失掉了麵皮！他正在發瘋呢。也不上你的甜！兄弟們來！明夜沒得再看啦！
+                終也渡過彼岸。水☆餃☆子。在環繞太陽運轉，甲哈哈地笑著說。丙可憐似的說。早幾點鐘解決，有沒有人要揪團！來--來！
               </p>
             </div>
-            <div class='mdl-cell mdl-cell--6-col-desktop mdl-cell--3-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-typography--text-right'>
+            <div class='mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-typography--text-right'>
               <hr>
               <button class='mdl-button mdl-js-button mdl-button--colored' id='report'>
                 檢舉違禁商品
@@ -504,7 +552,7 @@
         </footer>
         <div id='checkout-fab'>
           <a class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp' href='cart.html' id='checkout'>
-            <i class='material-icons'>shopping_cart</i>
+            <i class='material-icons mdl-badge mdl-badge--white-background mdl-badge--overlap' data-badge='14'>shopping_cart</i>
           </a>
           <span class='mdl-tooltip' for='checkout'>開始結帳</span>
         </div>
