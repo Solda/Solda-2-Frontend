@@ -1443,6 +1443,21 @@ footer {
 // product
 
 	.buy-bar {
+		.quantity-chooser {
+			margin-right: 12px;
+	    box-sizing: border-box;
+	    background: #fff3f0 right center url(/img/select-arrow.svg) no-repeat;
+	    padding: 0 18px 0 10px;
+	    color: #f75e50;
+	    line-height: 36px;
+	    font-size: 13px;
+	    border: 0;
+	    max-width: 82px;
+	    border-radius: 2px;
+	    -webkit-appearance: none;
+	    height: 36px;
+	    border: 1px solid #f98b81;
+		}
 		z-index: 10;
 		height: 64px;
 		margin-top: 0;
