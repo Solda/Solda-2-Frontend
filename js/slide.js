@@ -1,5 +1,15 @@
 $( document ).ready(function() {
 	
+		// 噗浪頁顯示說明
+
+		$(".open-popup").click(function() {
+			$("#popup").fadeIn();
+		});
+
+		$(".close-popup, #popup").click(function() {
+			$("#popup").fadeOut();
+		});
+
 		// 產品頁示範呼叫購物車
 
 		$("#add-to-cart").click(function() {
