@@ -48,7 +48,7 @@
 // 商品頁按鈕
 
 #checkout-fab .mdl-badge.mdl-badge--white-background[data-badge]:after {
-		color: white;
+	color: white;
     background: none;
     box-shadow: none;
     top: -16px;
@@ -1490,6 +1490,21 @@ footer {
 // product
 
 	.buy-bar {
+		.quantity-chooser {
+			margin-right: 12px;
+	    box-sizing: border-box;
+	    background: #fff3f0 right center url(/img/select-arrow.svg) no-repeat;
+	    padding: 0 18px 0 10px;
+	    color: #f75e50;
+	    line-height: 36px;
+	    font-size: 13px;
+	    border: 0;
+	    max-width: 82px;
+	    border-radius: 2px;
+	    -webkit-appearance: none;
+	    height: 36px;
+	    border: 1px solid #f98b81;
+		}
 		z-index: 10;
 		height: 64px;
 		margin-top: 0;
@@ -1637,64 +1652,59 @@ footer {
 		}
 	}
 
-	// 上方添加 gradient
 
-		@media (min-width: 839px) {
-	#image-holder {
-			border-radius: 4px;
-}		}
+// 產品業 gallery
 
-		@media (min-width: 839px) {
-			.go-next, .go-prev {
-				i {
-					color: black;
-				}
+#image-control {
+	height: 0px;
+	background:red;
+	display: block;
+	position: relative;
+	.go-next, .go-prev {
+		position: absolute;
+			i {
+				color: rgba(0,0,0,0.8);
 			}
-			.go-next {
-				right: 90px;
-			}
-			.go-prev {
-				left: 90px;
-			}
-		}
-
-	#image-holder {
-
-		.go-next, .go-prev {
-			position: absolute;
-				i {
-					color: white;
-				}
-			top: 220PX;
-		}
-		.go-next {
-			right: 10px;
-		}
-		.go-prev {
-			left: 10px;
-		}
-		border-radius: 0;
-		height: 500px;
-		overflow-x: auto;
-		overflow-y: hidden;
-    white-space: nowrap;
-		-webkit-overflow-scrolling: touch;
-
-		.img-container {
-			width: 100%;
-			padding: 0;
-			margin: 0;
-			height: 100%;
-			box-sizing: border-box;
-			display: inline-block;
-		}
-
-		.img-container:first-child {
-			// width: 100%;
-			// max-width: 100%;
-		}
-
+		top: 220PX;
 	}
+	.go-next {
+		right: -60px;
+	}
+	.go-prev {
+		left: -60px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.mdl-grid #image-holder {
+		height: 340px;
+		border-radius: 0;
+	}
+}
+
+@media screen and (max-width: 839px) and (min-width: 340px) {
+	.mdl-grid #image-holder {
+		height: 440px;
+		border-radius: 0;
+	}
+}
+
+#image-holder {
+	border-radius: 3px;
+	height: 530px;
+	overflow-x: auto;
+	overflow-y: hidden;
+  white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	.img-container {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+}
 
 	h1.mdl-typography--headline {
 		margin-top: 10px;
