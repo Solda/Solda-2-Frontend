@@ -102,97 +102,95 @@
         </div>
         <div class='mdl-grid'>
           <div class='mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet' style='text-align:center;'>
-            <img alt='' src='img/import_export.svg'>
-            <br>
-            <br>
-            <img alt='' src='img/plurk.svg'>
-            <h1 class='mdl-typography--title'>噗浪 + 手打拍賣 =  噗打拍賣</h1>
+            <img alt='' src='img/plurk.svg' style='width: 100px'>
+            <h1 class='mdl-typography--title-color-contrast'>噗浪 + 手打拍賣</h1>
             <p class='mdl-typography--font-regular'>
-              連接噗浪帳號後，即可上架到噗浪河道，並享有
+              連接帳號後即可上架到噗浪河道，並享有
               <strong>噗浪推廣</strong>
-              的好處，若成功透過噗浪販售，則酌收
+              ，若成功透過噗浪販售，則酌收
               <strong>5%</strong>
               推廣費用。
               <br>
-              <br>
               <a class='mdl-button mdl-button--primary open-popup' href='https://www.notion.so/fbb4d6fbb2104a95a1038f843f90991d' target='_blank'>
                 <i class='material-icons'>open_in_new</i>
-                瞭解推廣細節
+                瞭解噗浪推廣
               </a>
             </p>
           </div>
-        </div>
-        <div class='page-description'>
-          <h1 class='mdl-typography--title'>已經有手打帳號了？</h1>
         </div>
         <div class='mdl-grid login-form'>
           <div class='mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet' style='text-align:center;'>
-            <p>
-              <a class='mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href='register-facebook.html' style='width: 90%;'>
-                用 Facebook 快速登入
-                <span class='mdl-button__ripple-container'>
-                  <span class='mdl-ripple'></span>
-                </span>
-              </a>
-            </p>
-            <div class='page-description'>
-              <p class='mdl-typography--font-regular'>
-                或是
-              </p>
-            </div>
-          </div>
-          <div class='mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet'>
-            <div class='mdl-card__supporting-text mdl-card--border_bottom'><i class='material-icons with-text'>account_circle</i>使用者名稱登入
-            </div>
-            <div class='card-padding'>
-              <div>
-                <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded'>
-                  <input class='mdl-textfield__input' id='sample3' type='text'>
-                  <label class='mdl-textfield__label' for='sample3'>使用者名稱或 Email</label>
-                  <span class='mdl-textfield__error'>使用者名稱格式錯誤</span>
-                </div>
+            <div class='mdl-tabs mdl-js-tabs mdl-js-ripple-effect'>
+              <div class='mdl-tabs__tab-bar' style='margin-bottom: 20px;'>
+                <a class='mdl-tabs__tab is-active' href='#starks-panel'>登入手打</a>
+                <a class='mdl-tabs__tab' href='#lannisters-panel'>沒有手打帳號？</a>
               </div>
-              <div>
-                <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded'>
-                  <input class='mdl-textfield__input' id='sample3' type='password'>
-                  <label class='mdl-textfield__label' for='sample3'>密碼</label>
-                  <span class='mdl-textfield__error'>密碼格式錯誤</span>
+              <div class='mdl-tabs__panel is-active' id='starks-panel'>
+                <div class='mdl-card mdl-shadow--2dp' style='width:100%;'>
+                  <div class='mdl-card__supporting-text mdl-card--border_bottom'><i class='material-icons with-text'>account_circle</i>使用者名稱登入
+                  </div>
+                  <div class='card-padding'>
+                    <div>
+                      <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded'>
+                        <input class='mdl-textfield__input' id='sample3' type='text'>
+                        <label class='mdl-textfield__label' for='sample3'>使用者名稱</label>
+                        <span class='mdl-textfield__error'>使用者名稱格式錯誤</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded'>
+                        <input class='mdl-textfield__input' id='sample3' type='password'>
+                        <label class='mdl-textfield__label' for='sample3'>密碼</label>
+                        <span class='mdl-textfield__error'>密碼格式錯誤</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='mdl-card__actions'>
+                    <a class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>
+                      登入
+                    </a>
+                    <div class='mdl-layout-spacer'></div>
+                    <a class='mdl-button mdl-button mdl-js-button mdl-js-ripple-effect'>
+                      忘記密碼？
+                    </a>
+                  </div>
                 </div>
+                <div class='page-description'>
+                  <p class='mdl-typography--font-regular'>
+                    或是
+                  </p>
+                </div>
+                <p>
+                  <a class='mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href='register-facebook.html' style='width: 90%;'>
+                    用 Facebook 快速登入
+                    <span class='mdl-button__ripple-container'>
+                      <span class='mdl-ripple'></span>
+                    </span>
+                  </a>
+                </p>
+              </div>
+              <div class='mdl-tabs__panel' id='lannisters-panel'>
+                <p>
+                  <a class='mdl-button--accent mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href='register.html' style='width: 90%;'>
+                    用 Email 註冊
+                    <span class='mdl-button__ripple-container'>
+                      <span class='mdl-ripple'></span>
+                    </span>
+                  </a>
+                </p>
+                <p class='mdl-typography--caption' style='color: rgba(0,0,0,0.54);'>
+                  建議使用 Email 註冊。
+                </p>
+                <p>
+                  <a class='mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href='register-facebook.html' style='width: 90%;'>
+                    用 Facebook 快速註冊
+                    <span class='mdl-button__ripple-container'>
+                      <span class='mdl-ripple'></span>
+                    </span>
+                  </a>
+                </p>
               </div>
             </div>
-            <div class='mdl-card__actions'>
-              <a class='mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect'>
-                登入
-              </a>
-              <div class='mdl-layout-spacer'></div>
-              <a class='mdl-button mdl-button mdl-js-button mdl-js-ripple-effect'>
-                忘記密碼？
-              </a>
-            </div>
-          </div>
-          <div class='mdl-cell mdl-cell--4-col mdl-cell--4-offset mdl-cell--2-offset-tablet' style='text-align:center;'>
-            <div class='page-description'>
-              <h1 class='mdl-typography--title'>還沒有手打帳號？</h1>
-            </div>
-            <p>
-              <a class='mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href='register-facebook.html' style='width: 90%;'>
-                用 Facebook 快速註冊
-                <span class='mdl-button__ripple-container'>
-                  <span class='mdl-ripple'></span>
-                </span>
-              </a>
-            </p>
-            <p>
-              <a class='mdl-button--accent mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' href='register.html' style='width: 90%;'>
-                用 Email 註冊
-                <span class='mdl-button__ripple-container'>
-                  <span class='mdl-ripple'></span>
-                </span>
-              </a>
-            </p>
-            <p class='mdl-typography--caption' style='color: rgba(0,0,0,0.54);'>
-              不想綁定 Facebook 登入或是要與多人共用帳號的話，請選此項。
-            </p>
           </div>
         </div>
         <hr class='little'>
