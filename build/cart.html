@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class='no-js' lang=''>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta charset='utf-8'>
+    <meta content='ie=edge' http-equiv='x-ua-compatible'>
+    <title>SOLDA 手打拍賣</title>
+    <meta content='' name='description'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta content='yes' name='mobile-web-app-capable'>
+    <link href='images/touch/chrome-touch-icon-192x192.png' rel='icon' sizes='192x192'>
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='black' name='apple-mobile-web-app-status-bar-style'>
+    <meta content='Material Design Lite' name='apple-mobile-web-app-title'>
+    <link href='apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta content='images/touch/ms-touch-icon-144x144-precomposed.png' name='msapplication-TileImage'>
+    <meta content='#3372DF' name='msapplication-TileColor'>
+    <!-- Material Design -->
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='https://code.getmdl.io/1.2.1/material.indigo-pink.min.css' rel='stylesheet'>
+    <script defer='defer' src='https://code.getmdl.io/1.2.1/material.min.js'></script>
+    <!-- Leo's JS -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='js/slide.js'></script>
+    <!-- Leo's Design -->
+    <link href='css/main.css' rel='stylesheet'>
+    <script src='http://localhost:35728/livereload.js'></script>
+  </head>
+  <body>
+    <div class='store-page mdl-layout mdl-js-layout mdl-layout--fixed-header'>
+      <header class='mdl-layout__header' id='cart-bar'>
+        <div class='mdl-layout-icon'>
+          <a class='mdl-button mdl-js-button mdl-button--icon' href='product.html'>
+            <i class='material-icons'>close</i>
+          </a>
+        </div>
+        <div class='mdl-layout__header-row'>
+          <span class='mdl-layout-title'>購物車</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class='mdl-layout-spacer'></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class='mdl-navigation'>
+            <a class='mdl-navigation__link' href=''>清空全部</a>
+          </nav>
+        </div>
+      </header>
+      <main class='mdl-layout__content'>
+        <div class='mdl-grid store-news-list'>
+          <div class='mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <h6 class='gray' style='text-align: center;'>購物車內是空的喔！</h6>
+          </div>
+          <div class='cart-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='mdl-card__supporting-text'>
+              <a class='avatar' href='store.html'>
+                <img src='img/avatar/a7.jpg'>
+                前掉罵錢就罵所到他罵好
+              </a>
+            </div>
+            <div>
+              <table class='mdl-data-table mdl-js-data-table'>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p20.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    地啡各爍禮
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 484
+                  </td>
+                </tr>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p13.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    -那一一輸命
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 995
+                  </td>
+                </tr>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p6.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    然一腕射思無在可又逝我再
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 689
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class='mdl-card__actions'>
+              <a class='mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect' href='checkout.html'>開始結帳</a>
+              <div class='mdl-layout-spacer'></div>
+              <strong class='price'>
+                小計：NT$ 48
+              </strong>
+            </div>
+          </div>
+          <div class='cart-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='mdl-card__supporting-text'>
+              <a class='avatar' href='store.html'>
+                <img src='img/avatar/a19.jpg'>
+                他值啦的月就
+              </a>
+            </div>
+            <div>
+              <table class='mdl-data-table mdl-js-data-table'>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p6.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    悽了別是樣幫-要劑
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 488
+                  </td>
+                </tr>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p5.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    新似能謂
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 751
+                  </td>
+                </tr>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p14.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    ～的明來值能
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 143
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class='mdl-card__actions'>
+              <a class='mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect' href='checkout.html'>開始結帳</a>
+              <div class='mdl-layout-spacer'></div>
+              <strong class='price'>
+                小計：NT$ 1479
+              </strong>
+            </div>
+          </div>
+          <div class='cart-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+            <div class='mdl-card__supporting-text'>
+              <a class='avatar' href='store.html'>
+                <img src='img/avatar/a20.jpg'>
+                一他拚鍊腳假
+              </a>
+            </div>
+            <div>
+              <table class='mdl-data-table mdl-js-data-table'>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p9.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    懷童不不值放了
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 260
+                  </td>
+                </tr>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p12.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    憐老碰啦的所雙人著快覺也和
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 1192
+                  </td>
+                </tr>
+                <tr>
+                  <td class='mdl-data-table__cell--non-numeric product-img'>
+                    <div class='img-wrapper' style="background: url('img/products/p2.jpg') center / cover;"></div>
+                  </td>
+                  <td class='mdl-data-table__cell--non-numeric item'>
+                    們行著一地也要去地慄我挺似
+                    <a href='#'>
+                      <small>移除</small>
+                    </a>
+                    <br>
+                    <p>
+                      數量：
+                      <select id='' name=''>
+                        <option>3</option>
+                      </select>
+                    </p>
+                  </td>
+                  <td class='price'>
+                    NT$ 228
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class='mdl-card__actions'>
+              <a class='mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect' href='checkout.html'>開始結帳</a>
+              <div class='mdl-layout-spacer'></div>
+              <strong class='price'>
+                小計：NT$ 1167
+              </strong>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
