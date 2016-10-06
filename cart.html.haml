@@ -14,7 +14,8 @@
               %td.mdl-data-table__cell--non-numeric.product-img
                 .img-wrapper{style: "background: url('img/products/p#{1 + rand(20)}.jpg') center / cover;"}
               %td.mdl-data-table__cell--non-numeric.item
-                = zh_lorem_words(4+rand(10))
+                %a{href: "#",style: "padding-right:0.5em; color: black;"}
+                  = zh_lorem_words(4+rand(10))
                 %a{href: "#"}
                   %small 移除
                 %br/
