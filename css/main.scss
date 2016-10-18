@@ -110,14 +110,12 @@ a.plurk-button {
 // 商品頁面的「類別」捲軸
 
 .horizontal-scroller {
-
-
 	margin-bottom: -16px;
 	padding-top: 16px;
 	.mdl-chip {
 		margin-right: 10px;
 		&:first-child {
-				margin-left: 16px;
+			margin-left: 16px;
 		}
 	}
 
@@ -129,9 +127,7 @@ a.plurk-button {
 		height: 1px;
 	}
 
-	&::-webkit-scrollbar { 
-    display: none; 
-	}
+
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
@@ -139,7 +135,8 @@ a.plurk-button {
 	overflow-y: hidden; 
 	display: flex;
 	z-index: 1;
-	flex-direction: row;
+	display: flex;
+	justify-content: center;
 }
 
 // store / product page 樣式微調

@@ -29,16 +29,17 @@
     %a.mdl-tabs__tab.is-active{href: "#tab1"} 商品
     %a.mdl-tabs__tab{href: "#tab2"} 關於我
   #tab1.mdl-tabs__panel.is-active
-    .horizontal-scroller
-      %a.mdl-chip
-        %span.mdl-chip__text
-          全部商品
-        .mdl-chip__action
-          %i.material-icons check_circle
-      - 15.times do
+    .mdl-grid
+      .horizontal-scroller
         %a.mdl-chip
           %span.mdl-chip__text
-            = zh_lorem_words(1+rand(6))
+            全部商品
+          .mdl-chip__action
+            %i.material-icons check_circle
+        - 31.times do
+          %a.mdl-chip
+            %span.mdl-chip__text
+              = zh_lorem_words(1+rand(6))
         
     .mdl-grid
     = render :partial => "product-list-item-only"

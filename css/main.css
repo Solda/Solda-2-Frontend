@@ -107,7 +107,8 @@ a.plurk-button span {
   overflow-y: hidden;
   display: flex;
   z-index: 1;
-  flex-direction: row;
+  display: flex;
+  justify-content: center;
 }
 .horizontal-scroller .mdl-chip {
   margin-right: 10px;
@@ -120,9 +121,6 @@ a.plurk-button span {
   display: inline-block;
   width: 16px;
   height: 1px;
-}
-.horizontal-scroller::-webkit-scrollbar {
-  display: none;
 }
 
 .store-page header .material-icons, .product-page header .material-icons {
