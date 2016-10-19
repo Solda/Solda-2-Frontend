@@ -36,13 +36,21 @@
             全部商品
           .mdl-chip__action
             %i.material-icons check_circle
-        - 31.times do
+        - 21.times do
           %a.mdl-chip
             %span.mdl-chip__text
               = zh_lorem_words(1+rand(6))
         
     .mdl-grid
-    = render :partial => "product-list-item-only"
+      = render :partial => "product-list-item-only"
+      .pager.mdl-cell.mdl-cell--12-col
+        %a.previous-page{href: "#"}
+          / 在第一頁的時候 在 button 裡加上 disabled 即可變換樣式
+          %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised{disabled: "disabled"}
+            %i.material-icons arrow_back
+        %a.next-page{href: "#"}
+          %button.mdl-button.mdl-js-button.mdl-js-ripple-effect.mdl-button--icon.mdl-button--primary.mdl-button--raised
+            %i.material-icons arrow_forward
   #tab2.mdl-tabs__panel
     .mdl-grid.store-news-list
       / 預告
@@ -90,12 +98,12 @@
           的優良評價。
         .mdl-tabs.mdl-js-tabs
           .mdl-tabs__tab-bar.rating-tab
-            %a.mdl-tabs__tab{href: "#"}
+            %a.mdl-tabs__tab.selected{href: "#"}
               優良
               %br/
               %img{alt: "", src: "img/profile/good.svg"}/
               %br/
-              %strong 160
+              %strong 16
             %a.mdl-tabs__tab{href: "#"}
               可接受
               %br/

@@ -110,33 +110,39 @@ a.plurk-button {
 // 商品頁面的「類別」捲軸
 
 .horizontal-scroller {
-	margin-bottom: -16px;
-	padding-top: 16px;
+	margin-bottom: -32px;
+	padding: 8px 0 12px 0;
+	margin-left: 16px;
+	margin-right: 16px;
 	.mdl-chip {
 		margin-right: 10px;
-		&:first-child {
-			margin-left: 16px;
-		}
 	}
 
-	//尾端有空間
-	&::after {
-		content: "\00a0";
-		display: inline-block;
-		width: 16px;
-		height: 1px;
+	&::-webkit-scrollbar, &::-webkit-scrollbar:hover, &::-webkit-scrollbar:active,  { 
+    	display: none;
+    	width: 0;
 	}
 
+
+	// 尾端有空間
+	// &::after {
+	// 	content: "\00a0";
+	// 	display: inline-block;
+	// 	width: 16px;
+	// 	height: 1px;
+	// }
 
 	box-sizing: border-box;
-	width: 100%;
+	white-space: nowrap;
+	flex-wrap: nowrap;
+	width: auto;
 	height: auto;
 	overflow-x: scroll;
 	overflow-y: hidden; 
-	display: flex;
 	z-index: 1;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
+
 }
 
 // store / product page 樣式微調
@@ -1776,6 +1782,9 @@ footer {
 	margin-top: 20px;
 	.mdl-tabs__tab {
 		height: 110px;
+		&.selected {
+			border-bottom: 2px solid #3f51b5;
+		}
 	}
 	a {
 		width: 18%;
