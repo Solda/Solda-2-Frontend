@@ -1658,6 +1658,7 @@ footer {
 
 // 產品業 gallery
 
+
 #image-control {
 	height: 0px;
 	background:red;
@@ -1697,15 +1698,26 @@ footer {
 	height: 530px;
 	overflow-x: auto;
 	overflow-y: hidden;
-  white-space: nowrap;
+  	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
-	.img-container {
-		width: 100%;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	&::-webkit-scrollbar { 
+	    display: none; 
+	}
+	a.img-container {
+		-webkit-user-select: none;  /* Chrome all / Safari all */
+		-moz-user-select: none;     /* Firefox all */
+		-ms-user-select: none;      /* IE 10+ */
+		user-select: none;          /* Likely future */      
+		width: 87%;
 		padding: 0;
 		margin: 0;
 		height: 100%;
-		box-sizing: border-box;
+		box-sizing: border-box; 
 		display: inline-block;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
 	}
 }
 

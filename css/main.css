@@ -1511,14 +1511,29 @@ footer .mdl-mega-footer__drop-down-section .mdl-mega-footer__link-list li {
   overflow-y: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-.product-page #image-holder .img-container {
-  width: 100%;
+.product-page #image-holder::-webkit-scrollbar {
+  display: none;
+}
+.product-page #image-holder a.img-container {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+  width: 87%;
   padding: 0;
   margin: 0;
   height: 100%;
   box-sizing: border-box;
   display: inline-block;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 .product-page h1.mdl-typography--headline {
   margin-top: 10px;
