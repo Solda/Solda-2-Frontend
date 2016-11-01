@@ -1,5 +1,5 @@
 .vertical-spacer-alt
-.mdl-grid
+.mdl-grid{:style => "margin-bottom: 150px;"}
 	.cart-card.mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--10-col-desktop.mdl-cell--1-offset-desktop.mdl-cell--8-col-tablet.mdl-cell--4-col-phone
 		.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
 			.mdl-tabs__tab-bar
@@ -304,7 +304,7 @@
 
 				.card-padding.full-width-form
 					%h2.mdl-card__title-text
-						其他資訊
+						其他資訊（選填）
 					%p
 						%a.show-more-info 顯示其他設定
 					.more-info{:style => "display:none;"}
@@ -338,7 +338,40 @@
 							若指定時間，超過期限後客人將無法購買，若不想指定，留空即可。
 							%a{:href => "#"} 清空欄位
 
-
+				.card-padding
+					%h2.mdl-card__title-text
+						手打市集分類（選填）
+					%p 選擇一個公開的商品分類
+					.category-chooser
+						%a.category-icon._1.selected 設計手作
+						%a.category-icon._2 文具
+						%a.category-icon._3 吃貨
+						%a.category-icon._4 女裝
+						%a.category-icon._5 美妝
+						%a.category-icon._6 配件飾品
+						%a.category-icon._7 鞋子包包
+						%a.category-icon._8 男生服飾
+						%a.category-icon._9 代購連線
+						%a.category-icon._10 雜貨
+						%a.category-icon._11 二手
+						%a.category-icon._12 媽寶
+						%a.category-icon._13 貓狗
+						%a.category-icon._14 農夫市集
+						%a.category-icon._15 家具家飾
+						%a.category-icon._16 3C 電器
+						%a.category-icon._17 手機與周邊
+						%a.category-icon._18 果粉
+						%a.category-icon._19 獨立音樂
+						%a.category-icon._20 書雜誌
+						%a.category-icon._21 相機
+						%a.category-icon._22 樂器
+						%a.category-icon._23 票券
+						%a.category-icon._24 動漫
+						%a.category-icon._25 地方限定
+						%a.category-icon._26 玩具公仔
+						%a.category-icon._27 明星周邊
+						%a.category-icon._28 運動戶外
+						%a.category-icon._29 交通工具零組件
 			#virtual-goods.mdl-tabs__panel
 				.card-padding
 					%p 尚在規劃中。

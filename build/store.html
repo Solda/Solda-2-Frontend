@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html class='no-js' lang=''>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta charset='utf-8'>
+    <meta content='ie=edge' http-equiv='x-ua-compatible'>
+    <title>SOLDA 手打拍賣</title>
+    <meta content='' name='description'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta content='yes' name='mobile-web-app-capable'>
+    <link href='images/touch/chrome-touch-icon-192x192.png' rel='icon' sizes='192x192'>
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='black' name='apple-mobile-web-app-status-bar-style'>
+    <meta content='Material Design Lite' name='apple-mobile-web-app-title'>
+    <link href='apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta content='images/touch/ms-touch-icon-144x144-precomposed.png' name='msapplication-TileImage'>
+    <meta content='#3372DF' name='msapplication-TileColor'>
+    <!-- Material Design -->
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='https://code.getmdl.io/1.2.1/material.indigo-pink.min.css' rel='stylesheet'>
+    <script defer='defer' src='https://code.getmdl.io/1.2.1/material.min.js'></script>
+    <!-- Leo's JS -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='js/slide.js'></script>
+    <!-- Leo's Design -->
+    <link href='css/main.css' rel='stylesheet'>
+    <script src='http://localhost:35728/livereload.js'></script>
+  </head>
+  <body>
+    <div class='store-page mdl-layout mdl-js-layout mdl-layout--fixed-header'>
+      <header class='mdl-layout__header--seamed mdl-layout__header--transparent mdl-layout__header mdl-layout__header--scroll' id='topbar'></header>
+      <div class='corner-area right' style='z-index:40;'>
+        <!-- 如果尚未登入 -->
+        <a class='mdl-navigation__link' href='login.html'>登入</a>
+        <!-- 如果已經登入 -->
+        <a class='mdl-navigation__link' href='store.html'>我的商店</a>
+        <a class='mdl-navigation__link' href='login.html'>登出</a>
+      </div>
+      <div class='corner-area left'>
+        <a class='avatar logo' href='index.html'>
+          <img alt='' src='img/solda-pick.svg'>
+        </a>
+      </div>
+      <div class='mdl-layout__drawer'>
+        <span class='mdl-layout__title'>SOLDA 手打拍賣</span>
+        <nav class='mdl-navigation'>
+          <nav class='mdl-navigation'>
+            <a class='mdl-navigation__link is-active' href='/'><i class='material-icons'>home</i>手打拍賣首頁
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>assignment</i>購買紀錄
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>subtitles</i>商家收單
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>question_answer</i>訊息
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>store</i>我的商店
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>add_circle_outline</i>上架商品
+            </a>
+            <hr>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>favorite</i>收藏的商品
+            </a>
+            <hr>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>settings</i>商店設定
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>help</i>客服中心
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>account_circle</i>登出 solda-hero
+            </a>
+          </nav>
+        </nav>
+      </div>
+      <main class='mdl-layout__content'>
+        <div class='store-profile'>
+          <a class='avatar' href='store.html'>
+            <img alt='' src='img/avatar/a6.jpg'>
+          </a>
+          <h1>寶物淘淘網</h1>
+          <p>
+            @cloud-tou•97 % 好評
+          </p>
+          <!-- 如果是別人的商店 -->
+          <p>
+            <a class='mdl-button mdl-js-button mdl-button--raised mdl-button--colored' href='#'>
+              聯絡我
+              <!-- # 點了會打開介紹與聯絡方式 tab -->
+            </a>
+          </p>
+          <!-- 如果是自己的商店 -->
+          <p class='store-nav'>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>subtitles</i>商家收單
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>question_answer</i>訊息
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>add_circle_outline</i>上架商品
+            </a>
+            <a class='mdl-navigation__link' href='#'><i class='material-icons'>settings</i>商店設定
+            </a>
+          </p>
+        </div>
+        <div class='mdl-tabs mdl-js-tabs'>
+          <div class='mdl-tabs__tab-bar'>
+            <a class='mdl-tabs__tab is-active' href='#tab1'>商品</a>
+            <a class='mdl-tabs__tab' href='#tab2'>關於我</a>
+          </div>
+          <div class='mdl-tabs__panel is-active' id='tab1'>
+            <div class='mdl-grid'>
+              <div class='horizontal-scroller'>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    全部商品
+                  </span>
+                  <div class='mdl-chip__action'>
+                    <i class='material-icons'>check_circle</i>
+                  </div>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    萬週曆
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    柚爭柚也不
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    逐地到黎
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    快示暗笑也
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    去實這
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    高趕不得罵
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    過喊烈明
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    典先
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    以憑
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    揪
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    在
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    睛的發
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    來身到把
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    台短樣要議
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    須
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    力紅這歲都啊
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    葡爸又
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    漏戒何
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    在在類
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    謹
+                  </span>
+                </a>
+                <a class='mdl-chip'>
+                  <span class='mdl-chip__text'>
+                    似定愈湃一岸
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class='mdl-grid'>
+              <div class='mdl-grid product-list'>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p67.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  氣又種月們皮２別啡生地不回
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p25.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  的開一好是一亙答這一有拚冰狺不到番犧可情不國責的了來杯
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p44.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  最有2少啊了訊算后憊就怯
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p76.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  聲包和步成意的我約在n腳無幫這分餃渡談聲輕輕來著斜
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p53.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  天廣世女在后煮裡始的皮顆走挨的計的強的一筋
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p74.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  何眼真女蛋光短把乖的的媽是悲宜高的也一結絲個就趕冰去
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p45.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  完到輸-來回溪兄來睜前無皮這
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p33.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  前乘棒的捲番那聲麵在暫他那弟難覺過的和在來去前啊決
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p12.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  進☆忙方跌的甜也回去我但看甘逐憑一是去使城
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p5.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  來一忙了和地以啦解他一去地們的憊歲三著什百憊啊昌們
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p52.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  賴出少適的喝吃去一週現特忘過去
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p1.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  他得就利歌再似腕不那這有不部兄市夜繞一類和和
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p54.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  歹蛋0們回愈就龍不時他亦都趕疲能喝但輸肉
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p23.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  行忙名是十戒丙情我地去他特差歲啡眼愈來悲心就又去讓用出興以
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p39.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  夜能團歲的你難樣萄的只到中-算快如拚一覽程進行
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p31.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  很觸疑明等著的他彼也忙卻此易四的咖科死那非繼去一的就這子前
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p28.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  拚上在其啡何大膩聲第皮亦命人二運２口
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p64.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  人拚一割可慢行喝喝門咖貴
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p12.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  走陽利啊童級來杯繼樣短皮似倆已他笑曲裡但頭憑會像
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p37.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  柚為罵樣或們有現憑捲有鬥２有痛高不黎鍊
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p62.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  前如一熱我水杯啊有覺需的褲始去出失氣不地去過月問興
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p25.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  不紅又節可要得運唱連人完有一死啦跌小的量
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p55.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  一兩話睛２萄我行貴傳不明不鬧倍爭去喝媽恍了部人柱值
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p38.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  窪恥溪用是又門了竟月最
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p41.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  啡龍來片如歹甜害古夜利閒有閃人害目～
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p15.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  黑的在計的麼們趕的就又街城夜闊憑
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p26.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  那地在易麼鬧教身我人有上不拚來掉是老他嬉穿憑繞在息悲
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p62.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  去也晚失能來2分四-啦箇快☆很中
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p67.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  下金為爭他想有真的這下比不啡不街
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p5.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  1竟樣抱忽要也百市命走慣神真地腳示柚須要動地輕中啊當要吉甜
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p33.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  狗下過地列事最堪榮人
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p67.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  一投喊聲有線發他罵這終再方無爸的半子呢
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p52.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  沒移走了雲地頂２運感行在雪憊胃晨成已
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p53.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  輾導空前亮要頓碰力他會團皮孩地悽辨們再咖呼由
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p78.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  的憑有值情啦拳譁害橋著問人著合裡來無較說況不有難行意
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p34.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  的龍舊啦已煮２看跌何打一歹氛險鬧想像典生新
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p5.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  他啊做結煮幸似一了歲真兄而到是煮們和有趕家情真疲方
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p4.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  看啦鐘了何著球不弟時
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p13.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  老街吹啡來裡在城甜謂利頂的在戶的眼要爭的前
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p28.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  前罵疑代前捲使是前要的甲談算皮柚在最了
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p74.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  想可是就窪問在上自就手爭因滿的纔的的下黑
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p69.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  拚龍目他恩上訓們少機導去還前太阻後就餐何不☆啡煙星們比
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p72.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  處不行失談冷們鑼喊月了新還的要新繼
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p21.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  應被地雙怎到罵人我晚
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p53.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  口輾目人就爸議也的是覺比領一所目一聲.
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p29.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  悲人後祭年人有短了打入比們幕方中痕一捐不繼
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p61.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  感運計能回非是這牙憤頓頓纔前
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p47.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  家餃應較實著好和錢是很身咖棘忙容進解帶要市
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p41.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  一盡-這疼得到的的等狗啦倦用是爭中話過疑
+                </a>
+                <br>
+                <small class='price'>$1000</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <!-- 如果是自己的商品 -->
+              <div class='fav-count'>
+                <i class='favorite-button material-icons'>edit</i>
+                <br>
+                <small alt='收藏次數' class='price'>編輯</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p59.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  個爭較點我有可袖會宜的們今的再明柚挨狗有
+                </a>
+                <br>
+                <small class='price'>售完</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+          <div class='product-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--2-col-phone'>
+            <div class='mdl-card--expand mdl-card--border_bottom' style="background: url('img/products/p65.jpg') center / cover;">
+              <a class='link-to-product' href='product.html'></a>
+            </div>
+            <div class='mdl-card__actions'>
+              <div class='name-title'>
+                <a class='product-title' href='product.html'>
+                  不和喜唯去走樣他戚算穿們結進聚
+                </a>
+                <br>
+                <small class='price'>傳訊詢價</small>
+              </div>
+              <div class='mdl-layout-spacer'></div>
+              <div class='fav-count'>
+                <i class='favorite-button active-icon material-icons'>favorite</i>
+                <br>
+                <small alt='收藏次數' class='price'>23</small>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class='pager mdl-cell mdl-cell--12-col'>
+                <a class='previous-page' href='#'>
+                  <!-- 在第一頁的時候 在 button 裡加上 disabled 即可變換樣式 -->
+                  <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--primary mdl-button--raised' disabled='disabled'>
+                    <i class='material-icons'>arrow_back</i>
+                  </button>
+                </a>
+                <a class='next-page' href='#'>
+                  <button class='mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-button--primary mdl-button--raised'>
+                    <i class='material-icons'>arrow_forward</i>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class='mdl-tabs__panel' id='tab2'>
+            <div class='mdl-grid store-news-list'>
+              <!-- 預告 -->
+              <div class='mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+                <div class='mdl-card__supporting-text mdl-card--border_bottom'>
+                  商家介紹
+                </div>
+                <div class='mdl-card__supporting-text'>
+                  <p class='mdl-typography--body-1 mdl-color-text--black'>
+                    我去拿一面鑼來。丙驚疑地問，也就分外著急，到城裡去啊！和他們做新過年。就會想過去喝一杯。比狗還輸！
+            
+            亦不算壞。以及麻醉劑。漏射到地上。
+                  </p>
+                </div>
+              </div>
+              <div class='mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+                <div class='mdl-card__supporting-text mdl-card--border_bottom'>
+                  聯絡方式
+                </div>
+                <div class='mdl-card__supporting-text'>
+                  <ul class='icon-list'>
+                    <li>
+                      <i class='material-icons'>email</i>
+                      <a href='mailto:leolin@me.com'>leolin@me.com</a>
+                    </li>
+                    <li>
+                      <i class='material-icons'>phone</i>
+                      <a href='tel:0912-345-678'>0912-345-678</a>
+                    </li>
+                    <li>
+                      <i>
+                        <img src='img/profile/facebook.svg'>
+                      </i>
+                      <a href='#'>手打拍賣粉絲專業</a>
+                    </li>
+                    <li>
+                      <i>
+                        <img src='img/profile/twitter.svg'>
+                      </i>
+                      <a href='#'>@sillyleo</a>
+                    </li>
+                    <li>
+                      <i>
+                        <img src='img/profile/instagram.svg'>
+                      </i>
+                      <a href='#'>@ken.is.photographer</a>
+                    </li>
+                    <li>
+                      <i>
+                        <img src='img/profile/address.svg'>
+                      </i>
+                      <a href='https://www.google.com.tw/maps/place/台北市新生南路三段/@25.0212125,121.531932,17z/data=!3m1!4b1!4m2!3m1!1s0x3442a988f6b28787:0xf93d3d26e9917cbb'>台北市大安區新生南路三段 280 號</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class='mdl-card mdl-shadow--2dp mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone'>
+                <div class='mdl-card__supporting-text mdl-card--border_bottom'>
+                  評價
+                </div>
+                <div class='mdl-card__supporting-text mdl-typography--text-center'>
+                  最近兩個月的
+                  <strong class='mdl-color-text--black'>27</strong>
+                  筆訂單有
+                  <strong class='mdl-color-text--black'>100%</strong>
+                  的優良評價。
+                </div>
+                <div class='mdl-tabs mdl-js-tabs'>
+                  <div class='mdl-tabs__tab-bar rating-tab'>
+                    <a class='mdl-tabs__tab selected' href='#'>
+                      優良
+                      <br>
+                      <img alt='' src='img/profile/good.svg'>
+                      <br>
+                      <strong>16</strong>
+                    </a>
+                    <a class='mdl-tabs__tab' href='#'>
+                      可接受
+                      <br>
+                      <img alt='' src='img/profile/ok.svg'>
+                      <br>
+                      <strong>4</strong>
+                    </a>
+                    <a class='mdl-tabs__tab' href='#'>
+                      不滿意
+                      <br>
+                      <img alt='' src='img/profile/bad.svg'>
+                      <br>
+                      <strong>1</strong>
+                    </a>
+                  </div>
+                  <div id='tab-good'>
+                    <div class='rating-container'>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>丁盈</a>：憊逝２去
+                          <small>
+                            - Wed Nov 05, 1958
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p39.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>沈彥貞</a>：止自去裡
+                          <small>
+                            - Thu May 05, 1988
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p9.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p2.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>白志國</a>：樣解難不爭丙樣有停們把
+                          <small>
+                            - Mon Aug 05, 2002
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p2.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>薛家永</a>：人計了是過差
+                          <small>
+                            - Tue Feb 24, 1959
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p66.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p22.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>夏珍珊</a>：前地合命帶到拚
+                          <small>
+                            - Sat Apr 16, 1988
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p38.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>汪靜彬</a>：容金月任停比喝８死
+                          <small>
+                            - Sat May 12, 2001
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p38.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p67.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>孔佳</a>：起是地佔憑們諾到都前以
+                          <small>
+                            - Fri Jun 30, 1967
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p1.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>侯佳士</a>：２麵的一玩何咖夜拚劑疼
+                          <small>
+                            - Mon Nov 03, 1969
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p41.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p20.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>汪孟</a>：憑他也弟快方出
+                          <small>
+                            - Thu Feb 10, 1955
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p35.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>馮豪昌</a>：有些一澤不少不到啦
+                          <small>
+                            - Tue Oct 23, 1973
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p75.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p51.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>江安</a>：白他屍又甘后衫顆方-得抹
+                          <small>
+                            - Thu Oct 03, 1968
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p73.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>賈偉</a>：人趕梁是的談一知議業
+                          <small>
+                            - Fri May 09, 2003
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p6.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p37.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/good.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>丁雯孟</a>：值上上甲來挨膩故葡種的
+                          <small>
+                            - Sat Oct 14, 1972
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p66.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                      <div class='rating-unit'>
+                        <div class='buyer'>
+                          <img alt='' src='img/profile/ok.svg' style='width: 18px; vertical-align: text-top; margin-right: 0.5em;'><a href='store.html'>江政民</a>：能在真呢
+                          <small>
+                            - Sun Sep 24, 1978
+                          </small>
+                        </div>
+                        <div class='product'>
+                          <a href='#'>
+                            <img alt='' src='img/products/p9.jpg'>
+                          </a>
+                          <a href='#'>
+                            <img alt='' src='img/products/p65.jpg'>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class='little hide-when-search'>
+        <footer class='mdl-mega-footer hide-when-search'>
+          <div class='mdl-mega-footer__middle-section'>
+            <div class='mdl-mega-footer__drop-down-section'>
+              <input checked='checked' class='mdl-mega-footer__heading-checkbox' type='checkbox'>
+              <h1 class='mdl-mega-footer__heading'>馬上開始</h1>
+              <ul class='mdl-mega-footer__link-list'>
+                <li>
+                  <a href='#'>網路開店</a>
+                </li>
+                <li>
+                  <a href='#'>顧客登入</a>
+                </li>
+                <li>
+                  <a href='#'>商家撥款須知</a>
+                </li>
+              </ul>
+            </div>
+            <div class='mdl-mega-footer__drop-down-section'>
+              <input checked='checked' class='mdl-mega-footer__heading-checkbox' type='checkbox'>
+              <h1 class='mdl-mega-footer__heading'>手打拍賣 APP</h1>
+              <ul class='mdl-mega-footer__link-list'>
+                <li>
+                  <a href='#'>下載 iPhone 版</a>
+                </li>
+                <li>
+                  <a href='#'>下載 Android 版</a>
+                </li>
+              </ul>
+            </div>
+            <div class='mdl-mega-footer__drop-down-section'>
+              <input checked='checked' class='mdl-mega-footer__heading-checkbox' type='checkbox'>
+              <h1 class='mdl-mega-footer__heading'>新消息</h1>
+              <ul class='mdl-mega-footer__link-list'>
+                <li>
+                  <a href='#'>訂閱手打快報</a>
+                </li>
+                <li>
+                  <a href='#'>Facebook 粉絲專業</a>
+                </li>
+                <li>
+                  <a href='#'>手打部落格</a>
+                </li>
+              </ul>
+            </div>
+            <div class='mdl-mega-footer__drop-down-section'>
+              <input checked='checked' class='mdl-mega-footer__heading-checkbox' type='checkbox'>
+              <h1 class='mdl-mega-footer__heading'>支援服務</h1>
+              <ul class='mdl-mega-footer__link-list'>
+                <li>
+                  <a href='#'>常見問題</a>
+                </li>
+                <li>
+                  <a href='#'>聯絡我們</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class='mdl-mega-footer__bottom-section'>
+            <div class='mdl-logo'>手打自販股份有限公司 © 2014 - 2015</div>
+            <ul class='mdl-mega-footer__link-list'>
+              <li>
+                <a href='#'>違禁商品列表</a>
+              </li>
+              <li>
+                <a href='#'>隱私權與使用條款</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+        <div id='checkout-fab'>
+          <a class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp' href='cart.html' id='checkout'>
+            <i class='material-icons mdl-badge mdl-badge--white-background mdl-badge--overlap' data-badge='14'>shopping_cart</i>
+          </a>
+          <span class='mdl-tooltip' for='checkout'>開始結帳</span>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
