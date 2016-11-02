@@ -33,6 +33,10 @@
 						%label.mdl-textfield__label{:for => "sample2"} 價格（NT$）
 						%span.mdl-textfield__error 只能輸入數字
 					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+						%input#sample2.mdl-textfield__input{:pattern => "-?[0-9]*(\\.[0-9]+)?", :type => "text", :value => "1"}/
+						%label.mdl-textfield__label{:for => "sample2"} 庫存
+						%span.mdl-textfield__error 只能輸入數字，不得為 0
+					.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
 						%textarea#sample5.mdl-textfield__input{:rows => "3", :type => "text", :placeholder => "說說更多關於這個物品的事吧。例如尺寸、材質、狀態、特點...。也可以加上商品分類標籤像是 #家具 #椅子"}
 						%label.mdl-textfield__label{:for => "sample5"} 商品描述
 
