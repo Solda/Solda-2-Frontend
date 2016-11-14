@@ -1696,7 +1696,11 @@ footer {
 	display: block;
 	position: relative;
 	.go-next, .go-prev {
-		position: absolute;
+		-webkit-user-select: none;  /* Chrome all / Safari all */
+		-moz-user-select: none;     /* Firefox all */
+		-ms-user-select: none;      /* IE 10+ */
+		user-select: none;          /* Likely future */      
+			position: absolute;
 			i {
 				color: rgba(0,0,0,0.8);
 			}
@@ -1724,12 +1728,38 @@ footer {
 	}
 }
 
+#image-thumbnails {
+	width: 100%;
+	height: auto;
+	display: block;
+	text-align: center;
+	.img-container {
+		border-radius: 2px;
+		-webkit-user-select: none;  /* Chrome all / Safari all */
+		-moz-user-select: none;     /* Firefox all */
+		-ms-user-select: none;      /* IE 10+ */
+		user-select: none;          /* Likely future */      
+		width: 26px;
+		height: 26px;
+		padding: 10px 20px;
+		margin-top: 15px;
+		box-sizing: border-box; 
+		display: inline-block;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+		}
+}
 #image-holder {
+			-webkit-user-select: none;  /* Chrome all / Safari all */
+		-moz-user-select: none;     /* Firefox all */
+		-ms-user-select: none;      /* IE 10+ */
+		user-select: none;          /* Likely future */      
 	border-radius: 3px;
 	height: 530px;
 	overflow-x: auto;
 	overflow-y: hidden;
-  	white-space: nowrap;
+	white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 	&::-webkit-scrollbar { 
@@ -2015,8 +2045,8 @@ padding: 16px 16px 8px 16px;
 	}
 	.col-right {
 		-ms-flex-item-align: end;
-		        -webkit-align-self: flex-end;
-		        align-self: flex-end;
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
 	}
 }
 
