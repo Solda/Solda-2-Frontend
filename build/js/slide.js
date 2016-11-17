@@ -1,5 +1,12 @@
 $( document ).ready(function() {
-	
+
+		// 18 禁視窗
+
+
+		$("a.hide-warning").click(function() {
+			$("#warning").fadeOut();
+		});
+
 		// 噗浪頁顯示說明
 
 		$(".open-popup").click(function() {

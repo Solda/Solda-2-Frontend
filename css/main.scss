@@ -1,4 +1,25 @@
+// 18 禁視窗
 
+#warning {
+	background: white;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	box-sizing: border-box;
+	padding-top: 100px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	.w-wrapper {
+		z-index: 9999;
+		width: 80%;
+		padding: 20px;
+		margin: 0 auto;
+	}
+}
 
 // popup
 
