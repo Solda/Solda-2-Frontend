@@ -4,17 +4,5 @@
 		%meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
 		= render :partial => "header"
 	%body
-		.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-			%header.mdl-layout__header.mdl-layout__header--transparent
-				.mdl-layout-icon
-					%a.mdl-button.mdl-js-button.mdl-button--icon{href: "#"}
-						%i.material-icons arrow_back
-				.mdl-layout__header-row
-					%span.mdl-layout-title 上架新商品
-					.mdl-layout-spacer
-					%button.mdl-button.mdl-js-button.mdl-js-ripple-effec 下架此商品？
-					.mdl-layout-spacer
-					%nav.mdl-navigation
-						%button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent 上架商品
-			%main.mdl-layout__content
-				= yield
+		%main.mdl-layout__content
+			= yield
